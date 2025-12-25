@@ -15,7 +15,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Optional font (safe if blocked, page still works) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="./styles.css" />
@@ -36,7 +35,7 @@
         </div>
       </div>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a href="#projects" data-i18n="nav.projects">Projets</a>
         <a href="#skills" data-i18n="nav.skills">Compétences</a>
         <a href="#about" data-i18n="nav.about">À propos</a>
@@ -57,9 +56,7 @@
       <div class="container hero-grid">
         <div class="hero-text reveal">
           <div class="kicker" data-i18n="hero.kicker">Portfolio</div>
-          <h1 class="title" data-i18n="hero.title">
-            Stage — Systèmes, Réseaux & Cybersécurité
-          </h1>
+          <h1 class="title" data-i18n="hero.title">Stage — Systèmes, Réseaux & Cybersécurité</h1>
           <p class="subtitle" data-i18n="hero.subtitle">
             Je présente ici mes projets académiques et personnels (réseaux, Linux, dev & automatisation).
           </p>
@@ -67,8 +64,7 @@
           <div class="hero-cta">
             <a class="btn primary" href="#projects" data-i18n="hero.btnProjects">Voir mes projets</a>
             <a class="btn ghost" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer">
-              GitHub
-              <span class="icon" aria-hidden="true">↗</span>
+              GitHub <span class="icon" aria-hidden="true">↗</span>
             </a>
           </div>
 
@@ -151,22 +147,36 @@
             </div>
           </article>
 
-          <!-- PROJECT 2 -->
+          <!-- PROJECT 2 : PORT SCANNER (i18n) -->
           <article class="card project reveal">
             <div class="project-top">
-              <div class="project-title" data-i18n="projects.p2title">TP Réseaux & Services</div>
+              <div class="project-title" data-i18n="projects.portscanner.title">Port Scanner TCP (Python)</div>
               <div class="badges">
-                <span class="badge">TCP/IP</span><span class="badge">Linux</span><span class="badge">DNS/DHCP</span>
+                <span class="badge">Python</span>
+                <span class="badge">TCP</span>
+                <span class="badge">Cybersecurity</span>
+                <span class="badge">Flask</span>
+                <span class="badge">Docker</span>
               </div>
             </div>
-            <p class="project-desc" data-i18n="projects.p2">
-              Travaux pratiques : adressage IP, tests, routage statique (notions), services réseau et diagnostic.
+
+            <p class="project-desc" data-i18n="projects.portscanner.desc">
+              Scanner TCP multithread avec banner grabbing, fingerprint HTTP/SSH, historisation SQLite et dashboard Flask.
             </p>
+
             <div class="project-actions">
-              <a class="btn small" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer" data-i18n="projects.github">
+              <a class="btn small"
+                 href="https://github.com/atchekzaileo/port-scanner"
+                 target="_blank"
+                 rel="noreferrer"
+                 data-i18n="projects.github">
                 Code / GitHub ↗
               </a>
-              <button class="btn small ghost" type="button" data-modal-open="modal2" data-i18n="projects.details">
+
+              <button class="btn small ghost"
+                      type="button"
+                      data-modal-open="modal-portscanner"
+                      data-i18n="projects.details">
                 Détails
               </button>
             </div>
@@ -362,15 +372,31 @@
     </div>
   </dialog>
 
-  <dialog class="modal" id="modal2">
+  <!-- MODAL : PORT SCANNER (i18n) -->
+  <dialog class="modal" id="modal-portscanner">
     <div class="modal-inner">
       <div class="modal-head">
-        <div class="modal-title" data-i18n="modals.m2title">TP Réseaux & Services</div>
+        <div class="modal-title" data-i18n="modals.portscanner.title">Port Scanner TCP – Python</div>
         <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
       </div>
-      <p class="muted" data-i18n="modals.m2">
-        Travaux pratiques autour de l’adressage IP, diagnostic, routage (notions) et services (DNS/DHCP). Exemples et scripts à lier vers tes repos.
+
+      <p class="muted" data-i18n="modals.portscanner.p1">
+        Outil de port scanning TCP multithread développé en Python, intégrant banner grabbing, fingerprinting HTTP et analyse de banners SSH.
       </p>
+
+      <p class="muted" data-i18n="modals.portscanner.p2">
+        Le projet inclut l’historisation des scans en base SQLite, la détection de changements entre scans (ports ouverts/fermés), l’export JSON/CSV, des tests automatisés (HTTP et SSH via Docker) et un mini-dashboard Flask.
+      </p>
+
+      <p class="muted small" data-i18n="modals.portscanner.legal">
+        Projet pédagogique — scans réalisés uniquement sur des environnements locaux ou explicitement autorisés.
+      </p>
+
+      <div class="modal-actions">
+        <a class="btn small" href="https://github.com/atchekzaileo/port-scanner" target="_blank" rel="noreferrer">
+          GitHub ↗
+        </a>
+      </div>
     </div>
   </dialog>
 

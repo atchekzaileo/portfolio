@@ -30,17 +30,22 @@ const dict = {
     "hero.card.li4": "Objectif : Master Systèmes, Réseaux & Sécurité",
     "hero.card.contact": "Contact",
     "hero.card.copy": "Copier le lien",
+
     "projects.title": "Projets",
     "projects.subtitle": "Une sélection de projets (avec liens GitHub). J’ajoute les repos au fur et à mesure.",
     "projects.p1": "Page bilingue moderne pour présenter mes projets, compétences et liens (CV, GitHub, contact).",
-    "projects.p2title": "TP Réseaux & Services",
-    "projects.p2": "Travaux pratiques : adressage IP, tests, routage statique (notions), services réseau et diagnostic.",
+
+    "projects.portscanner.title": "Port Scanner TCP (Python)",
+    "projects.portscanner.desc":
+      "Scanner TCP multithread avec banner grabbing, fingerprint HTTP/SSH, historisation SQLite et dashboard Flask.",
+
     "projects.p3title": "Automation & Scripting",
     "projects.p3": "Scripts et mini-outils : automatisation de tâches, parsing, utilitaires (ex. réseau, logs, etc.).",
     "projects.p4title": "Apps (React / Flutter)",
     "projects.p4": "Projets académiques web & mobile : UI, authentification, données, logique applicative.",
     "projects.github": "Code / GitHub ↗",
     "projects.details": "Détails",
+
     "skills.title": "Compétences",
     "skills.subtitle": "Concentrées sur l’objectif Systèmes / Réseaux / Sécurité.",
     "skills.net.title": "Réseaux",
@@ -57,10 +62,13 @@ const dict = {
     "skills.sec.li4": "Curiosité : SOC, pentest (découverte)",
     "skills.dev.title": "Scripting & Dev",
     "skills.dev.li1": "Web : HTML/CSS/JS, WordPress, React",
+
     "about.title": "À propos",
     "about.subtitle": "Quelques lignes pour contextualiser ton profil.",
-    "about.p1": "Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’infrastructure : systèmes Linux, réseaux et cybersécurité. J’aime comprendre “comment ça marche” (protocoles, services, diagnostic), et automatiser via scripting.",
+    "about.p1":
+      "Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’infrastructure : systèmes Linux, réseaux et cybersécurité. J’aime comprendre “comment ça marche” (protocoles, services, diagnostic), et automatiser via scripting.",
     "about.p2": "Objectif : stage puis alternance en Master Systèmes, Réseaux & Sécurité.",
+
     "contact.title": "Contact",
     "contact.subtitle": "Un message et je réponds rapidement.",
     "contact.cvLabel": "CV",
@@ -70,14 +78,26 @@ const dict = {
     "contact.qrTitle": "QR Code",
     "contact.qrHint": "Clique sur “Générer un QR code” après mise en ligne.",
     "footer.built": "Fait en HTML/CSS/JS — GitHub Pages",
-    "modals.m1": "Page unique, responsive, bilingue, avec animations légères et sections adaptées à un recrutement en infra/réseaux/sécurité.",
-    "modals.m2title": "TP Réseaux & Services",
-    "modals.m2": "Travaux pratiques autour de l’adressage IP, diagnostic, routage (notions) et services (DNS/DHCP). Exemples et scripts à lier vers tes repos.",
+
+    "modals.m1":
+      "Page unique, responsive, bilingue, avec animations légères et sections adaptées à un recrutement en infra/réseaux/sécurité.",
+
+    "modals.portscanner.title": "Port Scanner TCP – Python",
+    "modals.portscanner.p1":
+      "Outil de port scanning TCP multithread développé en Python, intégrant banner grabbing, fingerprinting HTTP et analyse de banners SSH.",
+    "modals.portscanner.p2":
+      "Le projet inclut l’historisation des scans en base SQLite, la détection de changements entre scans (ports ouverts/fermés), l’export JSON/CSV, des tests automatisés (HTTP et SSH via Docker) et un mini-dashboard Flask.",
+    "modals.portscanner.legal":
+      "Projet pédagogique — scans réalisés uniquement sur des environnements locaux ou explicitement autorisés.",
+
     "modals.m3title": "Automation & Scripting",
-    "modals.m3": "Scripts Python/Bash (utilitaires, automatisation, parsing). Mets ici 1-2 liens vers des repos bien documentés.",
+    "modals.m3":
+      "Scripts Python/Bash (utilitaires, automatisation, parsing). Mets ici 1-2 liens vers des repos bien documentés.",
     "modals.m4title": "Apps (React / Flutter)",
-    "modals.m4": "Projets web et mobile : UI, logique applicative, auth, données. Idéal pour montrer ta polyvalence + rigueur."
+    "modals.m4":
+      "Projets web et mobile : UI, logique applicative, auth, données. Idéal pour montrer ta polyvalence + rigueur."
   },
+
   en: {
     "header.tagline": "BSc 3rd year — Systems, Networks & Cybersecurity (Lyon 1 — La Doua)",
     "header.cta": "Contact me",
@@ -102,17 +122,22 @@ const dict = {
     "hero.card.li4": "Goal: MSc Systems, Networks & Security",
     "hero.card.contact": "Contact",
     "hero.card.copy": "Copy link",
+
     "projects.title": "Projects",
     "projects.subtitle": "A small selection (with GitHub links). I add repositories regularly.",
     "projects.p1": "Modern bilingual single-page website to showcase projects, skills and links (CV, GitHub, contact).",
-    "projects.p2title": "Networking & Services Labs",
-    "projects.p2": "Labs: IP addressing, connectivity tests, static routing basics, network services and troubleshooting.",
+
+    "projects.portscanner.title": "TCP Port Scanner (Python)",
+    "projects.portscanner.desc":
+      "Multithreaded TCP port scanner with banner grabbing, HTTP/SSH fingerprinting, SQLite history and a Flask dashboard.",
+
     "projects.p3title": "Automation & Scripting",
     "projects.p3": "Scripts & small tools: automation, parsing, utilities (network, logs, etc.).",
     "projects.p4title": "Apps (React / Flutter)",
     "projects.p4": "Academic web & mobile projects: UI, authentication, data, application logic.",
     "projects.github": "Code / GitHub ↗",
     "projects.details": "Details",
+
     "skills.title": "Skills",
     "skills.subtitle": "Focused on Systems / Networks / Security.",
     "skills.net.title": "Networking",
@@ -129,10 +154,13 @@ const dict = {
     "skills.sec.li4": "Curiosity: SOC, pentest (exploring)",
     "skills.dev.title": "Scripting & Dev",
     "skills.dev.li1": "Web: HTML/CSS/JS, WordPress, React",
+
     "about.title": "About",
     "about.subtitle": "A few lines to contextualize my profile.",
-    "about.p1": "BSc 3rd-year student at Lyon 1 (La Doua), focusing on infrastructure: Linux systems, networking and cybersecurity. I enjoy understanding how things work (protocols, services, troubleshooting) and automating tasks with scripting.",
+    "about.p1":
+      "BSc 3rd-year student at Lyon 1 (La Doua), focusing on infrastructure: Linux systems, networking and cybersecurity. I enjoy understanding how things work (protocols, services, troubleshooting) and automating tasks with scripting.",
     "about.p2": "Goal: internship, then apprenticeship for the MSc Systems, Networks & Security.",
+
     "contact.title": "Contact",
     "contact.subtitle": "Send a message — I reply quickly.",
     "contact.cvLabel": "Resume",
@@ -142,13 +170,24 @@ const dict = {
     "contact.qrTitle": "QR Code",
     "contact.qrHint": "Click “Generate QR code” after publishing the website.",
     "footer.built": "Built with HTML/CSS/JS — GitHub Pages",
-    "modals.m1": "Responsive bilingual single-page portfolio with lightweight animations and infra/network/security-friendly sections.",
-    "modals.m2title": "Networking & Services Labs",
-    "modals.m2": "Labs around IP addressing, troubleshooting, routing basics and services (DNS/DHCP). Link your best repos here.",
+
+    "modals.m1":
+      "Responsive bilingual single-page portfolio with lightweight animations and infra/network/security-friendly sections.",
+
+    "modals.portscanner.title": "TCP Port Scanner – Python",
+    "modals.portscanner.p1":
+      "Educational multithreaded TCP port scanner written in Python, featuring banner grabbing, HTTP fingerprinting and SSH banner parsing.",
+    "modals.portscanner.p2":
+      "The project includes scan history stored in SQLite, change detection between scans (opened/closed ports), JSON/CSV export, automated tests (local HTTP and SSH via Docker), and a lightweight Flask dashboard.",
+    "modals.portscanner.legal":
+      "Educational project — scans are performed only on local or explicitly authorized environments.",
+
     "modals.m3title": "Automation & Scripting",
-    "modals.m3": "Python/Bash scripts (utilities, automation, parsing). Add 1–2 well-documented repos.",
+    "modals.m3":
+      "Python/Bash scripts (utilities, automation, parsing). Add 1–2 well-documented repos.",
     "modals.m4title": "Apps (React / Flutter)",
-    "modals.m4": "Web and mobile projects: UI, application logic, auth, data. Great to show versatility and rigor."
+    "modals.m4":
+      "Web and mobile projects: UI, application logic, auth, data. Great to show versatility and rigor."
   }
 };
 
@@ -188,11 +227,14 @@ if (langToggle) {
 
 // -------- Reveal on scroll --------
 const revealEls = $$(".reveal");
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add("show");
-  });
-}, { threshold: 0.12 });
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add("show");
+    });
+  },
+  { threshold: 0.12 }
+);
 
 revealEls.forEach(el => io.observe(el));
 
@@ -204,20 +246,22 @@ $$("[data-modal-open]").forEach(btn => {
     if (dlg && typeof dlg.showModal === "function") dlg.showModal();
   });
 });
+
 $$("[data-modal-close]").forEach(btn => {
   btn.addEventListener("click", () => {
     const dlg = btn.closest("dialog");
     if (dlg) dlg.close();
   });
 });
+
+// Close modal on backdrop click
 $$("dialog.modal").forEach(dlg => {
   dlg.addEventListener("click", (e) => {
     const rect = dlg.getBoundingClientRect();
-    const inDialog = (
+    const inDialog =
       rect.top <= e.clientY && e.clientY <= rect.bottom &&
-      rect.left <= e.clientX && e.clientX <= rect.right
-    );
-    // If click is outside, close
+      rect.left <= e.clientX && e.clientX <= rect.right;
+
     if (!inDialog) dlg.close();
   });
 });
@@ -233,9 +277,10 @@ async function copyText(text, noticeEl) {
   } catch {
     if (noticeEl) {
       noticeEl.className = "notice warn";
-      noticeEl.textContent = (currentLang === "fr")
-        ? "Impossible de copier automatiquement. Copie manuelle : " + text
-        : "Could not auto-copy. Manual copy: " + text;
+      noticeEl.textContent =
+        (currentLang === "fr")
+          ? `Impossible de copier automatiquement. Copie manuelle : ${text}`
+          : `Could not auto-copy. Manual copy: ${text}`;
     }
   }
 }
@@ -244,8 +289,7 @@ const copyLinkBtn = $("#copyLinkBtn");
 const copyNotice = $("#copyNotice");
 if (copyLinkBtn) {
   copyLinkBtn.addEventListener("click", () => {
-    const url = window.location.href;
-    copyText(url, copyNotice);
+    copyText(window.location.href, copyNotice);
   });
 }
 
@@ -253,22 +297,18 @@ const copyPageBtn = $("#copyPageBtn");
 const pageNotice = $("#pageNotice");
 if (copyPageBtn) {
   copyPageBtn.addEventListener("click", () => {
-    const url = window.location.href;
-    copyText(url, pageNotice);
+    copyText(window.location.href, pageNotice);
   });
 }
 
-// -------- QR Code (works once published) --------
-// Uses a free QR generator endpoint (simple image URL).
-// If it’s blocked by your browser, you can replace it later with another provider.
+// -------- QR Code --------
 const qrBtn = $("#qrBtn");
 const qrImg = $("#qrImg");
+
 if (qrBtn && qrImg) {
   qrBtn.addEventListener("click", () => {
     const url = window.location.href;
     const encoded = encodeURIComponent(url);
-
-    // Public QR endpoint (returns an image)
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encoded}`;
 
     qrImg.src = qrUrl;
@@ -276,9 +316,7 @@ if (qrBtn && qrImg) {
 
     if (pageNotice) {
       pageNotice.className = "notice ok";
-      pageNotice.textContent = (currentLang === "fr")
-        ? "QR code généré ✅"
-        : "QR generated ✅";
+      pageNotice.textContent = (currentLang === "fr") ? "QR code généré ✅" : "QR generated ✅";
     }
   });
 }
