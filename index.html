@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Portfolio – Leo Atchekzai | Systems, Networks & Cybersecurity" />
+  <meta name="description" content="Portfolio – Leo Atchekzai | Systèmes, Réseaux & Cybersécurité" />
   <meta name="theme-color" content="#0b1220" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Leo Atchekzai – Portfolio" />
-  <meta property="og:description" content="Systems, Networks & Cybersecurity – Projects & skills" />
+  <meta property="og:description" content="Systèmes, Réseaux & Cybersécurité – Projets et compétences" />
   <meta property="og:type" content="website" />
 
   <title>Leo Atchekzai – Portfolio</title>
@@ -32,6 +32,11 @@
           <div class="tagline" data-i18n="header.tagline">
             L3 Informatique — Systèmes, Réseaux & Cybersécurité (Lyon 1 — La Doua)
           </div>
+
+          <!-- "human touch": small, factual line -->
+          <div class="small muted" data-i18n="header.updated">
+            Mis à jour récemment — projets & liens à jour
+          </div>
         </div>
       </div>
 
@@ -54,45 +59,53 @@
   <main id="main">
     <section class="hero">
       <div class="container hero-grid">
+        <!-- keep reveal only on big blocks (less “template-y”) -->
         <div class="hero-text reveal">
           <div class="kicker" data-i18n="hero.kicker">Portfolio</div>
-          <h1 class="title" data-i18n="hero.title">Stage — Systèmes, Réseaux & Cybersécurité</h1>
+
+          <h1 class="title" data-i18n="hero.title">
+            Stage — Systèmes, Réseaux & Cybersécurité
+          </h1>
+
+          <!-- More human, less “marketing” -->
           <p class="subtitle" data-i18n="hero.subtitle">
-            Je présente ici mes projets académiques et personnels (réseaux, Linux, dev & automatisation).
+            Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’administration système,
+            les réseaux et la cybersécurité. Cette page regroupe des projets réalisés en cours et en autonomie,
+            avec l’objectif d’avoir un aperçu concret de ce que je sais faire.
           </p>
 
           <div class="hero-cta">
             <a class="btn primary" href="#projects" data-i18n="hero.btnProjects">Voir mes projets</a>
+
             <a class="btn ghost" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer">
               GitHub <span class="icon" aria-hidden="true">↗</span>
             </a>
+
+            <!-- add LinkedIn in plain text (more “real”) -->
+            <a class="btn ghost" href="https://www.linkedin.com/in/l%C3%A9o-atchekzai-644775234/" target="_blank" rel="noreferrer">
+              LinkedIn <span class="icon" aria-hidden="true">↗</span>
+            </a>
           </div>
 
-          <div class="hero-metrics">
-            <div class="metric">
-              <div class="metric-top" data-i18n="hero.metric1.top">Focus</div>
-              <div class="metric-bottom" data-i18n="hero.metric1.bottom">Réseaux • Linux • Sécurité</div>
-            </div>
-            <div class="metric">
-              <div class="metric-top" data-i18n="hero.metric2.top">Stack</div>
-              <div class="metric-bottom">Python • Bash • C/C++ • Web</div>
-            </div>
+          <!-- Less “card metrics”, more simple bullets -->
+          <div class="hero-notes">
+            <p class="muted small" data-i18n="hero.note">
+              Je cherche un stage (et une alternance pour la suite en Master SRS). Si un projet vous intéresse, je peux détailler
+              le contexte, les choix techniques et ce que j’ai appris.
+            </p>
           </div>
         </div>
 
+        <!-- Replace glass/glow with a simple card -->
         <div class="hero-card reveal">
-          <div class="glass card">
-            <div class="card-head">
-              <div class="chip" data-i18n="hero.card.chip">Disponible</div>
-              <div class="chip subtle" data-i18n="hero.card.chip2">Stage fin d’année</div>
-            </div>
-
+          <div class="card">
             <div class="card-body">
-              <div class="card-title" data-i18n="hero.card.title">Profil en bref</div>
+              <div class="card-title" data-i18n="hero.card.title">En bref</div>
+
               <ul class="bullets">
                 <li data-i18n="hero.card.li1">Licence 3 Informatique (UCBL — La Doua)</li>
-                <li data-i18n="hero.card.li2">CCNA 1 (bases réseaux solides)</li>
-                <li data-i18n="hero.card.li3">Linux + TP réseau + scripting</li>
+                <li data-i18n="hero.card.li2">Bases réseaux solides (CCNA 1 + TP)</li>
+                <li data-i18n="hero.card.li3">Linux au quotidien + scripting</li>
                 <li data-i18n="hero.card.li4">Objectif : Master Systèmes, Réseaux & Sécurité</li>
               </ul>
 
@@ -104,10 +117,13 @@
               </div>
 
               <div class="notice" id="copyNotice" aria-live="polite"></div>
+
+              <!-- small “human” line -->
+              <p class="muted small" data-i18n="hero.card.extra">
+                PS : les dépôts GitHub sont commentés (README) et j’essaie de garder l’historique propre.
+              </p>
             </div>
           </div>
-
-          <div class="glow" aria-hidden="true"></div>
         </div>
       </div>
 
@@ -121,24 +137,27 @@
         <div class="section-head reveal">
           <h2 data-i18n="projects.title">Projets</h2>
           <p class="muted" data-i18n="projects.subtitle">
-            Une sélection de projets (avec liens GitHub). J’ajoute les repos au fur et à mesure.
+            Quelques projets représentatifs (cours + perso). J’ajoute au fur et à mesure, en gardant seulement ceux que je peux expliquer clairement.
           </p>
         </div>
 
         <div class="grid projects-grid">
           <!-- PROJECT 1 -->
-          <article class="card project reveal">
+          <article class="card project">
             <div class="project-top">
               <div class="project-title">Portfolio (this page)</div>
               <div class="badges">
                 <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span>
               </div>
             </div>
+
             <p class="project-desc" data-i18n="projects.p1">
-              Page bilingue moderne pour présenter mes projets, compétences et liens (CV, GitHub, contact).
+              Site simple et bilingue pour regrouper mes projets, compétences et liens (CV, GitHub, contact).
+              Je l’ai volontairement gardé lisible (sans framework) pour qu’il charge vite et se parcoure facilement.
             </p>
+
             <div class="project-actions">
-              <a class="btn small" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer" data-i18n="projects.github">
+              <a class="btn small" href="https://github.com/atchekzaileo/portfolio" target="_blank" rel="noreferrer" data-i18n="projects.github">
                 Code / GitHub ↗
               </a>
               <button class="btn small ghost" type="button" data-modal-open="modal1" data-i18n="projects.details">
@@ -147,21 +166,21 @@
             </div>
           </article>
 
-          <!-- PROJECT 2 : PORT SCANNER (i18n) -->
-          <article class="card project reveal">
+          <!-- PROJECT 2 : PORT SCANNER -->
+          <article class="card project">
             <div class="project-top">
               <div class="project-title" data-i18n="projects.portscanner.title">Port Scanner TCP (Python)</div>
               <div class="badges">
                 <span class="badge">Python</span>
+                <span class="badge">Sockets</span>
                 <span class="badge">TCP</span>
-                <span class="badge">Cybersecurity</span>
                 <span class="badge">Flask</span>
-                <span class="badge">Docker</span>
               </div>
             </div>
 
             <p class="project-desc" data-i18n="projects.portscanner.desc">
-              Scanner TCP multithread avec banner grabbing, fingerprint HTTP/SSH, historisation SQLite et dashboard Flask.
+              Projet personnel pour comprendre un scan de ports TCP : multithread, lecture de bannières (HTTP/SSH),
+              sauvegarde de scans et petite visualisation web.
             </p>
 
             <div class="project-actions">
@@ -183,15 +202,16 @@
           </article>
 
           <!-- PROJECT 3 -->
-          <article class="card project reveal">
+          <article class="card project">
             <div class="project-top">
               <div class="project-title" data-i18n="projects.p3title">Automation & Scripting</div>
               <div class="badges">
-                <span class="badge">Python</span><span class="badge">Bash</span><span class="badge">Tools</span>
+                <span class="badge">Python</span><span class="badge">Bash</span>
               </div>
             </div>
             <p class="project-desc" data-i18n="projects.p3">
-              Scripts et mini-outils : automatisation de tâches, parsing, utilitaires (ex. réseau, logs, etc.).
+              Petits scripts / outils : automatisation, parsing, utilitaires (souvent autour de Linux/réseau).
+              Je sélectionne surtout ceux qui sont bien documentés et réutilisables.
             </p>
             <div class="project-actions">
               <a class="btn small" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer" data-i18n="projects.github">
@@ -203,24 +223,23 @@
             </div>
           </article>
 
-          <!-- PROJECT 4 : MAX FLOW INKING (replaces Apps/Flutter) -->
-          <article class="card project reveal">
+          <!-- PROJECT 4 : MAX FLOW INKING -->
+          <article class="card project">
             <div class="project-top">
               <div class="project-title" data-i18n="projects.maxflowink.title">
                 Encrage d’image par flot maximum (C++)
               </div>
               <div class="badges">
                 <span class="badge">C++</span>
-                <span class="badge">Graph</span>
-                <span class="badge">Max-Flow</span>
+                <span class="badge">Graphes</span>
                 <span class="badge">Edmonds–Karp</span>
                 <span class="badge">PGM</span>
               </div>
             </div>
 
             <p class="project-desc" data-i18n="projects.maxflowink.desc">
-              Binarisation d’une image PGM via modélisation graphe + coupe minimale : capacités gaussiennes entre voisins,
-              termes source/puits, BFS résiduel et export P2.
+              TP LIFAPC : binarisation d’une image PGM en modélisant l’image comme un graphe,
+              puis en appliquant flot maximum / coupe minimale (Edmonds–Karp + parcours résiduel).
             </p>
 
             <div class="project-actions">
@@ -247,11 +266,13 @@
       <div class="container">
         <div class="section-head reveal">
           <h2 data-i18n="skills.title">Compétences</h2>
-          <p class="muted" data-i18n="skills.subtitle">Concentrées sur l’objectif Systèmes / Réseaux / Sécurité.</p>
+          <p class="muted" data-i18n="skills.subtitle">
+            Je préfère être factuel : ce que je mets ici correspond à ce que j’ai déjà pratiqué (TP + projets).
+          </p>
         </div>
 
         <div class="grid skills-grid">
-          <div class="card reveal">
+          <div class="card">
             <h3 data-i18n="skills.net.title">Réseaux</h3>
             <ul class="list">
               <li>OSI / TCP-IP</li>
@@ -261,7 +282,7 @@
             </ul>
           </div>
 
-          <div class="card reveal">
+          <div class="card">
             <h3 data-i18n="skills.sys.title">Systèmes</h3>
             <ul class="list">
               <li>Linux (Ubuntu/Debian)</li>
@@ -271,7 +292,7 @@
             </ul>
           </div>
 
-          <div class="card reveal">
+          <div class="card">
             <h3 data-i18n="skills.sec.title">Sécurité</h3>
             <ul class="list">
               <li data-i18n="skills.sec.li1">Principes sécurité réseau</li>
@@ -281,14 +302,14 @@
             </ul>
           </div>
 
-          <div class="card reveal">
+          <div class="card">
             <h3 data-i18n="skills.dev.title">Scripting & Dev</h3>
             <ul class="list">
               <li>Python, Bash</li>
               <li>C / C++</li>
               <li>SQL</li>
               <li data-i18n="skills.dev.li1">Web : HTML/CSS/JS, WordPress, React</li>
-              <li>Flutter</li>
+              <li data-i18n="skills.dev.li2">Outils : Git, GitHub Pages, Docker (bases)</li>
             </ul>
           </div>
         </div>
@@ -299,17 +320,24 @@
       <div class="container">
         <div class="section-head reveal">
           <h2 data-i18n="about.title">À propos</h2>
-          <p class="muted" data-i18n="about.subtitle">Quelques lignes pour contextualiser ton profil.</p>
+          <p class="muted" data-i18n="about.subtitle">
+            Quelques lignes, simplement, sur ce que je cherche et comment je travaille.
+          </p>
         </div>
 
-        <div class="card reveal about-card">
+        <div class="card about-card">
           <p data-i18n="about.p1">
-            Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’infrastructure :
-            systèmes Linux, réseaux et cybersécurité. J’aime comprendre “comment ça marche” (protocoles, services, diagnostic),
-            et automatiser via scripting.
+            Je suis en Licence 3 Informatique à Lyon 1 (La Doua). J’ai découvert les systèmes et réseaux via les TP,
+            et j’ai naturellement voulu aller plus loin en construisant mes propres projets (outils réseau, algos, etc.).
           </p>
-          <p class="muted" data-i18n="about.p2">
-            Objectif : stage puis alternance en Master Systèmes, Réseaux & Sécurité.
+
+          <p data-i18n="about.p2">
+            J’aime surtout : comprendre le “pourquoi” (protocoles, services), diagnostiquer quand ça ne marche pas,
+            et automatiser ce qui peut l’être. Je cherche un stage, puis une alternance, en lien avec un Master Systèmes, Réseaux & Sécurité.
+          </p>
+
+          <p class="muted small" data-i18n="about.p3">
+            Si besoin, je peux fournir un résumé court par projet (contexte, choix techniques, difficultés rencontrées).
           </p>
         </div>
       </div>
@@ -319,19 +347,26 @@
       <div class="container">
         <div class="section-head reveal">
           <h2 data-i18n="contact.title">Contact</h2>
-          <p class="muted" data-i18n="contact.subtitle">Un message et je réponds rapidement.</p>
+          <p class="muted" data-i18n="contact.subtitle">Un message suffit. Je réponds rapidement.</p>
         </div>
 
         <div class="grid contact-grid">
-          <div class="card reveal">
+          <div class="card">
             <div class="contact-item">
-              <div class="label"> Email</div>
+              <div class="label">Email</div>
               <a href="mailto:atchekzaileo@gmail.com">atchekzaileo@gmail.com</a>
             </div>
 
             <div class="contact-item">
               <div class="label">GitHub</div>
               <a href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer">github.com/atchekzaileo ↗</a>
+            </div>
+
+            <div class="contact-item">
+              <div class="label">LinkedIn</div>
+              <a href="https://www.linkedin.com/in/l%C3%A9o-atchekzai-644775234/" target="_blank" rel="noreferrer">
+                linkedin.com/in/léo-atchekzai-644775234 ↗
+              </a>
             </div>
 
             <div class="contact-item">
@@ -350,7 +385,7 @@
             </div>
           </div>
 
-          <div class="card reveal qr-card">
+          <div class="card qr-card">
             <div class="qr-wrap">
               <div class="qr-title" data-i18n="contact.qrTitle">QR Code</div>
               <div class="qr-box">
@@ -380,15 +415,15 @@
         <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
       </div>
       <p class="muted" data-i18n="modals.m1">
-        Page unique, responsive, bilingue, avec animations légères et sections adaptées à un recrutement en infra/réseaux/sécurité.
+        Portfolio volontairement simple et lisible : une page, quelques sections, et des liens directs vers GitHub/CV.
       </p>
       <div class="modal-actions">
-        <a class="btn small" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a class="btn small" href="https://github.com/atchekzaileo/portfolio" target="_blank" rel="noreferrer">GitHub ↗</a>
       </div>
     </div>
   </dialog>
 
-  <!-- MODAL : PORT SCANNER (i18n) -->
+  <!-- MODAL : PORT SCANNER -->
   <dialog class="modal" id="modal-portscanner">
     <div class="modal-inner">
       <div class="modal-head">
@@ -397,11 +432,11 @@
       </div>
 
       <p class="muted" data-i18n="modals.portscanner.p1">
-        Outil de port scanning TCP multithread développé en Python, intégrant banner grabbing, fingerprinting HTTP et analyse de banners SSH.
+        Projet personnel pour comprendre le scan TCP “à la main” : sockets, timeouts, threads, et lecture de bannières (HTTP/SSH).
       </p>
 
       <p class="muted" data-i18n="modals.portscanner.p2">
-        Le projet inclut l’historisation des scans en base SQLite, la détection de changements entre scans (ports ouverts/fermés), l’export JSON/CSV, des tests automatisés (HTTP et SSH via Docker) et un mini-dashboard Flask.
+        J’ai ajouté l’historique des scans (SQLite), une détection simple des changements entre deux scans, et un mini-dashboard Flask pour parcourir les résultats.
       </p>
 
       <p class="muted small" data-i18n="modals.portscanner.legal">
@@ -423,12 +458,12 @@
         <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
       </div>
       <p class="muted" data-i18n="modals.m3">
-        Scripts Python/Bash (utilitaires, automatisation, parsing). Mets ici 1-2 liens vers des repos bien documentés.
+        Scripts Python/Bash : petites automatisations, parsing, utilitaires Linux. Je peux détailler un ou deux scripts selon le besoin.
       </p>
     </div>
   </dialog>
 
-  <!-- MODAL : MAX FLOW INKING (i18n) -->
+  <!-- MODAL : MAX FLOW INKING -->
   <dialog class="modal" id="modal-maxflowink">
     <div class="modal-inner">
       <div class="modal-head">
@@ -439,18 +474,15 @@
       </div>
 
       <p class="muted" data-i18n="modals.maxflowink.p1">
-        Projet LIFAPC : binarisation intelligente d’une image en niveaux de gris (PGM P2) via un modèle graphe
-        et l’équivalence flot maximum / coupe minimale.
+        Projet LIFAPC : binariser une image PGM en modélisant les pixels comme un graphe (source = noir, puits = blanc).
       </p>
 
       <p class="muted" data-i18n="modals.maxflowink.p2">
-        Chaque pixel est un nœud connecté à ses voisins (N/S/E/O) avec des capacités gaussiennes selon la différence
-        d’intensité. Des arcs relient aussi chaque pixel à la source (noir) et au puits (blanc), pondérés par α.
+        Les capacités entre voisins dépendent de la différence d’intensité (gaussienne). Les arcs vers source/puits sont pondérés pour favoriser clair/sombre.
       </p>
 
       <p class="muted" data-i18n="modals.maxflowink.p3">
-        Flot maximum calculé avec Edmonds–Karp (BFS sur graphe résiduel, mise à jour des arcs inverses).
-        Les pixels atteignables depuis la source après blocage sont colorés en noir (0), les autres en blanc (255).
+        Flot maximum avec Edmonds–Karp (BFS, graphe résiduel). Après convergence, un parcours depuis la source donne la coupure (noir/blanc).
       </p>
 
       <div class="modal-actions">
