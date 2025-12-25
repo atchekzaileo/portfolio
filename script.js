@@ -75,7 +75,7 @@ const dict = {
 
     "contact.title": "Contact",
     "contact.subtitle": "Un message et je réponds rapidement.",
-    "contact.cvLabel": "CV",
+    "contact.cvLabel": "Télécharger mon CV (PDF)",
     "contact.cvHint": "Ajoute ton PDF ici plus tard (ex: /cv.pdf)",
     "contact.copy": "Copier le lien du portfolio",
     "contact.qr": "Générer un QR code",
@@ -177,7 +177,7 @@ const dict = {
 
     "contact.title": "Contact",
     "contact.subtitle": "Send a message — I reply quickly.",
-    "contact.cvLabel": "Resume",
+    "contact.cvLabel": "Download my resume (PDF)",
     "contact.cvHint": "Add your PDF later (e.g., /cv.pdf)",
     "contact.copy": "Copy portfolio link",
     "contact.qr": "Generate QR code",
