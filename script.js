@@ -4,7 +4,7 @@ const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 const yearEl = $("#year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-// -------- i18n --------
+// ---------------- i18n ----------------
 const dict = {
   fr: {
     "header.tagline": "L3 Informatique — Systèmes, Réseaux & Cybersécurité (Lyon 1 — La Doua)",
@@ -13,6 +13,7 @@ const dict = {
     "nav.skills": "Compétences",
     "nav.about": "À propos",
     "nav.contact": "Contact",
+
     "hero.kicker": "Portfolio",
     "hero.title": "Stage — Systèmes, Réseaux & Cybersécurité",
     "hero.subtitle": "Je présente ici mes projets académiques et personnels (réseaux, Linux, dev & automatisation).",
@@ -42,7 +43,6 @@ const dict = {
     "projects.p3title": "Automation & Scripting",
     "projects.p3": "Scripts et mini-outils : automatisation de tâches, parsing, utilitaires (ex. réseau, logs, etc.).",
 
-    // ✅ REPLACEMENT (was Apps React/Flutter)
     "projects.maxflowink.title": "Encrage d’image par flot maximum (C++)",
     "projects.maxflowink.desc":
       "Binarisation d’une image PGM via modélisation graphe + coupe minimale : capacités gaussiennes entre voisins, termes source/puits, BFS résiduel et export P2.",
@@ -76,11 +76,11 @@ const dict = {
     "contact.title": "Contact",
     "contact.subtitle": "Un message et je réponds rapidement.",
     "contact.cvLabel": "Télécharger mon CV (PDF)",
-    "contact.cvHint": "Ajoute ton PDF ici plus tard (ex: /cv.pdf)",
     "contact.copy": "Copier le lien du portfolio",
     "contact.qr": "Générer un QR code",
     "contact.qrTitle": "QR Code",
     "contact.qrHint": "Clique sur “Générer un QR code” après mise en ligne.",
+
     "footer.built": "Fait en HTML/CSS/JS — GitHub Pages",
 
     "modals.m1":
@@ -98,7 +98,6 @@ const dict = {
     "modals.m3":
       "Scripts Python/Bash (utilitaires, automatisation, parsing). Mets ici 1-2 liens vers des repos bien documentés.",
 
-    // ✅ NEW MODAL for TP Graphe
     "modals.maxflowink.title": "Encrage d’une image par flot maximum (C++)",
     "modals.maxflowink.p1":
       "Projet LIFAPC : binarisation intelligente d’une image en niveaux de gris (PGM P2) via un modèle graphe et l’équivalence flot maximum / coupe minimale.",
@@ -115,6 +114,7 @@ const dict = {
     "nav.skills": "Skills",
     "nav.about": "About",
     "nav.contact": "Contact",
+
     "hero.kicker": "Portfolio",
     "hero.title": "Internship — Systems, Networks & Cybersecurity",
     "hero.subtitle": "Here are my academic & personal projects (networking, Linux, dev & automation).",
@@ -144,7 +144,6 @@ const dict = {
     "projects.p3title": "Automation & Scripting",
     "projects.p3": "Scripts & small tools: automation, parsing, utilities (network, logs, etc.).",
 
-    // ✅ REPLACEMENT (was Apps React/Flutter)
     "projects.maxflowink.title": "Image inking via max-flow / min-cut (C++)",
     "projects.maxflowink.desc":
       "PGM image binarization using graph modeling + min-cut: Gaussian neighbor capacities, source/sink terms, residual BFS, and P2 export.",
@@ -178,11 +177,11 @@ const dict = {
     "contact.title": "Contact",
     "contact.subtitle": "Send a message — I reply quickly.",
     "contact.cvLabel": "Download my resume (PDF)",
-    "contact.cvHint": "Add your PDF later (e.g., /cv.pdf)",
     "contact.copy": "Copy portfolio link",
     "contact.qr": "Generate QR code",
     "contact.qrTitle": "QR Code",
     "contact.qrHint": "Click “Generate QR code” after publishing the website.",
+
     "footer.built": "Built with HTML/CSS/JS — GitHub Pages",
 
     "modals.m1":
@@ -200,7 +199,6 @@ const dict = {
     "modals.m3":
       "Python/Bash scripts (utilities, automation, parsing). Add 1–2 well-documented repos.",
 
-    // ✅ NEW MODAL for TP Graphe
     "modals.maxflowink.title": "Image inking via max-flow / min-cut (C++)",
     "modals.maxflowink.p1":
       "LIFAPC project: smart binarization of a grayscale image (PGM P2) using a graph model and the max-flow / min-cut equivalence.",
@@ -219,6 +217,34 @@ function pickInitialLang() {
   return nav.startsWith("fr") ? "fr" : "en";
 }
 
+function t(lang, key) {
+  const pack = dict[lang] || dict.en;
+  return pack[key] ?? dict.en[key] ?? null;
+}
+
+function applyI18n(lang) {
+  // text nodes
+  $$("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    const value = t(lang, key);
+    if (typeof value === "string") el.textContent = value;
+  });
+
+  // optional attribute translations: data-i18n-attr="aria-label|title|placeholder"
+  $$("[data-i18n-attr]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    const attrs = (el.getAttribute("data-i18n-attr") || "")
+      .split("|")
+      .map(s => s.trim())
+      .filter(Boolean);
+
+    const value = key ? t(lang, key) : null;
+    if (!value) return;
+
+    attrs.forEach(attr => el.setAttribute(attr, value));
+  });
+}
+
 function setLang(lang) {
   const safe = (lang === "fr" || lang === "en") ? lang : "en";
   document.documentElement.lang = safe;
@@ -227,80 +253,115 @@ function setLang(lang) {
   const pill = $("#langPill");
   if (pill) pill.textContent = safe.toUpperCase();
 
-  $$("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    const value = dict[safe][key];
-    if (typeof value === "string") el.textContent = value;
-  });
+  applyI18n(safe);
+  return safe;
 }
 
 const langToggle = $("#langToggle");
-let currentLang = pickInitialLang();
-setLang(currentLang);
+let currentLang = setLang(pickInitialLang());
 
 if (langToggle) {
   langToggle.addEventListener("click", () => {
-    currentLang = currentLang === "fr" ? "en" : "fr";
-    setLang(currentLang);
+    currentLang = setLang(currentLang === "fr" ? "en" : "fr");
   });
 }
 
-// -------- Reveal on scroll --------
+// ---------------- Reveal on scroll (more “human”) ----------------
 const revealEls = $$(".reveal");
 const io = new IntersectionObserver(
   (entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add("show");
+      if (e.isIntersecting) {
+        e.target.classList.add("show");
+        io.unobserve(e.target); // reveal once
+      }
     });
   },
-  { threshold: 0.12 }
+  { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
 );
 
 revealEls.forEach(el => io.observe(el));
 
-// -------- Modals --------
+// ---------------- Modals (more robust) ----------------
+function openModalById(id) {
+  const dlg = document.getElementById(id);
+  if (!dlg || typeof dlg.showModal !== "function") return;
+
+  // store last focused element
+  dlg.__returnFocusEl = document.activeElement;
+  dlg.showModal();
+
+  // focus close button if present (nice UX)
+  const closeBtn = dlg.querySelector("[data-modal-close]");
+  if (closeBtn) closeBtn.focus();
+}
+
+function closeModal(dlg) {
+  if (!dlg) return;
+  dlg.close();
+  const prev = dlg.__returnFocusEl;
+  if (prev && typeof prev.focus === "function") prev.focus();
+}
+
 $$("[data-modal-open]").forEach(btn => {
   btn.addEventListener("click", () => {
     const id = btn.getAttribute("data-modal-open");
-    const dlg = document.getElementById(id);
-    if (dlg && typeof dlg.showModal === "function") dlg.showModal();
+    if (id) openModalById(id);
   });
 });
 
 $$("[data-modal-close]").forEach(btn => {
   btn.addEventListener("click", () => {
     const dlg = btn.closest("dialog");
-    if (dlg) dlg.close();
+    closeModal(dlg);
   });
 });
 
-// Close modal on backdrop click
+// Close modal on backdrop click + ESC
 $$("dialog.modal").forEach(dlg => {
   dlg.addEventListener("click", (e) => {
-    const rect = dlg.getBoundingClientRect();
-    const inDialog =
-      rect.top <= e.clientY && e.clientY <= rect.bottom &&
-      rect.left <= e.clientX && e.clientX <= rect.right;
+    // backdrop click: if click target is the dialog itself (not inside)
+    if (e.target === dlg) closeModal(dlg);
+  });
 
-    if (!inDialog) dlg.close();
+  dlg.addEventListener("cancel", (e) => {
+    // ESC
+    e.preventDefault();
+    closeModal(dlg);
   });
 });
 
-// -------- Copy link --------
+// ---------------- Copy helpers (clipboard fallback) ----------------
 async function copyText(text, noticeEl) {
+  const okMsg = currentLang === "fr" ? "Copié ✅" : "Copied ✅";
+  const warnMsg = currentLang === "fr"
+    ? "Copie manuelle : "
+    : "Manual copy: ";
+
   try {
-    await navigator.clipboard.writeText(text);
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+    } else {
+      // fallback (works on more browsers)
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      ta.style.top = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      ta.remove();
+    }
+
     if (noticeEl) {
       noticeEl.className = "notice ok";
-      noticeEl.textContent = (currentLang === "fr") ? "Copié ✅" : "Copied ✅";
+      noticeEl.textContent = okMsg;
     }
   } catch {
     if (noticeEl) {
       noticeEl.className = "notice warn";
-      noticeEl.textContent =
-        (currentLang === "fr")
-          ? `Impossible de copier automatiquement. Copie manuelle : ${text}`
-          : `Could not auto-copy. Manual copy: ${text}`;
+      noticeEl.textContent = warnMsg + text;
     }
   }
 }
@@ -321,13 +382,25 @@ if (copyPageBtn) {
   });
 }
 
-// -------- QR Code --------
+// ---------------- QR Code ----------------
 const qrBtn = $("#qrBtn");
 const qrImg = $("#qrImg");
 
 if (qrBtn && qrImg) {
   qrBtn.addEventListener("click", () => {
     const url = window.location.href;
+
+    // petit garde-fou (certaines pages locales / file://)
+    if (!url.startsWith("http")) {
+      if (pageNotice) {
+        pageNotice.className = "notice warn";
+        pageNotice.textContent = (currentLang === "fr")
+          ? "Publie d’abord le site (GitHub Pages), puis génère le QR code."
+          : "Publish the website first (GitHub Pages), then generate the QR code.";
+      }
+      return;
+    }
+
     const encoded = encodeURIComponent(url);
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encoded}`;
 
@@ -336,7 +409,9 @@ if (qrBtn && qrImg) {
 
     if (pageNotice) {
       pageNotice.className = "notice ok";
-      pageNotice.textContent = (currentLang === "fr") ? "QR code généré ✅" : "QR generated ✅";
+      pageNotice.textContent = (currentLang === "fr")
+        ? "QR code généré ✅"
+        : "QR generated ✅";
     }
   });
 }
