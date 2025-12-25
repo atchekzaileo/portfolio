@@ -308,6 +308,21 @@ $$("dialog.modal").forEach((dlg) => {
   });
 });
 
+function setNotice(el, type, text) {
+  if (!el) return;
+  el.className = `notice ${type || ""}`.trim();
+  el.textContent = text || "";
+  const prev = el.__t;
+  if (prev) clearTimeout(prev);
+  if (text) {
+    el.__t = setTimeout(() => {
+      el.className = "notice";
+      el.textContent = "";
+      el.__t = null;
+    }, 2400);
+  }
+}
+
 async function copyText(text, noticeEl) {
   const okMsg = currentLang === "fr" ? "Copié ✅" : "Copied ✅";
   const warnMsg = currentLang === "fr" ? "Copie manuelle : " : "Manual copy: ";
@@ -318,6 +333,7 @@ async function copyText(text, noticeEl) {
     } else {
       const ta = document.createElement("textarea");
       ta.value = text;
+      ta.setAttribute("readonly", "");
       ta.style.position = "fixed";
       ta.style.left = "-9999px";
       ta.style.top = "-9999px";
@@ -326,16 +342,9 @@ async function copyText(text, noticeEl) {
       document.execCommand("copy");
       ta.remove();
     }
-
-    if (noticeEl) {
-      noticeEl.className = "notice ok";
-      noticeEl.textContent = okMsg;
-    }
+    setNotice(noticeEl, "ok", okMsg);
   } catch {
-    if (noticeEl) {
-      noticeEl.className = "notice warn";
-      noticeEl.textContent = warnMsg + text;
-    }
+    setNotice(noticeEl, "warn", warnMsg + text);
   }
 }
 
@@ -358,28 +367,42 @@ if (copyPageBtn) {
 const qrBtn = $("#qrBtn");
 const qrImg = $("#qrImg");
 
+if (qrImg) {
+  qrImg.style.display = "none";
+  qrImg.removeAttribute("src");
+  qrImg.decoding = "async";
+  qrImg.loading = "lazy";
+}
+
 if (qrBtn && qrImg) {
+  qrImg.addEventListener("error", () => {
+    qrImg.style.display = "none";
+    setNotice(
+      pageNotice,
+      "warn",
+      currentLang === "fr"
+        ? "Impossible de générer le QR code."
+        : "Could not generate QR code."
+    );
+  });
+
   qrBtn.addEventListener("click", () => {
     const url = window.location.href;
 
     if (!url.startsWith("http")) {
-      if (pageNotice) {
-        pageNotice.className = "notice warn";
-        pageNotice.textContent =
-          currentLang === "fr"
-            ? "Publie d’abord le site (GitHub Pages), puis génère le QR code."
-            : "Publish the website first (GitHub Pages), then generate the QR code.";
-      }
+      setNotice(
+        pageNotice,
+        "warn",
+        currentLang === "fr"
+          ? "Publie d’abord le site (GitHub Pages), puis génère le QR code."
+          : "Publish the website first (GitHub Pages), then generate the QR code."
+      );
       return;
     }
 
     const encoded = encodeURIComponent(url);
     qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encoded}`;
     qrImg.style.display = "block";
-
-    if (pageNotice) {
-      pageNotice.className = "notice ok";
-      pageNotice.textContent = currentLang === "fr" ? "QR code généré ✅" : "QR generated ✅";
-    }
+    setNotice(pageNotice, "ok", currentLang === "fr" ? "QR code généré ✅" : "QR generated ✅");
   });
 }
