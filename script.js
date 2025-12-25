@@ -19,7 +19,7 @@ const dict = {
     "hero.subtitle":
       "Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’administration système, les réseaux et la cybersécurité. Cette page regroupe des projets réalisés en cours et en autonomie.",
     "hero.btnProjects": "Voir mes projets",
-    "hero.card.title": "En bref",
+    "hero.card.title": "Profil",
     "hero.card.li1": "Licence 3 Informatique (UCBL — La Doua)",
     "hero.card.li2": "Bases réseaux solides (CCNA 1 + TP)",
     "hero.card.li3": "Linux au quotidien + scripting",
@@ -121,7 +121,7 @@ const dict = {
     "hero.subtitle":
       "BSc 3rd-year student at Lyon 1 (La Doua), focusing on systems administration, networking and cybersecurity. This page gathers projects from coursework and personal practice.",
     "hero.btnProjects": "See projects",
-    "hero.card.title": "Quick summary",
+    "hero.card.title": "Profile",
     "hero.card.li1": "BSc in Computer Science (Lyon 1 — La Doua)",
     "hero.card.li2": "Solid networking foundations (CCNA 1 + labs)",
     "hero.card.li3": "Linux daily use + scripting",
