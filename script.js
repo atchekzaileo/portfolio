@@ -16,42 +16,41 @@ const dict = {
 
     "hero.kicker": "Portfolio",
     "hero.title": "Stage — Systèmes, Réseaux & Cybersécurité",
-    "hero.subtitle": "Je présente ici mes projets académiques et personnels (réseaux, Linux, dev & automatisation).",
+    "hero.subtitle":
+      "Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’administration système, les réseaux et la cybersécurité. Cette page regroupe des projets réalisés en cours et en autonomie.",
     "hero.btnProjects": "Voir mes projets",
-    "hero.metric1.top": "Focus",
-    "hero.metric1.bottom": "Réseaux • Linux • Sécurité",
-    "hero.metric2.top": "Stack",
-    "hero.metric2.bottom": "Python • Bash • C/C++ • Web",
-    "hero.card.chip": "Disponible",
-    "hero.card.chip2": "Stage fin d’année",
-    "hero.card.title": "Profil en bref",
+    "hero.card.title": "En bref",
     "hero.card.li1": "Licence 3 Informatique (UCBL — La Doua)",
-    "hero.card.li2": "CCNA 1 (bases réseaux solides)",
-    "hero.card.li3": "Linux + TP réseau + scripting",
+    "hero.card.li2": "Bases réseaux solides (CCNA 1 + TP)",
+    "hero.card.li3": "Linux au quotidien + scripting",
     "hero.card.li4": "Objectif : Master Systèmes, Réseaux & Sécurité",
     "hero.card.contact": "Contact",
     "hero.card.copy": "Copier le lien",
 
     "projects.title": "Projets",
-    "projects.subtitle": "Une sélection de projets (avec liens GitHub). J’ajoute les repos au fur et à mesure.",
-    "projects.p1": "Page bilingue moderne pour présenter mes projets, compétences et liens (CV, GitHub, contact).",
+    "projects.subtitle":
+      "Quelques projets représentatifs (cours + perso). J’ajoute au fur et à mesure, en gardant seulement ceux que je peux expliquer clairement.",
+    "projects.p1":
+      "Site simple et bilingue pour regrouper mes projets, compétences et liens (CV, GitHub, contact). Je l’ai volontairement gardé lisible (sans framework) pour qu’il charge vite et se parcoure facilement.",
 
     "projects.portscanner.title": "Port Scanner TCP (Python)",
     "projects.portscanner.desc":
-      "Scanner TCP multithread avec banner grabbing, fingerprint HTTP/SSH, historisation SQLite et dashboard Flask.",
+      "Projet personnel pour comprendre un scan de ports TCP : multithread, lecture de bannières (HTTP/SSH), sauvegarde de scans et petite visualisation web.",
 
     "projects.p3title": "Automation & Scripting",
-    "projects.p3": "Scripts et mini-outils : automatisation de tâches, parsing, utilitaires (ex. réseau, logs, etc.).",
+    "projects.p3":
+      "Petits scripts / outils : automatisation, parsing, utilitaires (souvent autour de Linux/réseau). Je sélectionne surtout ceux qui sont bien documentés et réutilisables.",
 
     "projects.maxflowink.title": "Encrage d’image par flot maximum (C++)",
     "projects.maxflowink.desc":
-      "Binarisation d’une image PGM via modélisation graphe + coupe minimale : capacités gaussiennes entre voisins, termes source/puits, BFS résiduel et export P2.",
+      "TP LIFAPC : binarisation d’une image PGM en modélisant l’image comme un graphe, puis en appliquant flot maximum / coupe minimale (Edmonds–Karp + parcours résiduel).",
 
     "projects.github": "Code / GitHub ↗",
     "projects.details": "Détails",
 
     "skills.title": "Compétences",
-    "skills.subtitle": "Concentrées sur l’objectif Systèmes / Réseaux / Sécurité.",
+    "skills.subtitle":
+      "Je préfère être factuel : ce que je mets ici correspond à ce que j’ai déjà pratiqué (TP + projets).",
     "skills.net.title": "Réseaux",
     "skills.net.li1": "Adressage IP, sous-réseaux",
     "skills.net.li2": "VLAN, routage statique (notions)",
@@ -70,12 +69,14 @@ const dict = {
     "about.title": "À propos",
     "about.subtitle": "Quelques lignes pour contextualiser ton profil.",
     "about.p1":
-      "Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’infrastructure : systèmes Linux, réseaux et cybersécurité. J’aime comprendre “comment ça marche” (protocoles, services, diagnostic), et automatiser via scripting.",
-    "about.p2": "Objectif : stage puis alternance en Master Systèmes, Réseaux & Sécurité.",
+      "Je suis en Licence 3 Informatique à Lyon 1 (La Doua). J’ai découvert les systèmes et réseaux via les TP, et j’ai voulu aller plus loin en construisant mes propres projets.",
+    "about.p2":
+      "Ce qui me plaît le plus, c’est le côté concret : comprendre pourquoi ça ne marche pas, tester, corriger, et automatiser quand c’est utile. Je cherche un stage, puis une alternance, en lien avec un Master Systèmes, Réseaux & Sécurité.",
 
     "contact.title": "Contact",
-    "contact.subtitle": "Un message et je réponds rapidement.",
-    "contact.cvLabel": "Télécharger mon CV (PDF)",
+    "contact.subtitle": "Un message suffit. Je réponds rapidement.",
+    "contact.cvLabel": "CV",
+    "contact.cvLink": "Télécharger mon CV (PDF)",
     "contact.copy": "Copier le lien du portfolio",
     "contact.qr": "Générer un QR code",
     "contact.qrTitle": "QR Code",
@@ -84,27 +85,27 @@ const dict = {
     "footer.built": "Fait en HTML/CSS/JS — GitHub Pages",
 
     "modals.m1":
-      "Page unique, responsive, bilingue, avec animations légères et sections adaptées à un recrutement en infra/réseaux/sécurité.",
+      "Portfolio volontairement simple et lisible : une page, quelques sections, et des liens directs vers GitHub/CV.",
 
     "modals.portscanner.title": "Port Scanner TCP – Python",
     "modals.portscanner.p1":
-      "Outil de port scanning TCP multithread développé en Python, intégrant banner grabbing, fingerprinting HTTP et analyse de banners SSH.",
+      "Projet personnel pour comprendre le scan TCP “à la main” : sockets, timeouts, threads, et lecture de bannières (HTTP/SSH).",
     "modals.portscanner.p2":
-      "Le projet inclut l’historisation des scans en base SQLite, la détection de changements entre scans (ports ouverts/fermés), l’export JSON/CSV, des tests automatisés (HTTP et SSH via Docker) et un mini-dashboard Flask.",
+      "J’ai ajouté l’historique des scans (SQLite), une détection simple des changements entre deux scans, et un mini-dashboard Flask pour parcourir les résultats.",
     "modals.portscanner.legal":
       "Projet pédagogique — scans réalisés uniquement sur des environnements locaux ou explicitement autorisés.",
 
     "modals.m3title": "Automation & Scripting",
     "modals.m3":
-      "Scripts Python/Bash (utilitaires, automatisation, parsing). Mets ici 1-2 liens vers des repos bien documentés.",
+      "Scripts Python/Bash : petites automatisations, parsing, utilitaires Linux. Je peux détailler un ou deux scripts selon le besoin.",
 
     "modals.maxflowink.title": "Encrage d’une image par flot maximum (C++)",
     "modals.maxflowink.p1":
-      "Projet LIFAPC : binarisation intelligente d’une image en niveaux de gris (PGM P2) via un modèle graphe et l’équivalence flot maximum / coupe minimale.",
+      "Projet LIFAPC : binariser une image PGM en modélisant les pixels comme un graphe (source = noir, puits = blanc).",
     "modals.maxflowink.p2":
-      "Chaque pixel est un nœud connecté à ses voisins (N/S/E/O) avec des capacités gaussiennes selon la différence d’intensité. Des arcs relient aussi chaque pixel à la source (noir) et au puits (blanc), pondérés par α.",
+      "Les capacités entre voisins dépendent de la différence d’intensité (gaussienne). Les arcs vers source/puits sont pondérés pour favoriser clair/sombre.",
     "modals.maxflowink.p3":
-      "Flot maximum calculé avec Edmonds–Karp (BFS sur graphe résiduel, mise à jour des arcs inverses). Les pixels atteignables depuis la source après blocage sont colorés en noir (0), les autres en blanc (255)."
+      "Flot maximum avec Edmonds–Karp (BFS, graphe résiduel). Après convergence, un parcours depuis la source donne la coupure (noir/blanc)."
   },
 
   en: {
@@ -117,42 +118,41 @@ const dict = {
 
     "hero.kicker": "Portfolio",
     "hero.title": "Internship — Systems, Networks & Cybersecurity",
-    "hero.subtitle": "Here are my academic & personal projects (networking, Linux, dev & automation).",
+    "hero.subtitle":
+      "BSc 3rd-year student at Lyon 1 (La Doua), focusing on systems administration, networking and cybersecurity. This page gathers projects from coursework and personal practice.",
     "hero.btnProjects": "See projects",
-    "hero.metric1.top": "Focus",
-    "hero.metric1.bottom": "Networking • Linux • Security",
-    "hero.metric2.top": "Stack",
-    "hero.metric2.bottom": "Python • Bash • C/C++ • Web",
-    "hero.card.chip": "Available",
-    "hero.card.chip2": "Internship (end of year)",
     "hero.card.title": "Quick summary",
     "hero.card.li1": "BSc in Computer Science (Lyon 1 — La Doua)",
-    "hero.card.li2": "CCNA 1 (solid networking foundations)",
-    "hero.card.li3": "Linux + networking labs + scripting",
+    "hero.card.li2": "Solid networking foundations (CCNA 1 + labs)",
+    "hero.card.li3": "Linux daily use + scripting",
     "hero.card.li4": "Goal: MSc Systems, Networks & Security",
     "hero.card.contact": "Contact",
     "hero.card.copy": "Copy link",
 
     "projects.title": "Projects",
-    "projects.subtitle": "A small selection (with GitHub links). I add repositories regularly.",
-    "projects.p1": "Modern bilingual single-page website to showcase projects, skills and links (CV, GitHub, contact).",
+    "projects.subtitle":
+      "A few representative projects (coursework + personal). I add more over time, keeping only projects I can clearly explain.",
+    "projects.p1":
+      "Simple bilingual website to centralize my projects, skills and links (CV, GitHub, contact). I kept it lightweight (no framework) so it loads fast and stays easy to read.",
 
     "projects.portscanner.title": "TCP Port Scanner (Python)",
     "projects.portscanner.desc":
-      "Multithreaded TCP port scanner with banner grabbing, HTTP/SSH fingerprinting, SQLite history and a Flask dashboard.",
+      "Personal project to understand TCP port scanning: multithreading, banner grabbing (HTTP/SSH), scan history and a small web view.",
 
     "projects.p3title": "Automation & Scripting",
-    "projects.p3": "Scripts & small tools: automation, parsing, utilities (network, logs, etc.).",
+    "projects.p3":
+      "Small scripts/tools: automation, parsing, utilities (often around Linux/networking). I mostly keep the ones that are documented and reusable.",
 
     "projects.maxflowink.title": "Image inking via max-flow / min-cut (C++)",
     "projects.maxflowink.desc":
-      "PGM image binarization using graph modeling + min-cut: Gaussian neighbor capacities, source/sink terms, residual BFS, and P2 export.",
+      "LIFAPC lab: binarize a PGM image by modeling pixels as a graph, then applying max-flow/min-cut (Edmonds–Karp + residual traversal).",
 
     "projects.github": "Code / GitHub ↗",
     "projects.details": "Details",
 
     "skills.title": "Skills",
-    "skills.subtitle": "Focused on Systems / Networks / Security.",
+    "skills.subtitle":
+      "I try to stay factual: what’s listed here is what I’ve actually practiced (labs + projects).",
     "skills.net.title": "Networking",
     "skills.net.li1": "IP addressing, subnetting",
     "skills.net.li2": "VLAN, static routing (basics)",
@@ -171,12 +171,14 @@ const dict = {
     "about.title": "About",
     "about.subtitle": "A few lines to contextualize my profile.",
     "about.p1":
-      "BSc 3rd-year student at Lyon 1 (La Doua), focusing on infrastructure: Linux systems, networking and cybersecurity. I enjoy understanding how things work (protocols, services, troubleshooting) and automating tasks with scripting.",
-    "about.p2": "Goal: internship, then apprenticeship for the MSc Systems, Networks & Security.",
+      "I’m a BSc 3rd-year Computer Science student at Lyon 1 (La Doua). I discovered systems and networking through labs, then went further by building my own projects.",
+    "about.p2":
+      "What I enjoy most is the practical side: understanding why something breaks, testing, fixing, and automating when it makes sense. I’m looking for an internship, then an apprenticeship aligned with an MSc in Systems, Networks & Security.",
 
     "contact.title": "Contact",
-    "contact.subtitle": "Send a message — I reply quickly.",
-    "contact.cvLabel": "Download my resume (PDF)",
+    "contact.subtitle": "A message is enough — I reply quickly.",
+    "contact.cvLabel": "Resume",
+    "contact.cvLink": "Download my resume (PDF)",
     "contact.copy": "Copy portfolio link",
     "contact.qr": "Generate QR code",
     "contact.qrTitle": "QR Code",
@@ -185,27 +187,27 @@ const dict = {
     "footer.built": "Built with HTML/CSS/JS — GitHub Pages",
 
     "modals.m1":
-      "Responsive bilingual single-page portfolio with lightweight animations and infra/network/security-friendly sections.",
+      "A simple, readable one-page portfolio with direct links to GitHub and the resume.",
 
     "modals.portscanner.title": "TCP Port Scanner – Python",
     "modals.portscanner.p1":
-      "Educational multithreaded TCP port scanner written in Python, featuring banner grabbing, HTTP fingerprinting and SSH banner parsing.",
+      "Personal project to understand TCP scanning “from scratch”: sockets, timeouts, threads, and banner grabbing (HTTP/SSH).",
     "modals.portscanner.p2":
-      "The project includes scan history stored in SQLite, change detection between scans (opened/closed ports), JSON/CSV export, automated tests (local HTTP and SSH via Docker), and a lightweight Flask dashboard.",
+      "Added scan history (SQLite), basic change detection between scans, and a small Flask dashboard to browse results.",
     "modals.portscanner.legal":
       "Educational project — scans are performed only on local or explicitly authorized environments.",
 
     "modals.m3title": "Automation & Scripting",
     "modals.m3":
-      "Python/Bash scripts (utilities, automation, parsing). Add 1–2 well-documented repos.",
+      "Python/Bash scripts: small automation, parsing, Linux utilities. I can walk through one or two scripts if needed.",
 
     "modals.maxflowink.title": "Image inking via max-flow / min-cut (C++)",
     "modals.maxflowink.p1":
-      "LIFAPC project: smart binarization of a grayscale image (PGM P2) using a graph model and the max-flow / min-cut equivalence.",
+      "LIFAPC project: binarize a PGM image by modeling pixels as a graph (source=black, sink=white).",
     "modals.maxflowink.p2":
-      "Each pixel is a node connected to its 4-neighbors (N/S/E/W) with Gaussian capacities based on intensity differences. Pixels are also connected to a source (black) and a sink (white), weighted by α.",
+      "Neighbor capacities depend on intensity differences (Gaussian). Source/sink edges are weighted to encourage dark/light assignment.",
     "modals.maxflowink.p3":
-      "Max flow is computed with Edmonds–Karp (BFS on the residual graph, reverse-edge updates). Pixels reachable from the source after convergence become black (0); others become white (255)."
+      "Max flow with Edmonds–Karp (BFS, residual graph). After convergence, reachability from the source gives the cut (black/white)."
   }
 };
 
@@ -223,14 +225,12 @@ function t(lang, key) {
 }
 
 function applyI18n(lang) {
-  // text nodes
   $$("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     const value = t(lang, key);
     if (typeof value === "string") el.textContent = value;
   });
 
-  // optional attribute translations: data-i18n-attr="aria-label|title|placeholder"
   $$("[data-i18n-attr]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     const attrs = (el.getAttribute("data-i18n-attr") || "")
@@ -266,14 +266,14 @@ if (langToggle) {
   });
 }
 
-// ---------------- Reveal on scroll (more “human”) ----------------
+// ---------------- Reveal on scroll ----------------
 const revealEls = $$(".reveal");
 const io = new IntersectionObserver(
   (entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.classList.add("show");
-        io.unobserve(e.target); // reveal once
+        io.unobserve(e.target);
       }
     });
   },
@@ -282,16 +282,14 @@ const io = new IntersectionObserver(
 
 revealEls.forEach(el => io.observe(el));
 
-// ---------------- Modals (more robust) ----------------
+// ---------------- Modals ----------------
 function openModalById(id) {
   const dlg = document.getElementById(id);
   if (!dlg || typeof dlg.showModal !== "function") return;
 
-  // store last focused element
   dlg.__returnFocusEl = document.activeElement;
   dlg.showModal();
 
-  // focus close button if present (nice UX)
   const closeBtn = dlg.querySelector("[data-modal-close]");
   if (closeBtn) closeBtn.focus();
 }
@@ -317,32 +315,26 @@ $$("[data-modal-close]").forEach(btn => {
   });
 });
 
-// Close modal on backdrop click + ESC
 $$("dialog.modal").forEach(dlg => {
   dlg.addEventListener("click", (e) => {
-    // backdrop click: if click target is the dialog itself (not inside)
     if (e.target === dlg) closeModal(dlg);
   });
 
   dlg.addEventListener("cancel", (e) => {
-    // ESC
     e.preventDefault();
     closeModal(dlg);
   });
 });
 
-// ---------------- Copy helpers (clipboard fallback) ----------------
+// ---------------- Copy helpers ----------------
 async function copyText(text, noticeEl) {
   const okMsg = currentLang === "fr" ? "Copié ✅" : "Copied ✅";
-  const warnMsg = currentLang === "fr"
-    ? "Copie manuelle : "
-    : "Manual copy: ";
+  const warnMsg = currentLang === "fr" ? "Copie manuelle : " : "Manual copy: ";
 
   try {
     if (navigator.clipboard && window.isSecureContext) {
       await navigator.clipboard.writeText(text);
     } else {
-      // fallback (works on more browsers)
       const ta = document.createElement("textarea");
       ta.value = text;
       ta.style.position = "fixed";
@@ -390,7 +382,6 @@ if (qrBtn && qrImg) {
   qrBtn.addEventListener("click", () => {
     const url = window.location.href;
 
-    // petit garde-fou (certaines pages locales / file://)
     if (!url.startsWith("http")) {
       if (pageNotice) {
         pageNotice.className = "notice warn";

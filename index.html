@@ -32,8 +32,6 @@
           <div class="tagline" data-i18n="header.tagline">
             L3 Informatique — Systèmes, Réseaux & Cybersécurité (Lyon 1 — La Doua)
           </div>
-
-
         </div>
       </div>
 
@@ -56,7 +54,6 @@
   <main id="main">
     <section class="hero">
       <div class="container hero-grid">
-        <!-- keep reveal only on big blocks (less “template-y”) -->
         <div class="hero-text reveal">
           <div class="kicker" data-i18n="hero.kicker">Portfolio</div>
 
@@ -64,7 +61,7 @@
             Stage — Systèmes, Réseaux & Cybersécurité
           </h1>
 
-          <!-- More human, less “marketing” -->
+          <!-- Texte plus “humain” (il faudra aussi mettre à jour le dict i18n pour FR/EN) -->
           <p class="subtitle" data-i18n="hero.subtitle">
             Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’administration système,
             les réseaux et la cybersécurité. Cette page regroupe des projets réalisés en cours et en autonomie,
@@ -78,22 +75,12 @@
               GitHub <span class="icon" aria-hidden="true">↗</span>
             </a>
 
-            <!-- add LinkedIn in plain text (more “real”) -->
             <a class="btn ghost" href="https://www.linkedin.com/in/l%C3%A9o-atchekzai-644775234/" target="_blank" rel="noreferrer">
               LinkedIn <span class="icon" aria-hidden="true">↗</span>
             </a>
           </div>
-
-          <!-- Less “card metrics”, more simple bullets -->
-          <div class="hero-notes">
-            <p class="muted small" data-i18n="hero.note">
-              Je cherche un stage (et une alternance pour la suite en Master SRS). Si un projet vous intéresse, je peux détailler
-              le contexte, les choix techniques et ce que j’ai appris.
-            </p>
-          </div>
         </div>
 
-        <!-- Replace glass/glow with a simple card -->
         <div class="hero-card reveal">
           <div class="card">
             <div class="card-body">
@@ -114,11 +101,6 @@
               </div>
 
               <div class="notice" id="copyNotice" aria-live="polite"></div>
-
-              <!-- small “human” line -->
-              <p class="muted small" data-i18n="hero.card.extra">
-                PS : les dépôts GitHub sont commentés (README) et j’essaie de garder l’historique propre.
-              </p>
             </div>
           </div>
         </div>
@@ -139,7 +121,6 @@
         </div>
 
         <div class="grid projects-grid">
-          <!-- PROJECT 1 -->
           <article class="card project">
             <div class="project-top">
               <div class="project-title">Portfolio (this page)</div>
@@ -163,7 +144,6 @@
             </div>
           </article>
 
-          <!-- PROJECT 2 : PORT SCANNER -->
           <article class="card project">
             <div class="project-top">
               <div class="project-title" data-i18n="projects.portscanner.title">Port Scanner TCP (Python)</div>
@@ -198,7 +178,6 @@
             </div>
           </article>
 
-          <!-- PROJECT 3 -->
           <article class="card project">
             <div class="project-top">
               <div class="project-title" data-i18n="projects.p3title">Automation & Scripting</div>
@@ -220,7 +199,6 @@
             </div>
           </article>
 
-          <!-- PROJECT 4 : MAX FLOW INKING -->
           <article class="card project">
             <div class="project-top">
               <div class="project-title" data-i18n="projects.maxflowink.title">
@@ -306,7 +284,7 @@
               <li>C / C++</li>
               <li>SQL</li>
               <li data-i18n="skills.dev.li1">Web : HTML/CSS/JS, WordPress, React</li>
-              <li data-i18n="skills.dev.li2">Outils : Git, GitHub Pages, Docker (bases)</li>
+              <li>Git, GitHub Pages, Docker (bases)</li>
             </ul>
           </div>
         </div>
@@ -317,9 +295,7 @@
       <div class="container">
         <div class="section-head reveal">
           <h2 data-i18n="about.title">À propos</h2>
-          <p class="muted" data-i18n="about.subtitle">
-            Quelques lignes, simplement, sur ce que je cherche et comment je travaille.
-          </p>
+          <p class="muted" data-i18n="about.subtitle">Quelques lignes pour contextualiser ton profil.</p>
         </div>
 
         <div class="card about-card">
@@ -328,13 +304,10 @@
             et j’ai naturellement voulu aller plus loin en construisant mes propres projets (outils réseau, algos, etc.).
           </p>
 
+          <!-- Texte “IA-ish” supprimé + formulation plus simple -->
           <p data-i18n="about.p2">
-            J’aime surtout : comprendre le “pourquoi” (protocoles, services), diagnostiquer quand ça ne marche pas,
-            et automatiser ce qui peut l’être. Je cherche un stage, puis une alternance, en lien avec un Master Systèmes, Réseaux & Sécurité.
-          </p>
-
-          <p class="muted small" data-i18n="about.p3">
-            Si besoin, je peux fournir un résumé court par projet (contexte, choix techniques, difficultés rencontrées).
+            Ce qui me plaît le plus, c’est le côté concret : comprendre pourquoi ça ne marche pas, tester, corriger,
+            et automatiser quand c’est utile. Je cherche un stage, puis une alternance, en lien avec un Master Systèmes, Réseaux & Sécurité.
           </p>
         </div>
       </div>
@@ -420,7 +393,6 @@
     </div>
   </dialog>
 
-  <!-- MODAL : PORT SCANNER -->
   <dialog class="modal" id="modal-portscanner">
     <div class="modal-inner">
       <div class="modal-head">
@@ -460,7 +432,6 @@
     </div>
   </dialog>
 
-  <!-- MODAL : MAX FLOW INKING -->
   <dialog class="modal" id="modal-maxflowink">
     <div class="modal-inner">
       <div class="modal-head">
