@@ -34,9 +34,11 @@ const dict = {
     "projects.portscanner.title": "Port Scanner TCP (Python)",
     "projects.portscanner.desc":
       "Projet personnel pour comprendre un scan de ports TCP : multithread, lecture de bannières (HTTP/SSH), sauvegarde de scans et visualisation web.",
-    "projects.p3title": "Automation & Scripting",
+
+    "projects.p3title": "NetCheck – Diagnostic réseau (Python)",
     "projects.p3":
-      "Petits scripts / outils : automatisation, parsing, utilitaires (souvent autour de Linux/réseau). Je garde surtout ceux qui sont documentés et réutilisables.",
+      "Outil de diagnostic réseau développé après le CCNA 1 pour relier la théorie aux cas concrets. Vérification DNS, connectivité ICMP/TCP, accès HTTP/HTTPS et expiration des certificats TLS.",
+
     "projects.maxflowink.title": "Encrage d’image par flot maximum (C++)",
     "projects.maxflowink.desc":
       "TP LIFAPC : binarisation d’une image PGM en modélisant l’image comme un graphe, puis en appliquant flot maximum / coupe minimale (Edmonds–Karp + parcours résiduel).",
@@ -87,9 +89,11 @@ const dict = {
       "Ajout de l’historique des scans (SQLite), d’une détection de changements entre scans, et d’un mini-dashboard Flask pour parcourir les résultats.",
     "modals.portscanner.legal":
       "Projet pédagogique — scans réalisés uniquement sur des environnements locaux ou explicitement autorisés.",
-    "modals.m3title": "Automation & Scripting",
+
+    "modals.m3title": "NetCheck – Diagnostic réseau",
     "modals.m3":
-      "Scripts Python/Bash : petites automatisations, parsing, utilitaires Linux. Je peux détailler un ou deux scripts selon le besoin.",
+      "Outil de diagnostic réseau développé après le CCNA 1, orienté support et exploitation. Vérification DNS, ping, connexions TCP, accès HTTP/HTTPS et contrôle de l’expiration des certificats TLS.",
+
     "modals.maxflowink.title": "Encrage d’une image par flot maximum (C++)",
     "modals.maxflowink.p1":
       "Projet LIFAPC : binariser une image PGM en modélisant les pixels comme un graphe (source = noir, puits = blanc).",
@@ -128,9 +132,11 @@ const dict = {
     "projects.portscanner.title": "TCP Port Scanner (Python)",
     "projects.portscanner.desc":
       "Personal project to understand TCP port scanning: multithreading, banner grabbing (HTTP/SSH), scan history and a small web view.",
-    "projects.p3title": "Automation & Scripting",
+
+    "projects.p3title": "NetCheck – Network diagnostics (Python)",
     "projects.p3":
-      "Small scripts/tools: automation, parsing, utilities (often around Linux/networking). I mostly keep the ones that are documented and reusable.",
+      "Network diagnostic tool developed after CCNA 1 to connect theory with real-world checks. DNS resolution, ICMP/TCP connectivity, HTTP/HTTPS access and TLS certificate expiry.",
+
     "projects.maxflowink.title": "Image inking via max-flow / min-cut (C++)",
     "projects.maxflowink.desc":
       "LIFAPC lab: binarize a PGM image by modeling pixels as a graph, then applying max-flow/min-cut (Edmonds–Karp + residual traversal).",
@@ -181,9 +187,11 @@ const dict = {
       "Added scan history (SQLite), basic change detection between scans, and a small Flask dashboard to browse results.",
     "modals.portscanner.legal":
       "Educational project — scans are performed only on local or explicitly authorized environments.",
-    "modals.m3title": "Automation & Scripting",
+
+    "modals.m3title": "NetCheck – Network diagnostics",
     "modals.m3":
-      "Python/Bash scripts: small automation, parsing, Linux utilities. I can walk through one or two scripts if needed.",
+      "Python-based network diagnostic tool built after CCNA 1, focused on support and operations. DNS, ping, TCP checks, HTTP/HTTPS access and TLS expiry verification.",
+
     "modals.maxflowink.title": "Image inking via max-flow / min-cut (C++)",
     "modals.maxflowink.p1":
       "LIFAPC project: binarize a PGM image by modeling pixels as a graph (source=black, sink=white).",

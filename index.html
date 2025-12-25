@@ -164,22 +164,27 @@
 
           <article class="card project">
             <div class="project-top">
-              <div class="project-title" data-i18n="projects.p3title">Automation & Scripting</div>
+              <div class="project-title">NetCheck – Diagnostic réseau (Python)</div>
               <div class="badges">
-                <span class="badge">Python</span><span class="badge">Bash</span>
+                <span class="badge">Python</span>
+                <span class="badge">Réseaux</span>
+                <span class="badge">DNS</span>
+                <span class="badge">TCP/IP</span>
+                <span class="badge">HTTP</span>
               </div>
             </div>
 
-            <p class="project-desc" data-i18n="projects.p3">
-              Petits scripts/outils : automatisation, parsing, utilitaires (souvent autour de Linux et du réseau).
-              Je mets surtout ceux que je peux expliquer rapidement et qui sont réutilisables.
+            <p class="project-desc">
+              Outil de diagnostic réseau développé après le CCNA 1 pour relier la théorie aux cas concrets.
+              Il permet de vérifier rapidement la résolution DNS, la connectivité ICMP/TCP,
+              l’accès HTTP/HTTPS et l’expiration des certificats TLS.
             </p>
 
             <div class="project-actions">
-              <a class="btn small" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer" data-i18n="projects.github">
+              <a class="btn small" href="https://github.com/atchekzaileo/NetCheck-outil-de-diagnostic-et-monitoring-l-ger-Python-" target="_blank" rel="noreferrer">
                 Code / GitHub ↗
               </a>
-              <button class="btn small ghost" type="button" data-modal-open="modal3" data-i18n="projects.details">
+              <button class="btn small ghost" type="button" data-modal-open="modal-netcheck">
                 Détails
               </button>
             </div>
@@ -395,27 +400,30 @@
     </div>
   </dialog>
 
-  <dialog class="modal" id="modal-maxflowink">
+  <dialog class="modal" id="modal-netcheck">
     <div class="modal-inner">
       <div class="modal-head">
-        <div class="modal-title" data-i18n="modals.maxflowink.title">Encrage d’une image par flot maximum (C++)</div>
+        <div class="modal-title">NetCheck – Diagnostic réseau</div>
         <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
       </div>
 
-      <p class="muted" data-i18n="modals.maxflowink.p1">
-        Projet LIFAPC : binariser une image PGM en modélisant les pixels comme un graphe (source = noir, puits = blanc).
+      <p class="muted">
+        NetCheck est un outil de diagnostic réseau développé en Python après le CCNA 1.
+        L’objectif est d’avoir un état des lieux rapide d’un service ou d’une destination réseau,
+        sans utiliser d’outils lourds.
       </p>
 
-      <p class="muted" data-i18n="modals.maxflowink.p2">
-        Les capacités entre voisins dépendent de la différence d’intensité (gaussienne). Les arcs vers source/puits sont pondérés pour favoriser clair/sombre.
+      <p class="muted">
+        Il regroupe plusieurs vérifications courantes : DNS, ping, connexions TCP,
+        accès HTTP/HTTPS et contrôle de l’expiration des certificats TLS.
       </p>
 
-      <p class="muted" data-i18n="modals.maxflowink.p3">
-        Flot maximum avec Edmonds–Karp (BFS, graphe résiduel). Après convergence, un parcours depuis la source donne la coupure (noir/blanc).
+      <p class="muted small">
+        Projet personnel à vocation pédagogique, orienté support et exploitation réseau.
       </p>
 
       <div class="modal-actions">
-        <a class="btn small" href="https://github.com/atchekzaileo/Encrage-d-une-image-par-flot-maximum" target="_blank" rel="noreferrer">
+        <a class="btn small" href="https://github.com/atchekzaileo/NetCheck-outil-de-diagnostic-et-monitoring-l-ger-Python-" target="_blank" rel="noreferrer">
           GitHub ↗
         </a>
       </div>
