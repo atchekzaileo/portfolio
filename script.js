@@ -14,7 +14,7 @@ const dict = {
     "nav.contact": "Contact",
 
     "hero.kicker": "Portfolio",
-    "hero.title": "Stage — Systèmes, Réseaux & Cybersécurité",
+    "hero.title": "Stage / Alternance — Systèmes, Réseaux & Cybersécurité",
     "hero.subtitle":
       "Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’administration système, les réseaux et la cybersécurité. Cette page regroupe des projets réalisés en cours et en autonomie.",
     "hero.btnProjects": "Voir mes projets",
@@ -112,7 +112,7 @@ const dict = {
     "nav.contact": "Contact",
 
     "hero.kicker": "Portfolio",
-    "hero.title": "Internship — Systems, Networks & Cybersecurity",
+    "hero.title": "Internship / Apprenticeship — Systems, Networks & Cybersecurity",
     "hero.subtitle":
       "BSc 3rd-year student at Lyon 1 (La Doua), focusing on systems administration, networking and cybersecurity. This page gathers projects from coursework and personal practice.",
     "hero.btnProjects": "See projects",
