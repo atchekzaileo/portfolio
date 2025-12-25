@@ -41,8 +41,12 @@ const dict = {
 
     "projects.p3title": "Automation & Scripting",
     "projects.p3": "Scripts et mini-outils : automatisation de tâches, parsing, utilitaires (ex. réseau, logs, etc.).",
-    "projects.p4title": "Apps (React / Flutter)",
-    "projects.p4": "Projets académiques web & mobile : UI, authentification, données, logique applicative.",
+
+    // ✅ REPLACEMENT (was Apps React/Flutter)
+    "projects.maxflowink.title": "Encrage d’image par flot maximum (C++)",
+    "projects.maxflowink.desc":
+      "Binarisation d’une image PGM via modélisation graphe + coupe minimale : capacités gaussiennes entre voisins, termes source/puits, BFS résiduel et export P2.",
+
     "projects.github": "Code / GitHub ↗",
     "projects.details": "Détails",
 
@@ -93,9 +97,15 @@ const dict = {
     "modals.m3title": "Automation & Scripting",
     "modals.m3":
       "Scripts Python/Bash (utilitaires, automatisation, parsing). Mets ici 1-2 liens vers des repos bien documentés.",
-    "modals.m4title": "Apps (React / Flutter)",
-    "modals.m4":
-      "Projets web et mobile : UI, logique applicative, auth, données. Idéal pour montrer ta polyvalence + rigueur."
+
+    // ✅ NEW MODAL for TP Graphe
+    "modals.maxflowink.title": "Encrage d’une image par flot maximum (C++)",
+    "modals.maxflowink.p1":
+      "Projet LIFAPC : binarisation intelligente d’une image en niveaux de gris (PGM P2) via un modèle graphe et l’équivalence flot maximum / coupe minimale.",
+    "modals.maxflowink.p2":
+      "Chaque pixel est un nœud connecté à ses voisins (N/S/E/O) avec des capacités gaussiennes selon la différence d’intensité. Des arcs relient aussi chaque pixel à la source (noir) et au puits (blanc), pondérés par α.",
+    "modals.maxflowink.p3":
+      "Flot maximum calculé avec Edmonds–Karp (BFS sur graphe résiduel, mise à jour des arcs inverses). Les pixels atteignables depuis la source après blocage sont colorés en noir (0), les autres en blanc (255)."
   },
 
   en: {
@@ -133,8 +143,12 @@ const dict = {
 
     "projects.p3title": "Automation & Scripting",
     "projects.p3": "Scripts & small tools: automation, parsing, utilities (network, logs, etc.).",
-    "projects.p4title": "Apps (React / Flutter)",
-    "projects.p4": "Academic web & mobile projects: UI, authentication, data, application logic.",
+
+    // ✅ REPLACEMENT (was Apps React/Flutter)
+    "projects.maxflowink.title": "Image inking via max-flow / min-cut (C++)",
+    "projects.maxflowink.desc":
+      "PGM image binarization using graph modeling + min-cut: Gaussian neighbor capacities, source/sink terms, residual BFS, and P2 export.",
+
     "projects.github": "Code / GitHub ↗",
     "projects.details": "Details",
 
@@ -185,9 +199,15 @@ const dict = {
     "modals.m3title": "Automation & Scripting",
     "modals.m3":
       "Python/Bash scripts (utilities, automation, parsing). Add 1–2 well-documented repos.",
-    "modals.m4title": "Apps (React / Flutter)",
-    "modals.m4":
-      "Web and mobile projects: UI, application logic, auth, data. Great to show versatility and rigor."
+
+    // ✅ NEW MODAL for TP Graphe
+    "modals.maxflowink.title": "Image inking via max-flow / min-cut (C++)",
+    "modals.maxflowink.p1":
+      "LIFAPC project: smart binarization of a grayscale image (PGM P2) using a graph model and the max-flow / min-cut equivalence.",
+    "modals.maxflowink.p2":
+      "Each pixel is a node connected to its 4-neighbors (N/S/E/W) with Gaussian capacities based on intensity differences. Pixels are also connected to a source (black) and a sink (white), weighted by α.",
+    "modals.maxflowink.p3":
+      "Max flow is computed with Edmonds–Karp (BFS on the residual graph, reverse-edge updates). Pixels reachable from the source after convergence become black (0); others become white (255)."
   }
 };
 

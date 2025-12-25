@@ -203,22 +203,38 @@
             </div>
           </article>
 
-          <!-- PROJECT 4 -->
+          <!-- PROJECT 4 : MAX FLOW INKING (replaces Apps/Flutter) -->
           <article class="card project reveal">
             <div class="project-top">
-              <div class="project-title" data-i18n="projects.p4title">Apps (React / Flutter)</div>
+              <div class="project-title" data-i18n="projects.maxflowink.title">
+                Encrage d’image par flot maximum (C++)
+              </div>
               <div class="badges">
-                <span class="badge">React</span><span class="badge">Flutter</span><span class="badge">Firebase</span>
+                <span class="badge">C++</span>
+                <span class="badge">Graph</span>
+                <span class="badge">Max-Flow</span>
+                <span class="badge">Edmonds–Karp</span>
+                <span class="badge">PGM</span>
               </div>
             </div>
-            <p class="project-desc" data-i18n="projects.p4">
-              Projets académiques web & mobile : UI, authentification, données, logique applicative.
+
+            <p class="project-desc" data-i18n="projects.maxflowink.desc">
+              Binarisation d’une image PGM via modélisation graphe + coupe minimale : capacités gaussiennes entre voisins,
+              termes source/puits, BFS résiduel et export P2.
             </p>
+
             <div class="project-actions">
-              <a class="btn small" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer" data-i18n="projects.github">
+              <a class="btn small"
+                 href="https://github.com/atchekzaileo/Encrage-d-une-image-par-flot-maximum"
+                 target="_blank"
+                 rel="noreferrer"
+                 data-i18n="projects.github">
                 Code / GitHub ↗
               </a>
-              <button class="btn small ghost" type="button" data-modal-open="modal4" data-i18n="projects.details">
+              <button class="btn small ghost"
+                      type="button"
+                      data-modal-open="modal-maxflowink"
+                      data-i18n="projects.details">
                 Détails
               </button>
             </div>
@@ -412,15 +428,39 @@
     </div>
   </dialog>
 
-  <dialog class="modal" id="modal4">
+  <!-- MODAL : MAX FLOW INKING (i18n) -->
+  <dialog class="modal" id="modal-maxflowink">
     <div class="modal-inner">
       <div class="modal-head">
-        <div class="modal-title" data-i18n="modals.m4title">Apps (React / Flutter)</div>
+        <div class="modal-title" data-i18n="modals.maxflowink.title">
+          Encrage d’une image par flot maximum (C++)
+        </div>
         <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
       </div>
-      <p class="muted" data-i18n="modals.m4">
-        Projets web et mobile : UI, logique applicative, auth, données. Idéal pour montrer ta polyvalence + rigueur.
+
+      <p class="muted" data-i18n="modals.maxflowink.p1">
+        Projet LIFAPC : binarisation intelligente d’une image en niveaux de gris (PGM P2) via un modèle graphe
+        et l’équivalence flot maximum / coupe minimale.
       </p>
+
+      <p class="muted" data-i18n="modals.maxflowink.p2">
+        Chaque pixel est un nœud connecté à ses voisins (N/S/E/O) avec des capacités gaussiennes selon la différence
+        d’intensité. Des arcs relient aussi chaque pixel à la source (noir) et au puits (blanc), pondérés par α.
+      </p>
+
+      <p class="muted" data-i18n="modals.maxflowink.p3">
+        Flot maximum calculé avec Edmonds–Karp (BFS sur graphe résiduel, mise à jour des arcs inverses).
+        Les pixels atteignables depuis la source après blocage sont colorés en noir (0), les autres en blanc (255).
+      </p>
+
+      <div class="modal-actions">
+        <a class="btn small"
+           href="https://github.com/atchekzaileo/Encrage-d-une-image-par-flot-maximum"
+           target="_blank"
+           rel="noreferrer">
+          GitHub ↗
+        </a>
+      </div>
     </div>
   </dialog>
 
