@@ -1,10 +1,9 @@
 const $ = (sel, root = document) => root.querySelector(sel);
-const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
 const yearEl = $("#year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-// ---------------- i18n ----------------
 const dict = {
   fr: {
     "header.tagline": "L3 Informatique — Systèmes, Réseaux & Cybersécurité (Lyon 1 — La Doua)",
@@ -31,26 +30,22 @@ const dict = {
     "projects.subtitle":
       "Quelques projets représentatifs (cours + perso). J’ajoute au fur et à mesure, en gardant seulement ceux que je peux expliquer clairement.",
     "projects.p1":
-      "Site simple et bilingue pour regrouper mes projets, compétences et liens (CV, GitHub, contact). Je l’ai volontairement gardé lisible (sans framework) pour qu’il charge vite et se parcoure facilement.",
-
+      "Site simple et bilingue pour regrouper mes projets, compétences et liens (CV, GitHub, contact). Je l’ai gardé volontairement léger (sans framework) pour qu’il charge vite et reste lisible.",
     "projects.portscanner.title": "Port Scanner TCP (Python)",
     "projects.portscanner.desc":
-      "Projet personnel pour comprendre un scan de ports TCP : multithread, lecture de bannières (HTTP/SSH), sauvegarde de scans et petite visualisation web.",
-
+      "Projet personnel pour comprendre un scan de ports TCP : multithread, lecture de bannières (HTTP/SSH), sauvegarde de scans et visualisation web.",
     "projects.p3title": "Automation & Scripting",
     "projects.p3":
-      "Petits scripts / outils : automatisation, parsing, utilitaires (souvent autour de Linux/réseau). Je sélectionne surtout ceux qui sont bien documentés et réutilisables.",
-
+      "Petits scripts / outils : automatisation, parsing, utilitaires (souvent autour de Linux/réseau). Je garde surtout ceux qui sont documentés et réutilisables.",
     "projects.maxflowink.title": "Encrage d’image par flot maximum (C++)",
     "projects.maxflowink.desc":
       "TP LIFAPC : binarisation d’une image PGM en modélisant l’image comme un graphe, puis en appliquant flot maximum / coupe minimale (Edmonds–Karp + parcours résiduel).",
-
     "projects.github": "Code / GitHub ↗",
     "projects.details": "Détails",
 
     "skills.title": "Compétences",
     "skills.subtitle":
-      "Je préfère être factuel : ce que je mets ici correspond à ce que j’ai déjà pratiqué (TP + projets).",
+      "Je préfère rester factuel : ce qui est listé correspond à ce que j’ai déjà pratiqué (TP + projets).",
     "skills.net.title": "Réseaux",
     "skills.net.li1": "Adressage IP, sous-réseaux",
     "skills.net.li2": "VLAN, routage statique (notions)",
@@ -67,9 +62,8 @@ const dict = {
     "skills.dev.li1": "Web : HTML/CSS/JS, WordPress, React",
 
     "about.title": "À propos",
-    "about.subtitle": "Quelques lignes pour contextualiser ton profil.",
     "about.p1":
-      "Je suis en Licence 3 Informatique à Lyon 1 (La Doua). J’ai découvert les systèmes et réseaux via les TP, et j’ai voulu aller plus loin en construisant mes propres projets.",
+      "Je suis en Licence 3 Informatique à Lyon 1 (La Doua). J’ai découvert les systèmes et réseaux via les TP, puis j’ai continué en construisant mes propres projets.",
     "about.p2":
       "Ce qui me plaît le plus, c’est le côté concret : comprendre pourquoi ça ne marche pas, tester, corriger, et automatiser quand c’est utile. Je cherche un stage, puis une alternance, en lien avec un Master Systèmes, Réseaux & Sécurité.",
 
@@ -85,20 +79,17 @@ const dict = {
     "footer.built": "Fait en HTML/CSS/JS — GitHub Pages",
 
     "modals.m1":
-      "Portfolio volontairement simple et lisible : une page, quelques sections, et des liens directs vers GitHub/CV.",
-
+      "Portfolio simple et lisible : une page, quelques sections, et des liens directs vers GitHub/CV.",
     "modals.portscanner.title": "Port Scanner TCP – Python",
     "modals.portscanner.p1":
-      "Projet personnel pour comprendre le scan TCP “à la main” : sockets, timeouts, threads, et lecture de bannières (HTTP/SSH).",
+      "Projet personnel pour comprendre le scan TCP : sockets, timeouts, threads, et lecture de bannières (HTTP/SSH).",
     "modals.portscanner.p2":
-      "J’ai ajouté l’historique des scans (SQLite), une détection simple des changements entre deux scans, et un mini-dashboard Flask pour parcourir les résultats.",
+      "Ajout de l’historique des scans (SQLite), d’une détection de changements entre scans, et d’un mini-dashboard Flask pour parcourir les résultats.",
     "modals.portscanner.legal":
       "Projet pédagogique — scans réalisés uniquement sur des environnements locaux ou explicitement autorisés.",
-
     "modals.m3title": "Automation & Scripting",
     "modals.m3":
       "Scripts Python/Bash : petites automatisations, parsing, utilitaires Linux. Je peux détailler un ou deux scripts selon le besoin.",
-
     "modals.maxflowink.title": "Encrage d’une image par flot maximum (C++)",
     "modals.maxflowink.p1":
       "Projet LIFAPC : binariser une image PGM en modélisant les pixels comme un graphe (source = noir, puits = blanc).",
@@ -133,20 +124,16 @@ const dict = {
     "projects.subtitle":
       "A few representative projects (coursework + personal). I add more over time, keeping only projects I can clearly explain.",
     "projects.p1":
-      "Simple bilingual website to centralize my projects, skills and links (CV, GitHub, contact). I kept it lightweight (no framework) so it loads fast and stays easy to read.",
-
+      "Simple bilingual website to centralize my projects, skills and links (resume, GitHub, contact). I kept it lightweight (no framework) so it loads fast and stays easy to read.",
     "projects.portscanner.title": "TCP Port Scanner (Python)",
     "projects.portscanner.desc":
       "Personal project to understand TCP port scanning: multithreading, banner grabbing (HTTP/SSH), scan history and a small web view.",
-
     "projects.p3title": "Automation & Scripting",
     "projects.p3":
       "Small scripts/tools: automation, parsing, utilities (often around Linux/networking). I mostly keep the ones that are documented and reusable.",
-
     "projects.maxflowink.title": "Image inking via max-flow / min-cut (C++)",
     "projects.maxflowink.desc":
       "LIFAPC lab: binarize a PGM image by modeling pixels as a graph, then applying max-flow/min-cut (Edmonds–Karp + residual traversal).",
-
     "projects.github": "Code / GitHub ↗",
     "projects.details": "Details",
 
@@ -169,7 +156,6 @@ const dict = {
     "skills.dev.li1": "Web: HTML/CSS/JS, WordPress, React",
 
     "about.title": "About",
-    "about.subtitle": "A few lines to contextualize my profile.",
     "about.p1":
       "I’m a BSc 3rd-year Computer Science student at Lyon 1 (La Doua). I discovered systems and networking through labs, then went further by building my own projects.",
     "about.p2":
@@ -188,19 +174,16 @@ const dict = {
 
     "modals.m1":
       "A simple, readable one-page portfolio with direct links to GitHub and the resume.",
-
     "modals.portscanner.title": "TCP Port Scanner – Python",
     "modals.portscanner.p1":
-      "Personal project to understand TCP scanning “from scratch”: sockets, timeouts, threads, and banner grabbing (HTTP/SSH).",
+      "Personal project to understand TCP scanning: sockets, timeouts, threads, and banner grabbing (HTTP/SSH).",
     "modals.portscanner.p2":
       "Added scan history (SQLite), basic change detection between scans, and a small Flask dashboard to browse results.",
     "modals.portscanner.legal":
       "Educational project — scans are performed only on local or explicitly authorized environments.",
-
     "modals.m3title": "Automation & Scripting",
     "modals.m3":
       "Python/Bash scripts: small automation, parsing, Linux utilities. I can walk through one or two scripts if needed.",
-
     "modals.maxflowink.title": "Image inking via max-flow / min-cut (C++)",
     "modals.maxflowink.p1":
       "LIFAPC project: binarize a PGM image by modeling pixels as a graph (source=black, sink=white).",
@@ -214,7 +197,6 @@ const dict = {
 function pickInitialLang() {
   const saved = localStorage.getItem("lang");
   if (saved === "fr" || saved === "en") return saved;
-
   const nav = (navigator.language || "").toLowerCase();
   return nav.startsWith("fr") ? "fr" : "en";
 }
@@ -225,28 +207,28 @@ function t(lang, key) {
 }
 
 function applyI18n(lang) {
-  $$("[data-i18n]").forEach(el => {
+  $$("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     const value = t(lang, key);
     if (typeof value === "string") el.textContent = value;
   });
 
-  $$("[data-i18n-attr]").forEach(el => {
+  $$("[data-i18n-attr]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    const attrs = (el.getAttribute("data-i18n-attr") || "")
-      .split("|")
-      .map(s => s.trim())
-      .filter(Boolean);
-
     const value = key ? t(lang, key) : null;
     if (!value) return;
 
-    attrs.forEach(attr => el.setAttribute(attr, value));
+    const attrs = (el.getAttribute("data-i18n-attr") || "")
+      .split("|")
+      .map((s) => s.trim())
+      .filter(Boolean);
+
+    attrs.forEach((attr) => el.setAttribute(attr, value));
   });
 }
 
 function setLang(lang) {
-  const safe = (lang === "fr" || lang === "en") ? lang : "en";
+  const safe = lang === "fr" || lang === "en" ? lang : "en";
   document.documentElement.lang = safe;
   localStorage.setItem("lang", safe);
 
@@ -266,23 +248,22 @@ if (langToggle) {
   });
 }
 
-// ---------------- Reveal on scroll ----------------
 const revealEls = $$(".reveal");
-const io = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
+if (revealEls.length) {
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
         e.target.classList.add("show");
         io.unobserve(e.target);
-      }
-    });
-  },
-  { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
-);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+  );
 
-revealEls.forEach(el => io.observe(el));
+  revealEls.forEach((el) => io.observe(el));
+}
 
-// ---------------- Modals ----------------
 function openModalById(id) {
   const dlg = document.getElementById(id);
   if (!dlg || typeof dlg.showModal !== "function") return;
@@ -297,25 +278,26 @@ function openModalById(id) {
 function closeModal(dlg) {
   if (!dlg) return;
   dlg.close();
+
   const prev = dlg.__returnFocusEl;
   if (prev && typeof prev.focus === "function") prev.focus();
 }
 
-$$("[data-modal-open]").forEach(btn => {
+$$("[data-modal-open]").forEach((btn) => {
   btn.addEventListener("click", () => {
     const id = btn.getAttribute("data-modal-open");
     if (id) openModalById(id);
   });
 });
 
-$$("[data-modal-close]").forEach(btn => {
+$$("[data-modal-close]").forEach((btn) => {
   btn.addEventListener("click", () => {
     const dlg = btn.closest("dialog");
     closeModal(dlg);
   });
 });
 
-$$("dialog.modal").forEach(dlg => {
+$$("dialog.modal").forEach((dlg) => {
   dlg.addEventListener("click", (e) => {
     if (e.target === dlg) closeModal(dlg);
   });
@@ -326,7 +308,6 @@ $$("dialog.modal").forEach(dlg => {
   });
 });
 
-// ---------------- Copy helpers ----------------
 async function copyText(text, noticeEl) {
   const okMsg = currentLang === "fr" ? "Copié ✅" : "Copied ✅";
   const warnMsg = currentLang === "fr" ? "Copie manuelle : " : "Manual copy: ";
@@ -374,7 +355,6 @@ if (copyPageBtn) {
   });
 }
 
-// ---------------- QR Code ----------------
 const qrBtn = $("#qrBtn");
 const qrImg = $("#qrImg");
 
@@ -385,24 +365,21 @@ if (qrBtn && qrImg) {
     if (!url.startsWith("http")) {
       if (pageNotice) {
         pageNotice.className = "notice warn";
-        pageNotice.textContent = (currentLang === "fr")
-          ? "Publie d’abord le site (GitHub Pages), puis génère le QR code."
-          : "Publish the website first (GitHub Pages), then generate the QR code.";
+        pageNotice.textContent =
+          currentLang === "fr"
+            ? "Publie d’abord le site (GitHub Pages), puis génère le QR code."
+            : "Publish the website first (GitHub Pages), then generate the QR code.";
       }
       return;
     }
 
     const encoded = encodeURIComponent(url);
-    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encoded}`;
-
-    qrImg.src = qrUrl;
+    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encoded}`;
     qrImg.style.display = "block";
 
     if (pageNotice) {
       pageNotice.className = "notice ok";
-      pageNotice.textContent = (currentLang === "fr")
-        ? "QR code généré ✅"
-        : "QR generated ✅";
+      pageNotice.textContent = currentLang === "fr" ? "QR code généré ✅" : "QR generated ✅";
     }
   });
 }

@@ -6,7 +6,6 @@
   <meta name="description" content="Portfolio – Leo Atchekzai | Systèmes, Réseaux & Cybersécurité" />
   <meta name="theme-color" content="#0b1220" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Leo Atchekzai – Portfolio" />
   <meta property="og:description" content="Systèmes, Réseaux & Cybersécurité – Projets et compétences" />
   <meta property="og:type" content="website" />
@@ -57,15 +56,11 @@
         <div class="hero-text reveal">
           <div class="kicker" data-i18n="hero.kicker">Portfolio</div>
 
-          <h1 class="title" data-i18n="hero.title">
-            Stage — Systèmes, Réseaux & Cybersécurité
-          </h1>
+          <h1 class="title" data-i18n="hero.title">Stage — Systèmes, Réseaux & Cybersécurité</h1>
 
-          <!-- Texte plus “humain” (il faudra aussi mettre à jour le dict i18n pour FR/EN) -->
           <p class="subtitle" data-i18n="hero.subtitle">
-            Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’administration système,
-            les réseaux et la cybersécurité. Cette page regroupe des projets réalisés en cours et en autonomie,
-            avec l’objectif d’avoir un aperçu concret de ce que je sais faire.
+            Étudiant en L3 Informatique à Lyon 1 (La Doua), je m’oriente vers les systèmes, les réseaux et la cybersécurité.
+            Ici, je regroupe quelques projets (cours et perso) pour montrer concrètement ce que je sais faire.
           </p>
 
           <div class="hero-cta">
@@ -128,7 +123,7 @@
 
             <p class="project-desc" data-i18n="projects.p1">
               Site simple et bilingue pour regrouper mes projets, compétences et liens (CV, GitHub, contact).
-              Je l’ai volontairement gardé lisible (sans framework) pour qu’il charge vite et se parcoure facilement.
+              Je l’ai gardé volontairement léger (sans framework) pour que ce soit rapide et lisible.
             </p>
 
             <div class="project-actions">
@@ -153,23 +148,15 @@
             </div>
 
             <p class="project-desc" data-i18n="projects.portscanner.desc">
-              Projet personnel pour comprendre un scan de ports TCP : multithread, lecture de bannières (HTTP/SSH),
-              sauvegarde de scans et petite visualisation web.
+              Projet perso pour comprendre un scan TCP : multithread, lecture de bannières (HTTP/SSH),
+              sauvegarde des scans et petite visualisation web.
             </p>
 
             <div class="project-actions">
-              <a class="btn small"
-                 href="https://github.com/atchekzaileo/port-scanner"
-                 target="_blank"
-                 rel="noreferrer"
-                 data-i18n="projects.github">
+              <a class="btn small" href="https://github.com/atchekzaileo/port-scanner" target="_blank" rel="noreferrer" data-i18n="projects.github">
                 Code / GitHub ↗
               </a>
-
-              <button class="btn small ghost"
-                      type="button"
-                      data-modal-open="modal-portscanner"
-                      data-i18n="projects.details">
+              <button class="btn small ghost" type="button" data-modal-open="modal-portscanner" data-i18n="projects.details">
                 Détails
               </button>
             </div>
@@ -182,10 +169,12 @@
                 <span class="badge">Python</span><span class="badge">Bash</span>
               </div>
             </div>
+
             <p class="project-desc" data-i18n="projects.p3">
-              Petits scripts / outils : automatisation, parsing, utilitaires (souvent autour de Linux/réseau).
-              Je sélectionne surtout ceux qui sont bien documentés et réutilisables.
+              Petits scripts/outils : automatisation, parsing, utilitaires (souvent autour de Linux et du réseau).
+              Je mets surtout ceux que je peux expliquer rapidement et qui sont réutilisables.
             </p>
+
             <div class="project-actions">
               <a class="btn small" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer" data-i18n="projects.github">
                 Code / GitHub ↗
@@ -198,9 +187,7 @@
 
           <article class="card project">
             <div class="project-top">
-              <div class="project-title" data-i18n="projects.maxflowink.title">
-                Encrage d’image par flot maximum (C++)
-              </div>
+              <div class="project-title" data-i18n="projects.maxflowink.title">Encrage d’image par flot maximum (C++)</div>
               <div class="badges">
                 <span class="badge">C++</span>
                 <span class="badge">Graphes</span>
@@ -215,17 +202,10 @@
             </p>
 
             <div class="project-actions">
-              <a class="btn small"
-                 href="https://github.com/atchekzaileo/Encrage-d-une-image-par-flot-maximum"
-                 target="_blank"
-                 rel="noreferrer"
-                 data-i18n="projects.github">
+              <a class="btn small" href="https://github.com/atchekzaileo/Encrage-d-une-image-par-flot-maximum" target="_blank" rel="noreferrer" data-i18n="projects.github">
                 Code / GitHub ↗
               </a>
-              <button class="btn small ghost"
-                      type="button"
-                      data-modal-open="modal-maxflowink"
-                      data-i18n="projects.details">
+              <button class="btn small ghost" type="button" data-modal-open="modal-maxflowink" data-i18n="projects.details">
                 Détails
               </button>
             </div>
@@ -294,13 +274,12 @@
         <div class="card about-card">
           <p data-i18n="about.p1">
             Je suis en Licence 3 Informatique à Lyon 1 (La Doua). J’ai découvert les systèmes et réseaux via les TP,
-            et j’ai naturellement voulu aller plus loin en construisant mes propres projets (outils réseau, algos, etc.).
+            et j’ai voulu aller plus loin en construisant mes propres projets (outils réseau, algo, etc.).
           </p>
 
-          <!-- Texte “IA-ish” supprimé + formulation plus simple -->
           <p data-i18n="about.p2">
-            Ce qui me plaît le plus, c’est le côté concret : comprendre pourquoi ça ne marche pas, tester, corriger,
-            et automatiser quand c’est utile. Je cherche un stage, puis une alternance, en lien avec un Master Systèmes, Réseaux & Sécurité.
+            Ce que j’aime, c’est le côté concret : diagnostiquer, tester, corriger, et automatiser quand ça fait gagner du temps.
+            Je cherche un stage, puis une alternance, en lien avec un Master Systèmes, Réseaux & Sécurité.
           </p>
         </div>
       </div>
@@ -338,12 +317,8 @@
             </div>
 
             <div class="contact-actions">
-              <button class="btn primary" id="copyPageBtn" type="button" data-i18n="contact.copy">
-                Copier le lien du portfolio
-              </button>
-              <button class="btn ghost" id="qrBtn" type="button" data-i18n="contact.qr">
-                Générer un QR code
-              </button>
+              <button class="btn primary" id="copyPageBtn" type="button" data-i18n="contact.copy">Copier le lien du portfolio</button>
+              <button class="btn ghost" id="qrBtn" type="button" data-i18n="contact.qr">Générer un QR code</button>
               <div class="notice" id="pageNotice" aria-live="polite"></div>
             </div>
           </div>
@@ -354,9 +329,7 @@
               <div class="qr-box">
                 <img id="qrImg" alt="QR Code" />
               </div>
-              <p class="muted small" data-i18n="contact.qrHint">
-                Clique sur “Générer un QR code” après mise en ligne.
-              </p>
+              <p class="muted small" data-i18n="contact.qrHint">Clique sur “Générer un QR code” après mise en ligne.</p>
             </div>
           </div>
         </div>
@@ -370,7 +343,6 @@
     </section>
   </main>
 
-  <!-- Modals -->
   <dialog class="modal" id="modal1">
     <div class="modal-inner">
       <div class="modal-head">
@@ -406,9 +378,7 @@
       </p>
 
       <div class="modal-actions">
-        <a class="btn small" href="https://github.com/atchekzaileo/port-scanner" target="_blank" rel="noreferrer">
-          GitHub ↗
-        </a>
+        <a class="btn small" href="https://github.com/atchekzaileo/port-scanner" target="_blank" rel="noreferrer">GitHub ↗</a>
       </div>
     </div>
   </dialog>
@@ -428,9 +398,7 @@
   <dialog class="modal" id="modal-maxflowink">
     <div class="modal-inner">
       <div class="modal-head">
-        <div class="modal-title" data-i18n="modals.maxflowink.title">
-          Encrage d’une image par flot maximum (C++)
-        </div>
+        <div class="modal-title" data-i18n="modals.maxflowink.title">Encrage d’une image par flot maximum (C++)</div>
         <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
       </div>
 
@@ -447,10 +415,7 @@
       </p>
 
       <div class="modal-actions">
-        <a class="btn small"
-           href="https://github.com/atchekzaileo/Encrage-d-une-image-par-flot-maximum"
-           target="_blank"
-           rel="noreferrer">
+        <a class="btn small" href="https://github.com/atchekzaileo/Encrage-d-une-image-par-flot-maximum" target="_blank" rel="noreferrer">
           GitHub ↗
         </a>
       </div>
