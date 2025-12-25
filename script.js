@@ -1,0 +1,284 @@
+const $ = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+
+const yearEl = $("#year");
+if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+// -------- i18n --------
+const dict = {
+  fr: {
+    "header.tagline": "L3 Informatique — Systèmes, Réseaux & Cybersécurité (Lyon 1 — La Doua)",
+    "header.cta": "Me contacter",
+    "nav.projects": "Projets",
+    "nav.skills": "Compétences",
+    "nav.about": "À propos",
+    "nav.contact": "Contact",
+    "hero.kicker": "Portfolio",
+    "hero.title": "Stage — Systèmes, Réseaux & Cybersécurité",
+    "hero.subtitle": "Je présente ici mes projets académiques et personnels (réseaux, Linux, dev & automatisation).",
+    "hero.btnProjects": "Voir mes projets",
+    "hero.metric1.top": "Focus",
+    "hero.metric1.bottom": "Réseaux • Linux • Sécurité",
+    "hero.metric2.top": "Stack",
+    "hero.metric2.bottom": "Python • Bash • C/C++ • Web",
+    "hero.card.chip": "Disponible",
+    "hero.card.chip2": "Stage fin d’année",
+    "hero.card.title": "Profil en bref",
+    "hero.card.li1": "Licence 3 Informatique (UCBL — La Doua)",
+    "hero.card.li2": "CCNA 1 (bases réseaux solides)",
+    "hero.card.li3": "Linux + TP réseau + scripting",
+    "hero.card.li4": "Objectif : Master Systèmes, Réseaux & Sécurité",
+    "hero.card.contact": "Contact",
+    "hero.card.copy": "Copier le lien",
+    "projects.title": "Projets",
+    "projects.subtitle": "Une sélection de projets (avec liens GitHub). J’ajoute les repos au fur et à mesure.",
+    "projects.p1": "Page bilingue moderne pour présenter mes projets, compétences et liens (CV, GitHub, contact).",
+    "projects.p2title": "TP Réseaux & Services",
+    "projects.p2": "Travaux pratiques : adressage IP, tests, routage statique (notions), services réseau et diagnostic.",
+    "projects.p3title": "Automation & Scripting",
+    "projects.p3": "Scripts et mini-outils : automatisation de tâches, parsing, utilitaires (ex. réseau, logs, etc.).",
+    "projects.p4title": "Apps (React / Flutter)",
+    "projects.p4": "Projets académiques web & mobile : UI, authentification, données, logique applicative.",
+    "projects.github": "Code / GitHub ↗",
+    "projects.details": "Détails",
+    "skills.title": "Compétences",
+    "skills.subtitle": "Concentrées sur l’objectif Systèmes / Réseaux / Sécurité.",
+    "skills.net.title": "Réseaux",
+    "skills.net.li1": "Adressage IP, sous-réseaux",
+    "skills.net.li2": "VLAN, routage statique (notions)",
+    "skills.sys.title": "Systèmes",
+    "skills.sys.li1": "Commandes réseau : ip, ping, traceroute",
+    "skills.sys.li2": "Notions DNS / DHCP / HTTP",
+    "skills.sys.li3": "Bases administration",
+    "skills.sec.title": "Sécurité",
+    "skills.sec.li1": "Principes sécurité réseau",
+    "skills.sec.li2": "Pare-feu (notions)",
+    "skills.sec.li3": "Bonnes pratiques & durcissement (bases)",
+    "skills.sec.li4": "Curiosité : SOC, pentest (découverte)",
+    "skills.dev.title": "Scripting & Dev",
+    "skills.dev.li1": "Web : HTML/CSS/JS, WordPress, React",
+    "about.title": "À propos",
+    "about.subtitle": "Quelques lignes pour contextualiser ton profil.",
+    "about.p1": "Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’infrastructure : systèmes Linux, réseaux et cybersécurité. J’aime comprendre “comment ça marche” (protocoles, services, diagnostic), et automatiser via scripting.",
+    "about.p2": "Objectif : stage puis alternance en Master Systèmes, Réseaux & Sécurité.",
+    "contact.title": "Contact",
+    "contact.subtitle": "Un message et je réponds rapidement.",
+    "contact.cvLabel": "CV",
+    "contact.cvHint": "Ajoute ton PDF ici plus tard (ex: /cv.pdf)",
+    "contact.copy": "Copier le lien du portfolio",
+    "contact.qr": "Générer un QR code",
+    "contact.qrTitle": "QR Code",
+    "contact.qrHint": "Clique sur “Générer un QR code” après mise en ligne.",
+    "footer.built": "Fait en HTML/CSS/JS — GitHub Pages",
+    "modals.m1": "Page unique, responsive, bilingue, avec animations légères et sections adaptées à un recrutement en infra/réseaux/sécurité.",
+    "modals.m2title": "TP Réseaux & Services",
+    "modals.m2": "Travaux pratiques autour de l’adressage IP, diagnostic, routage (notions) et services (DNS/DHCP). Exemples et scripts à lier vers tes repos.",
+    "modals.m3title": "Automation & Scripting",
+    "modals.m3": "Scripts Python/Bash (utilitaires, automatisation, parsing). Mets ici 1-2 liens vers des repos bien documentés.",
+    "modals.m4title": "Apps (React / Flutter)",
+    "modals.m4": "Projets web et mobile : UI, logique applicative, auth, données. Idéal pour montrer ta polyvalence + rigueur."
+  },
+  en: {
+    "header.tagline": "BSc 3rd year — Systems, Networks & Cybersecurity (Lyon 1 — La Doua)",
+    "header.cta": "Contact me",
+    "nav.projects": "Projects",
+    "nav.skills": "Skills",
+    "nav.about": "About",
+    "nav.contact": "Contact",
+    "hero.kicker": "Portfolio",
+    "hero.title": "Internship — Systems, Networks & Cybersecurity",
+    "hero.subtitle": "Here are my academic & personal projects (networking, Linux, dev & automation).",
+    "hero.btnProjects": "See projects",
+    "hero.metric1.top": "Focus",
+    "hero.metric1.bottom": "Networking • Linux • Security",
+    "hero.metric2.top": "Stack",
+    "hero.metric2.bottom": "Python • Bash • C/C++ • Web",
+    "hero.card.chip": "Available",
+    "hero.card.chip2": "Internship (end of year)",
+    "hero.card.title": "Quick summary",
+    "hero.card.li1": "BSc in Computer Science (Lyon 1 — La Doua)",
+    "hero.card.li2": "CCNA 1 (solid networking foundations)",
+    "hero.card.li3": "Linux + networking labs + scripting",
+    "hero.card.li4": "Goal: MSc Systems, Networks & Security",
+    "hero.card.contact": "Contact",
+    "hero.card.copy": "Copy link",
+    "projects.title": "Projects",
+    "projects.subtitle": "A small selection (with GitHub links). I add repositories regularly.",
+    "projects.p1": "Modern bilingual single-page website to showcase projects, skills and links (CV, GitHub, contact).",
+    "projects.p2title": "Networking & Services Labs",
+    "projects.p2": "Labs: IP addressing, connectivity tests, static routing basics, network services and troubleshooting.",
+    "projects.p3title": "Automation & Scripting",
+    "projects.p3": "Scripts & small tools: automation, parsing, utilities (network, logs, etc.).",
+    "projects.p4title": "Apps (React / Flutter)",
+    "projects.p4": "Academic web & mobile projects: UI, authentication, data, application logic.",
+    "projects.github": "Code / GitHub ↗",
+    "projects.details": "Details",
+    "skills.title": "Skills",
+    "skills.subtitle": "Focused on Systems / Networks / Security.",
+    "skills.net.title": "Networking",
+    "skills.net.li1": "IP addressing, subnetting",
+    "skills.net.li2": "VLAN, static routing (basics)",
+    "skills.sys.title": "Systems",
+    "skills.sys.li1": "Network commands: ip, ping, traceroute",
+    "skills.sys.li2": "DNS / DHCP / HTTP basics",
+    "skills.sys.li3": "Admin basics",
+    "skills.sec.title": "Security",
+    "skills.sec.li1": "Network security principles",
+    "skills.sec.li2": "Firewall (basics)",
+    "skills.sec.li3": "Hardening & best practices (basics)",
+    "skills.sec.li4": "Curiosity: SOC, pentest (exploring)",
+    "skills.dev.title": "Scripting & Dev",
+    "skills.dev.li1": "Web: HTML/CSS/JS, WordPress, React",
+    "about.title": "About",
+    "about.subtitle": "A few lines to contextualize my profile.",
+    "about.p1": "BSc 3rd-year student at Lyon 1 (La Doua), focusing on infrastructure: Linux systems, networking and cybersecurity. I enjoy understanding how things work (protocols, services, troubleshooting) and automating tasks with scripting.",
+    "about.p2": "Goal: internship, then apprenticeship for the MSc Systems, Networks & Security.",
+    "contact.title": "Contact",
+    "contact.subtitle": "Send a message — I reply quickly.",
+    "contact.cvLabel": "Resume",
+    "contact.cvHint": "Add your PDF later (e.g., /cv.pdf)",
+    "contact.copy": "Copy portfolio link",
+    "contact.qr": "Generate QR code",
+    "contact.qrTitle": "QR Code",
+    "contact.qrHint": "Click “Generate QR code” after publishing the website.",
+    "footer.built": "Built with HTML/CSS/JS — GitHub Pages",
+    "modals.m1": "Responsive bilingual single-page portfolio with lightweight animations and infra/network/security-friendly sections.",
+    "modals.m2title": "Networking & Services Labs",
+    "modals.m2": "Labs around IP addressing, troubleshooting, routing basics and services (DNS/DHCP). Link your best repos here.",
+    "modals.m3title": "Automation & Scripting",
+    "modals.m3": "Python/Bash scripts (utilities, automation, parsing). Add 1–2 well-documented repos.",
+    "modals.m4title": "Apps (React / Flutter)",
+    "modals.m4": "Web and mobile projects: UI, application logic, auth, data. Great to show versatility and rigor."
+  }
+};
+
+function pickInitialLang() {
+  const saved = localStorage.getItem("lang");
+  if (saved === "fr" || saved === "en") return saved;
+
+  const nav = (navigator.language || "").toLowerCase();
+  return nav.startsWith("fr") ? "fr" : "en";
+}
+
+function setLang(lang) {
+  const safe = (lang === "fr" || lang === "en") ? lang : "en";
+  document.documentElement.lang = safe;
+  localStorage.setItem("lang", safe);
+
+  const pill = $("#langPill");
+  if (pill) pill.textContent = safe.toUpperCase();
+
+  $$("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    const value = dict[safe][key];
+    if (typeof value === "string") el.textContent = value;
+  });
+}
+
+const langToggle = $("#langToggle");
+let currentLang = pickInitialLang();
+setLang(currentLang);
+
+if (langToggle) {
+  langToggle.addEventListener("click", () => {
+    currentLang = currentLang === "fr" ? "en" : "fr";
+    setLang(currentLang);
+  });
+}
+
+// -------- Reveal on scroll --------
+const revealEls = $$(".reveal");
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add("show");
+  });
+}, { threshold: 0.12 });
+
+revealEls.forEach(el => io.observe(el));
+
+// -------- Modals --------
+$$("[data-modal-open]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const id = btn.getAttribute("data-modal-open");
+    const dlg = document.getElementById(id);
+    if (dlg && typeof dlg.showModal === "function") dlg.showModal();
+  });
+});
+$$("[data-modal-close]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const dlg = btn.closest("dialog");
+    if (dlg) dlg.close();
+  });
+});
+$$("dialog.modal").forEach(dlg => {
+  dlg.addEventListener("click", (e) => {
+    const rect = dlg.getBoundingClientRect();
+    const inDialog = (
+      rect.top <= e.clientY && e.clientY <= rect.bottom &&
+      rect.left <= e.clientX && e.clientX <= rect.right
+    );
+    // If click is outside, close
+    if (!inDialog) dlg.close();
+  });
+});
+
+// -------- Copy link --------
+async function copyText(text, noticeEl) {
+  try {
+    await navigator.clipboard.writeText(text);
+    if (noticeEl) {
+      noticeEl.className = "notice ok";
+      noticeEl.textContent = (currentLang === "fr") ? "Copié ✅" : "Copied ✅";
+    }
+  } catch {
+    if (noticeEl) {
+      noticeEl.className = "notice warn";
+      noticeEl.textContent = (currentLang === "fr")
+        ? "Impossible de copier automatiquement. Copie manuelle : " + text
+        : "Could not auto-copy. Manual copy: " + text;
+    }
+  }
+}
+
+const copyLinkBtn = $("#copyLinkBtn");
+const copyNotice = $("#copyNotice");
+if (copyLinkBtn) {
+  copyLinkBtn.addEventListener("click", () => {
+    const url = window.location.href;
+    copyText(url, copyNotice);
+  });
+}
+
+const copyPageBtn = $("#copyPageBtn");
+const pageNotice = $("#pageNotice");
+if (copyPageBtn) {
+  copyPageBtn.addEventListener("click", () => {
+    const url = window.location.href;
+    copyText(url, pageNotice);
+  });
+}
+
+// -------- QR Code (works once published) --------
+// Uses a free QR generator endpoint (simple image URL).
+// If it’s blocked by your browser, you can replace it later with another provider.
+const qrBtn = $("#qrBtn");
+const qrImg = $("#qrImg");
+if (qrBtn && qrImg) {
+  qrBtn.addEventListener("click", () => {
+    const url = window.location.href;
+    const encoded = encodeURIComponent(url);
+
+    // Public QR endpoint (returns an image)
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encoded}`;
+
+    qrImg.src = qrUrl;
+    qrImg.style.display = "block";
+
+    if (pageNotice) {
+      pageNotice.className = "notice ok";
+      pageNotice.textContent = (currentLang === "fr")
+        ? "QR code généré ✅"
+        : "QR generated ✅";
+    }
+  });
+}

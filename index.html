@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio – Leo Atchekzai | Systems, Networks & Cybersecurity" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Leo Atchekzai – Portfolio" />
+  <meta property="og:description" content="Systems, Networks & Cybersecurity – Projects & skills" />
+  <meta property="og:type" content="website" />
+
+  <title>Leo Atchekzai – Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Optional font (safe if blocked, page still works) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">LA</div>
+        <div class="brand-text">
+          <div class="name">Leo Atchekzai</div>
+          <div class="tagline" data-i18n="header.tagline">
+            L3 Informatique — Systèmes, Réseaux & Cybersécurité (Lyon 1 — La Doua)
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#projects" data-i18n="nav.projects">Projets</a>
+        <a href="#skills" data-i18n="nav.skills">Compétences</a>
+        <a href="#about" data-i18n="nav.about">À propos</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <button id="langToggle" class="btn ghost" type="button" aria-label="Toggle language">
+          <span class="pill" id="langPill">FR</span>
+        </button>
+        <a class="btn primary" href="#contact" data-i18n="header.cta">Me contacter</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <div class="kicker" data-i18n="hero.kicker">Portfolio</div>
+          <h1 class="title" data-i18n="hero.title">
+            Stage — Systèmes, Réseaux & Cybersécurité
+          </h1>
+          <p class="subtitle" data-i18n="hero.subtitle">
+            Je présente ici mes projets académiques et personnels (réseaux, Linux, dev & automatisation).
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects" data-i18n="hero.btnProjects">Voir mes projets</a>
+            <a class="btn ghost" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer">
+              GitHub
+              <span class="icon" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric">
+              <div class="metric-top" data-i18n="hero.metric1.top">Focus</div>
+              <div class="metric-bottom" data-i18n="hero.metric1.bottom">Réseaux • Linux • Sécurité</div>
+            </div>
+            <div class="metric">
+              <div class="metric-top" data-i18n="hero.metric2.top">Stack</div>
+              <div class="metric-bottom">Python • Bash • C/C++ • Web</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <div class="glass card">
+            <div class="card-head">
+              <div class="chip" data-i18n="hero.card.chip">Disponible</div>
+              <div class="chip subtle" data-i18n="hero.card.chip2">Stage fin d’année</div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-title" data-i18n="hero.card.title">Profil en bref</div>
+              <ul class="bullets">
+                <li data-i18n="hero.card.li1">Licence 3 Informatique (UCBL — La Doua)</li>
+                <li data-i18n="hero.card.li2">CCNA 1 (bases réseaux solides)</li>
+                <li data-i18n="hero.card.li3">Linux + TP réseau + scripting</li>
+                <li data-i18n="hero.card.li4">Objectif : Master Systèmes, Réseaux & Sécurité</li>
+              </ul>
+
+              <div class="mini-actions">
+                <a class="btn small" href="#contact" data-i18n="hero.card.contact">Contact</a>
+                <button class="btn small ghost" id="copyLinkBtn" type="button" data-i18n="hero.card.copy">
+                  Copier le lien
+                </button>
+              </div>
+
+              <div class="notice" id="copyNotice" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="glow" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="divider"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="projects.title">Projets</h2>
+          <p class="muted" data-i18n="projects.subtitle">
+            Une sélection de projets (avec liens GitHub). J’ajoute les repos au fur et à mesure.
+          </p>
+        </div>
+
+        <div class="grid projects-grid">
+          <!-- PROJECT 1 -->
+          <article class="card project reveal">
+            <div class="project-top">
+              <div class="project-title">Portfolio (this page)</div>
+              <div class="badges">
+                <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span>
+              </div>
+            </div>
+            <p class="project-desc" data-i18n="projects.p1">
+              Page bilingue moderne pour présenter mes projets, compétences et liens (CV, GitHub, contact).
+            </p>
+            <div class="project-actions">
+              <a class="btn small" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer" data-i18n="projects.github">
+                Code / GitHub ↗
+              </a>
+              <button class="btn small ghost" type="button" data-modal-open="modal1" data-i18n="projects.details">
+                Détails
+              </button>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 -->
+          <article class="card project reveal">
+            <div class="project-top">
+              <div class="project-title" data-i18n="projects.p2title">TP Réseaux & Services</div>
+              <div class="badges">
+                <span class="badge">TCP/IP</span><span class="badge">Linux</span><span class="badge">DNS/DHCP</span>
+              </div>
+            </div>
+            <p class="project-desc" data-i18n="projects.p2">
+              Travaux pratiques : adressage IP, tests, routage statique (notions), services réseau et diagnostic.
+            </p>
+            <div class="project-actions">
+              <a class="btn small" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer" data-i18n="projects.github">
+                Code / GitHub ↗
+              </a>
+              <button class="btn small ghost" type="button" data-modal-open="modal2" data-i18n="projects.details">
+                Détails
+              </button>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="card project reveal">
+            <div class="project-top">
+              <div class="project-title" data-i18n="projects.p3title">Automation & Scripting</div>
+              <div class="badges">
+                <span class="badge">Python</span><span class="badge">Bash</span><span class="badge">Tools</span>
+              </div>
+            </div>
+            <p class="project-desc" data-i18n="projects.p3">
+              Scripts et mini-outils : automatisation de tâches, parsing, utilitaires (ex. réseau, logs, etc.).
+            </p>
+            <div class="project-actions">
+              <a class="btn small" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer" data-i18n="projects.github">
+                Code / GitHub ↗
+              </a>
+              <button class="btn small ghost" type="button" data-modal-open="modal3" data-i18n="projects.details">
+                Détails
+              </button>
+            </div>
+          </article>
+
+          <!-- PROJECT 4 -->
+          <article class="card project reveal">
+            <div class="project-top">
+              <div class="project-title" data-i18n="projects.p4title">Apps (React / Flutter)</div>
+              <div class="badges">
+                <span class="badge">React</span><span class="badge">Flutter</span><span class="badge">Firebase</span>
+              </div>
+            </div>
+            <p class="project-desc" data-i18n="projects.p4">
+              Projets académiques web & mobile : UI, authentification, données, logique applicative.
+            </p>
+            <div class="project-actions">
+              <a class="btn small" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer" data-i18n="projects.github">
+                Code / GitHub ↗
+              </a>
+              <button class="btn small ghost" type="button" data-modal-open="modal4" data-i18n="projects.details">
+                Détails
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="skills.title">Compétences</h2>
+          <p class="muted" data-i18n="skills.subtitle">Concentrées sur l’objectif Systèmes / Réseaux / Sécurité.</p>
+        </div>
+
+        <div class="grid skills-grid">
+          <div class="card reveal">
+            <h3 data-i18n="skills.net.title">Réseaux</h3>
+            <ul class="list">
+              <li>OSI / TCP-IP</li>
+              <li data-i18n="skills.net.li1">Adressage IP, sous-réseaux</li>
+              <li>ARP, ICMP, TCP/UDP</li>
+              <li data-i18n="skills.net.li2">VLAN, routage statique (notions)</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3 data-i18n="skills.sys.title">Systèmes</h3>
+            <ul class="list">
+              <li>Linux (Ubuntu/Debian)</li>
+              <li data-i18n="skills.sys.li1">Commandes réseau : ip, ping, traceroute</li>
+              <li data-i18n="skills.sys.li2">Notions DNS / DHCP / HTTP</li>
+              <li data-i18n="skills.sys.li3">Bases administration</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3 data-i18n="skills.sec.title">Sécurité</h3>
+            <ul class="list">
+              <li data-i18n="skills.sec.li1">Principes sécurité réseau</li>
+              <li data-i18n="skills.sec.li2">Pare-feu (notions)</li>
+              <li data-i18n="skills.sec.li3">Bonnes pratiques & durcissement (bases)</li>
+              <li data-i18n="skills.sec.li4">Curiosité : SOC, pentest (découverte)</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3 data-i18n="skills.dev.title">Scripting & Dev</h3>
+            <ul class="list">
+              <li>Python, Bash</li>
+              <li>C / C++</li>
+              <li>SQL</li>
+              <li data-i18n="skills.dev.li1">Web : HTML/CSS/JS, WordPress, React</li>
+              <li>Flutter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="about.title">À propos</h2>
+          <p class="muted" data-i18n="about.subtitle">Quelques lignes pour contextualiser ton profil.</p>
+        </div>
+
+        <div class="card reveal about-card">
+          <p data-i18n="about.p1">
+            Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’infrastructure :
+            systèmes Linux, réseaux et cybersécurité. J’aime comprendre “comment ça marche” (protocoles, services, diagnostic),
+            et automatiser via scripting.
+          </p>
+          <p class="muted" data-i18n="about.p2">
+            Objectif : stage puis alternance en Master Systèmes, Réseaux & Sécurité.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="contact.title">Contact</h2>
+          <p class="muted" data-i18n="contact.subtitle">Un message et je réponds rapidement.</p>
+        </div>
+
+        <div class="grid contact-grid">
+          <div class="card reveal">
+            <div class="contact-item">
+              <div class="label">Email</div>
+              <a href="mailto:atchekzaileo@gmail.com">atchekzaileo@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+              <div class="label">GitHub</div>
+              <a href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer">github.com/atchekzaileo ↗</a>
+            </div>
+
+            <div class="contact-item">
+              <div class="label" data-i18n="contact.cvLabel">CV</div>
+              <span class="muted" data-i18n="contact.cvHint">Ajoute ton PDF ici plus tard (ex: /cv.pdf)</span>
+            </div>
+
+            <div class="contact-actions">
+              <button class="btn primary" id="copyPageBtn" type="button" data-i18n="contact.copy">
+                Copier le lien du portfolio
+              </button>
+              <button class="btn ghost" id="qrBtn" type="button" data-i18n="contact.qr">
+                Générer un QR code
+              </button>
+              <div class="notice" id="pageNotice" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="card reveal qr-card">
+            <div class="qr-wrap">
+              <div class="qr-title" data-i18n="contact.qrTitle">QR Code</div>
+              <div class="qr-box">
+                <img id="qrImg" alt="QR Code" />
+              </div>
+              <p class="muted small" data-i18n="contact.qrHint">
+                Clique sur “Générer un QR code” après mise en ligne.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer muted">
+          <span>© <span id="year"></span> Leo Atchekzai</span>
+          <span class="dot">•</span>
+          <span data-i18n="footer.built">Fait en HTML/CSS/JS — GitHub Pages</span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <dialog class="modal" id="modal1">
+    <div class="modal-inner">
+      <div class="modal-head">
+        <div class="modal-title">Portfolio</div>
+        <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
+      </div>
+      <p class="muted" data-i18n="modals.m1">
+        Page unique, responsive, bilingue, avec animations légères et sections adaptées à un recrutement en infra/réseaux/sécurité.
+      </p>
+      <div class="modal-actions">
+        <a class="btn small" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal2">
+    <div class="modal-inner">
+      <div class="modal-head">
+        <div class="modal-title" data-i18n="modals.m2title">TP Réseaux & Services</div>
+        <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
+      </div>
+      <p class="muted" data-i18n="modals.m2">
+        Travaux pratiques autour de l’adressage IP, diagnostic, routage (notions) et services (DNS/DHCP). Exemples et scripts à lier vers tes repos.
+      </p>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal3">
+    <div class="modal-inner">
+      <div class="modal-head">
+        <div class="modal-title" data-i18n="modals.m3title">Automation & Scripting</div>
+        <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
+      </div>
+      <p class="muted" data-i18n="modals.m3">
+        Scripts Python/Bash (utilitaires, automatisation, parsing). Mets ici 1-2 liens vers des repos bien documentés.
+      </p>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal4">
+    <div class="modal-inner">
+      <div class="modal-head">
+        <div class="modal-title" data-i18n="modals.m4title">Apps (React / Flutter)</div>
+        <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
+      </div>
+      <p class="muted" data-i18n="modals.m4">
+        Projets web et mobile : UI, logique applicative, auth, données. Idéal pour montrer ta polyvalence + rigueur.
+      </p>
+    </div>
+  </dialog>
+
+  <script src="./script.js"></script>
+</body>
+</html>
