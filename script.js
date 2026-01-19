@@ -16,33 +16,36 @@ const dict = {
     "hero.kicker": "Portfolio",
     "hero.title": "Stage / Alternance — Systèmes, Réseaux & Cybersécurité",
     "hero.subtitle":
-      "Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je m’oriente vers l’administration système, les réseaux et la cybersécurité. Cette page regroupe des projets réalisés en cours et en autonomie.",
+      "Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je me spécialise en systèmes, réseaux et cybersécurité. Cette page regroupe des projets réalisés en cours et en autonomie.",
     "hero.btnProjects": "Voir mes projets",
+    "hero.btnContact": "Discuter d’une opportunité",
     "hero.card.title": "Profil",
     "hero.card.li1": "Licence 3 Informatique (UCBL — La Doua)",
     "hero.card.li2": "Bases réseaux solides (CCNA 1 + TP)",
     "hero.card.li3": "Linux au quotidien + scripting",
     "hero.card.li4": "Objectif : Master Systèmes, Réseaux & Sécurité",
-    "hero.card.contact": "Contact",
-    "hero.card.copy": "Copier le lien",
+    "hero.card.contact": "Disponible pour un stage / une alternance",
 
     "projects.title": "Projets",
     "projects.subtitle":
-      "Quelques projets représentatifs (cours + perso). J’ajoute au fur et à mesure, en gardant seulement ceux que je peux expliquer clairement.",
+      "Quelques projets représentatifs (cours + perso). J’ajoute progressivement des projets en gardant seulement ceux que je peux expliquer clairement.",
     "projects.p1":
-      "Site simple et bilingue pour regrouper mes projets, compétences et liens (CV, GitHub, contact). Je l’ai gardé volontairement léger (sans framework) pour qu’il charge vite et reste lisible.",
+      "Site simple et bilingue pour regrouper mes projets, compétences et coordonnées. Pensé mobile-first, léger (sans framework) pour qu’il charge vite et reste lisible.",
     "projects.portscanner.title": "Port Scanner TCP (Python)",
     "projects.portscanner.desc":
-      "Projet personnel pour comprendre un scan de ports TCP : multithread, lecture de bannières (HTTP/SSH), sauvegarde de scans et visualisation web.",
-
+      "Projet personnel pour comprendre un scan de ports TCP : multithread, timeouts, lecture de bannières (HTTP/SSH), sauvegarde des scans et petite visualisation web.",
     "projects.p3title": "NetCheck – Diagnostic réseau (Python)",
     "projects.p3":
-      "Outil de diagnostic réseau développé après le CCNA 1 pour relier la théorie aux cas concrets. Vérification DNS, connectivité ICMP/TCP, accès HTTP/HTTPS et expiration des certificats TLS.",
-
+      "Outil de diagnostic réseau développé après le CCNA 1 pour vérifier rapidement la connectivité (ping), quelques ports, DNS, HTTP/HTTPS et expiration des certificats TLS.",
     "projects.maxflowink.title": "Encrage d’image par flot maximum (C++)",
     "projects.maxflowink.desc":
-      "TP LIFAPC : binarisation d’une image PGM en modélisant l’image comme un graphe, puis en appliquant flot maximum / coupe minimale (Edmonds–Karp + parcours résiduel).",
-    "projects.github": "Code / GitHub ↗",
+      "TP LIFAPC : binarisation d’une image PGM en modélisant l’image en graphe, puis en appliquant flot maximum / coupe minimale (Edmonds–Karp + parcours résiduel).",
+    
+    "projects.brontkd.title": "Site du club Bron Taekwondo",
+    "projects.brontkd.desc":
+      "Site vitrine pour le club Bron Taekwondo : présentation des cours, planning, informations pratiques et mise en avant des événements du club.",
+    "projects.site": "Voir le site ↗",
+"projects.github": "Code / GitHub ↗",
     "projects.details": "Détails",
 
     "skills.title": "Compétences",
@@ -50,33 +53,51 @@ const dict = {
       "Je préfère rester factuel : ce qui est listé correspond à ce que j’ai déjà pratiqué (TP + projets).",
     "skills.net.title": "Réseaux",
     "skills.net.li1": "Adressage IP, sous-réseaux",
-    "skills.net.li2": "VLAN, routage statique (notions)",
+    "skills.net.li2": "Routage statique, VLAN",
+    "skills.net.li3": "Modèle OSI, TCP/IP",
+    "skills.net.li4": "DHCP, DNS, NAT (notions)",
+    "skills.net.li5": "TP CCNA 1 + labo Cisco",
+
     "skills.sys.title": "Systèmes",
-    "skills.sys.li1": "Commandes réseau : ip, ping, traceroute",
-    "skills.sys.li2": "Notions DNS / DHCP / HTTP",
-    "skills.sys.li3": "Bases administration",
-    "skills.sec.title": "Sécurité",
-    "skills.sec.li1": "Principes sécurité réseau",
-    "skills.sec.li2": "Pare-feu (notions)",
-    "skills.sec.li3": "Bonnes pratiques & durcissement (bases)",
-    "skills.sec.li4": "Curiosité : SOC, pentest (découverte)",
-    "skills.dev.title": "Scripting & Dev",
-    "skills.dev.li1": "Web : HTML/CSS/JS, WordPress, React",
+    "skills.sys.li1": "Linux (Ubuntu/Debian) au quotidien",
+    "skills.sys.li2": "Shell, scripts Bash simples",
+    "skills.sys.li3": "Services réseau de base",
+    "skills.sys.li4": "Notions d’administration Windows",
+    "skills.sys.li5": "Utilisation Git/GitHub",
+
+    "skills.sec.title": "Cybersécurité",
+    "skills.sec.li1": "Sensibilisation aux bonnes pratiques",
+    "skills.sec.li2": "Premières notions (pare-feu, DMZ)",
+    "skills.sec.li3": "Scan de ports, services",
+    "skills.sec.li4": "TP sécurité en L3 (en cours)",
+
+    "skills.dev.title": "Développement",
+    "skills.dev.li1": "Python (scripts, outils réseau)",
+    "skills.dev.li2": "C/C++ (TP algo, graphes)",
+    "skills.dev.li3": "HTML/CSS/JS (ce site)",
+    "skills.dev.li4": "SQL (notions, TP BDD)",
 
     "about.title": "À propos",
     "about.p1":
-      "Je suis en Licence 3 Informatique à Lyon 1 (La Doua). J’ai découvert les systèmes et réseaux via les TP, puis j’ai continué en construisant mes propres projets.",
+      "Je m’appelle Leo Atchekzai, étudiant en L3 Informatique à l’Université Lyon 1 (La Doua), parcours Systèmes, Réseaux & Cybersécurité. Je m’intéresse surtout à l’infrastructure (réseaux, serveurs) et à la manière de la sécuriser.",
     "about.p2":
-      "Ce qui me plaît le plus, c’est le côté concret : comprendre pourquoi ça ne marche pas, tester, corriger, et automatiser quand c’est utile. Je cherche un stage, puis une alternance, en lien avec un Master Systèmes, Réseaux & Sécurité.",
+      "Ce portfolio n’a pas pour but de tout lister, mais de mettre en avant quelques projets que je peux expliquer techniquement (choix, limites, pistes d’amélioration).",
+    "about.p3":
+      "Je cherche un stage / une alternance où je peux progresser sur les sujets suivants : administration système, réseaux, sécurité, automatisation (scripts, outils internes).",
+    "about.card.title": "Ce que je recherche",
+    "about.card.li1": "Encadrement technique et bienveillance",
+    "about.card.li2": "Projets concrets (même modestes)",
+    "about.card.li3": "Environnement où je peux poser des questions",
+    "about.card.li4": "Possibilité de documenter ce que je fais",
 
     "contact.title": "Contact",
-    "contact.subtitle": "Un message suffit. Je réponds rapidement.",
-    "contact.cvLabel": "CV",
-    "contact.cvLink": "Télécharger mon CV (PDF)",
-    "contact.copy": "Copier le lien du portfolio",
-    "contact.qr": "Générer un QR code",
-    "contact.qrTitle": "QR Code",
-    "contact.qrHint": "Clique sur “Générer un QR code” après mise en ligne.",
+    "contact.p1":
+      "Si mon profil correspond à ce que vous recherchez, je serais ravi d’échanger.",
+    "contact.p2":
+      "N’hésitez pas à me contacter pour un stage, une alternance ou simplement discuter de vos besoins en systèmes, réseaux et cybersécurité.",
+    "contact.card.title": "Coordonnées",
+    "contact.cv": "CV",
+    "contact.cvLink": "Télécharger le CV ↗",
 
     "footer.built": "Fait en HTML/CSS/JS — GitHub Pages",
 
@@ -86,25 +107,29 @@ const dict = {
     "modals.portscanner.p1":
       "Projet personnel pour comprendre le scan TCP : sockets, timeouts, threads, et lecture de bannières (HTTP/SSH).",
     "modals.portscanner.p2":
-      "Ajout de l’historique des scans (SQLite), d’une détection de changements entre scans, et d’un mini-dashboard Flask pour parcourir les résultats.",
+      "Ajout de l’historique des scans (SQLite), d’une détection basique de services, et d’un mini-dashboard Flask pour parcourir les résultats.",
     "modals.portscanner.legal":
       "Projet pédagogique — scans réalisés uniquement sur des environnements locaux ou explicitement autorisés.",
 
     "modals.m3title": "NetCheck – Diagnostic réseau",
     "modals.m3":
-      "Outil de diagnostic réseau développé après le CCNA 1, orienté support et exploitation. Vérification DNS, ping, connexions TCP, accès HTTP/HTTPS et contrôle de l’expiration des certificats TLS.",
+      "Outil de diagnostic réseau développé après le CCNA 1, orienté supervision rapide : ping, ports, DNS, HTTP/HTTPS, certificats TLS.",
 
-    "modals.maxflowink.title": "Encrage d’une image par flot maximum (C++)",
     "modals.maxflowink.p1":
-      "Projet LIFAPC : binariser une image PGM en modélisant les pixels comme un graphe (source = noir, puits = blanc).",
+      "TP LIFAPC : transformer une image PGM en graphe (un sommet par pixel), ajouter des arêtes vers une source (noir) et un puits (blanc) avec des capacités basées sur l’intensité.",
     "modals.maxflowink.p2":
-      "Les capacités entre voisins dépendent de la différence d’intensité (gaussienne). Les arcs vers source/puits sont pondérés pour favoriser clair/sombre.",
+      "Application d’un algorithme de flot maximum (Edmonds–Karp) pour trouver une coupe minimale qui sépare les pixels en deux classes (noir/blanc).",
     "modals.maxflowink.p3":
-      "Flot maximum avec Edmonds–Karp (BFS, graphe résiduel). Après convergence, un parcours depuis la source donne la coupure (noir/blanc)."
+      "Flot maximum avec Edmonds–Karp (BFS, graphe résiduel). Après convergence, un parcours depuis la source donne la coupure (noir/blanc).",
+    "modals.brontkd.title": "Site Bron Taekwondo",
+    "modals.brontkd.p1":
+      "Site vitrine responsive pour le club Bron Taekwondo : présentation du club, des cours (enfants, ados, adultes), informations pratiques (tarifs, lieu, horaires) et mise en avant des événements (stages, compétitions, passages de grade).",
+    "modals.brontkd.p2":
+      "Objectif : offrir un point d’entrée clair pour les nouveaux adhérents, tout en restant simple à maintenir pour le club (mise à jour des infos et actualités sans complexité technique).",
   },
 
   en: {
-    "header.tagline": "BSc 3rd year — Systems, Networks & Cybersecurity (Lyon 1 — La Doua)",
+    "header.tagline": "BSc CS — Systems, Networks & Cybersecurity (Lyon 1 — La Doua)",
     "header.cta": "Contact me",
     "nav.projects": "Projects",
     "nav.skills": "Skills",
@@ -114,303 +139,193 @@ const dict = {
     "hero.kicker": "Portfolio",
     "hero.title": "Internship / Apprenticeship — Systems, Networks & Cybersecurity",
     "hero.subtitle":
-      "BSc 3rd-year student at Lyon 1 (La Doua), focusing on systems administration, networking and cybersecurity. This page gathers projects from coursework and personal practice.",
-    "hero.btnProjects": "See projects",
+      "I’m a 3rd-year Computer Science student at Lyon 1 University (La Doua), focusing on systems, networks and cybersecurity. This page showcases course and personal projects.",
+    "hero.btnProjects": "View my projects",
+    "hero.btnContact": "Discuss an opportunity",
     "hero.card.title": "Profile",
-    "hero.card.li1": "BSc in Computer Science (Lyon 1 — La Doua)",
-    "hero.card.li2": "Solid networking foundations (CCNA 1 + labs)",
-    "hero.card.li3": "Linux daily use + scripting",
-    "hero.card.li4": "Goal: MSc Systems, Networks & Security",
-    "hero.card.contact": "Contact",
-    "hero.card.copy": "Copy link",
+    "hero.card.li1": "3rd year CS (UCBL — La Doua)",
+    "hero.card.li2": "Solid networking basics (CCNA 1 + labs)",
+    "hero.card.li3": "Linux for daily use + scripting",
+    "hero.card.li4": "Goal: Master’s in Systems, Networks & Security",
+    "hero.card.contact": "Open for an internship / apprenticeship",
 
     "projects.title": "Projects",
     "projects.subtitle":
-      "A few representative projects (coursework + personal). I add more over time, keeping only projects I can clearly explain.",
+      "A few representative projects (coursework + personal). I’m gradually adding more, keeping only those I can explain clearly.",
     "projects.p1":
-      "Simple bilingual website to centralize my projects, skills and links (resume, GitHub, contact). I kept it lightweight (no framework) so it loads fast and stays easy to read.",
+      "Simple, bilingual website to present my projects, skills and contact details. Mobile-first and lightweight (no framework) so it loads fast and stays readable.",
     "projects.portscanner.title": "TCP Port Scanner (Python)",
     "projects.portscanner.desc":
-      "Personal project to understand TCP port scanning: multithreading, banner grabbing (HTTP/SSH), scan history and a small web view.",
-
+      "Personal project to understand TCP port scanning: multithreading, timeouts, banner grabbing (HTTP/SSH), scan history and a small web dashboard.",
     "projects.p3title": "NetCheck – Network diagnostics (Python)",
     "projects.p3":
-      "Network diagnostic tool developed after CCNA 1 to connect theory with real-world checks. DNS resolution, ICMP/TCP connectivity, HTTP/HTTPS access and TLS certificate expiry.",
-
-    "projects.maxflowink.title": "Image inking via max-flow / min-cut (C++)",
+      "Network diagnostic tool built after CCNA 1, to quickly check connectivity (ping), a few ports, DNS, HTTP/HTTPS and TLS certificate expiry.",
+    "projects.maxflowink.title": "Image inking via max flow (C++)",
     "projects.maxflowink.desc":
-      "LIFAPC lab: binarize a PGM image by modeling pixels as a graph, then applying max-flow/min-cut (Edmonds–Karp + residual traversal).",
-    "projects.github": "Code / GitHub ↗",
+      "LIFAPC lab: binarizing a PGM image by modeling the pixels and neighbourhood constraints as a graph, then applying max-flow/min-cut (Edmonds–Karp + residual graph).",
+    "projects.brontkd.title": "Bron Taekwondo club website",
+    "projects.brontkd.desc":
+      "Showcase website for the Bron Taekwondo club: classes overview, schedule, practical information and highlighted club events.",
+    "projects.site": "Visit website ↗",
+"projects.github": "Code / GitHub ↗",
     "projects.details": "Details",
 
     "skills.title": "Skills",
     "skills.subtitle":
-      "I try to stay factual: what’s listed here is what I’ve actually practiced (labs + projects).",
+      "I try to stay factual: what’s listed here is what I’ve already practiced (labs + projects).",
     "skills.net.title": "Networking",
-    "skills.net.li1": "IP addressing, subnetting",
-    "skills.net.li2": "VLAN, static routing (basics)",
+    "skills.net.li1": "IP addressing, subnets",
+    "skills.net.li2": "Static routing, VLANs",
+    "skills.net.li3": "OSI model, TCP/IP",
+    "skills.net.li4": "DHCP, DNS, NAT (basics)",
+    "skills.net.li5": "CCNA 1 labs + Cisco equipment",
+
     "skills.sys.title": "Systems",
-    "skills.sys.li1": "Network commands: ip, ping, traceroute",
-    "skills.sys.li2": "DNS / DHCP / HTTP basics",
-    "skills.sys.li3": "Admin basics",
-    "skills.sec.title": "Security",
-    "skills.sec.li1": "Network security principles",
-    "skills.sec.li2": "Firewall (basics)",
-    "skills.sec.li3": "Hardening & best practices (basics)",
-    "skills.sec.li4": "Curiosity: SOC, pentest (exploring)",
-    "skills.dev.title": "Scripting & Dev",
-    "skills.dev.li1": "Web: HTML/CSS/JS, WordPress, React",
+    "skills.sys.li1": "Linux (Ubuntu/Debian) for daily use",
+    "skills.sys.li2": "Shell, simple Bash scripts",
+    "skills.sys.li3": "Basic network services",
+    "skills.sys.li4": "Basic Windows administration",
+    "skills.sys.li5": "Git/GitHub usage",
+
+    "skills.sec.title": "Cybersecurity",
+    "skills.sec.li1": "Awareness of security best practices",
+    "skills.sec.li2": "First concepts (firewall, DMZ)",
+    "skills.sec.li3": "Port / service scanning",
+    "skills.sec.li4": "Security labs in 3rd year (ongoing)",
+
+    "skills.dev.title": "Development",
+    "skills.dev.li1": "Python (scripts, network tools)",
+    "skills.dev.li2": "C/C++ (algo / graph labs)",
+    "skills.dev.li3": "HTML/CSS/JS (this site)",
+    "skills.dev.li4": "SQL (basics, DB labs)",
 
     "about.title": "About",
     "about.p1":
-      "I’m a BSc 3rd-year Computer Science student at Lyon 1 (La Doua). I discovered systems and networking through labs, then went further by building my own projects.",
+      "My name is Leo Atchekzai. I’m a 3rd-year CS student at Lyon 1 University (La Doua), majoring in Systems, Networks & Cybersecurity. I’m particularly interested in infrastructure (networks, servers) and how to secure it.",
     "about.p2":
-      "What I enjoy most is the practical side: understanding why something breaks, testing, fixing, and automating when it makes sense. I’m looking for an internship, then an apprenticeship aligned with an MSc in Systems, Networks & Security.",
+      "This portfolio is not meant to list everything, but to highlight a few projects I can explain technically (choices, limitations, improvement ideas).",
+    "about.p3":
+      "I’m looking for an internship / apprenticeship where I can grow on the following topics: system administration, networking, security, automation (scripts, internal tools).",
+    "about.card.title": "What I’m looking for",
+    "about.card.li1": "Technical guidance and a supportive team",
+    "about.card.li2": "Real-world projects (even small ones)",
+    "about.card.li3": "An environment where I can ask questions",
+    "about.card.li4": "Opportunities to document what I do",
 
     "contact.title": "Contact",
-    "contact.subtitle": "A message is enough — I reply quickly.",
-    "contact.cvLabel": "Resume",
-    "contact.cvLink": "Download my resume (PDF)",
-    "contact.copy": "Copy portfolio link",
-    "contact.qr": "Generate QR code",
-    "contact.qrTitle": "QR Code",
-    "contact.qrHint": "Click “Generate QR code” after publishing the website.",
+    "contact.p1":
+      "If my profile matches what you are looking for, I’d be happy to talk.",
+    "contact.p2":
+      "Feel free to contact me for an internship, an apprenticeship or simply to discuss your systems, networking and cybersecurity needs.",
+    "contact.card.title": "Details",
+    "contact.cv": "Resume",
+    "contact.cvLink": "Download resume ↗",
 
     "footer.built": "Built with HTML/CSS/JS — GitHub Pages",
 
     "modals.m1":
-      "A simple, readable one-page portfolio with direct links to GitHub and the resume.",
+      "Simple and readable portfolio: one page, a few sections, and direct links to GitHub/resume.",
     "modals.portscanner.title": "TCP Port Scanner – Python",
     "modals.portscanner.p1":
       "Personal project to understand TCP scanning: sockets, timeouts, threads, and banner grabbing (HTTP/SSH).",
     "modals.portscanner.p2":
-      "Added scan history (SQLite), basic change detection between scans, and a small Flask dashboard to browse results.",
+      "Added scan history (SQLite), basic service detection, and a tiny Flask dashboard to browse results.",
     "modals.portscanner.legal":
-      "Educational project — scans are performed only on local or explicitly authorized environments.",
+      "Educational project — scans are run only on local or explicitly authorized environments.",
 
     "modals.m3title": "NetCheck – Network diagnostics",
     "modals.m3":
-      "Python-based network diagnostic tool built after CCNA 1, focused on support and operations. DNS, ping, TCP checks, HTTP/HTTPS access and TLS expiry verification.",
+      "Network diagnostic tool built after CCNA 1, focused on quick checks: ping, ports, DNS, HTTP/HTTPS, TLS certificates.",
 
-    "modals.maxflowink.title": "Image inking via max-flow / min-cut (C++)",
     "modals.maxflowink.p1":
-      "LIFAPC project: binarize a PGM image by modeling pixels as a graph (source=black, sink=white).",
+      "LIFAPC lab: turn a PGM image into a graph (one node per pixel), add edges to a source (black) and a sink (white) with capacities derived from intensity.",
     "modals.maxflowink.p2":
-      "Neighbor capacities depend on intensity differences (Gaussian). Source/sink edges are weighted to encourage dark/light assignment.",
+      "Apply a max-flow algorithm (Edmonds–Karp) to find a minimum cut that splits pixels into two classes (black/white).",
     "modals.maxflowink.p3":
-      "Max flow with Edmonds–Karp (BFS, residual graph). After convergence, reachability from the source gives the cut (black/white)."
+      "Max flow with Edmonds–Karp (BFS, residual graph). After convergence, a traversal from the source gives the cut (black/white).",
+    "modals.brontkd.title": "Bron Taekwondo website",
+    "modals.brontkd.p1":
+      "Responsive showcase website for the Bron Taekwondo club: club presentation, classes (kids, teens, adults), practical information (fees, location, timetable) and events (seminars, competitions, belt tests).",
+    "modals.brontkd.p2":
+      "Goal: provide a clear entry point for new members while keeping updates simple for the club (texts and news can be updated without technical complexity).",
   }
 };
 
-function pickInitialLang() {
-  const saved = localStorage.getItem("lang");
-  if (saved === "fr" || saved === "en") return saved;
-  const nav = (navigator.language || "").toLowerCase();
-  return nav.startsWith("fr") ? "fr" : "en";
-}
+let currentLang = "fr";
 
-function t(lang, key) {
-  const pack = dict[lang] || dict.en;
-  return pack[key] ?? dict.en[key] ?? null;
-}
+function applyTranslations(lang) {
+  const dictLang = dict[lang];
+  if (!dictLang) return;
 
-function applyI18n(lang) {
   $$("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    const value = t(lang, key);
-    if (typeof value === "string") el.textContent = value;
-  });
-
-  $$("[data-i18n-attr]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    const value = key ? t(lang, key) : null;
+    const value = dictLang[key];
     if (!value) return;
-
-    const attrs = (el.getAttribute("data-i18n-attr") || "")
-      .split("|")
-      .map((s) => s.trim())
-      .filter(Boolean);
-
-    attrs.forEach((attr) => el.setAttribute(attr, value));
+    el.textContent = value;
   });
-}
-
-function setLang(lang) {
-  const safe = lang === "fr" || lang === "en" ? lang : "en";
-  document.documentElement.lang = safe;
-  localStorage.setItem("lang", safe);
-
-  const pill = $("#langPill");
-  if (pill) pill.textContent = safe.toUpperCase();
-
-  applyI18n(safe);
-  return safe;
 }
 
 const langToggle = $("#langToggle");
-let currentLang = setLang(pickInitialLang());
-
 if (langToggle) {
   langToggle.addEventListener("click", () => {
-    currentLang = setLang(currentLang === "fr" ? "en" : "fr");
+    currentLang = currentLang === "fr" ? "en" : "fr";
+    applyTranslations(currentLang);
   });
 }
 
+// Apply default language on load
+applyTranslations(currentLang);
+
+// Reveal on scroll
 const revealEls = $$(".reveal");
-if (revealEls.length) {
+if ("IntersectionObserver" in window) {
   const io = new IntersectionObserver(
     (entries) => {
-      entries.forEach((e) => {
-        if (!e.isIntersecting) return;
-        e.target.classList.add("show");
-        io.unobserve(e.target);
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-visible");
+          io.unobserve(entry.target);
+        }
       });
     },
-    { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+    { threshold: 0.2 }
   );
 
   revealEls.forEach((el) => io.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("reveal-visible"));
 }
 
-function openModalById(id) {
-  const dlg = document.getElementById(id);
-  if (!dlg || typeof dlg.showModal !== "function") return;
+// Modals
+const modalOpenButtons = $$("[data-modal-open]");
+const modalCloseButtons = $$("[data-modal-close]");
 
-  dlg.__returnFocusEl = document.activeElement;
-  dlg.showModal();
-
-  const closeBtn = dlg.querySelector("[data-modal-close]");
-  if (closeBtn) closeBtn.focus();
-}
-
-function closeModal(dlg) {
-  if (!dlg) return;
-  dlg.close();
-
-  const prev = dlg.__returnFocusEl;
-  if (prev && typeof prev.focus === "function") prev.focus();
-}
-
-$$("[data-modal-open]").forEach((btn) => {
+modalOpenButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const id = btn.getAttribute("data-modal-open");
-    if (id) openModalById(id);
+    const dialog = document.getElementById(id);
+    if (dialog && typeof dialog.showModal === "function") {
+      dialog.showModal();
+    }
   });
 });
 
-$$("[data-modal-close]").forEach((btn) => {
+modalCloseButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const dlg = btn.closest("dialog");
-    closeModal(dlg);
+    const dialog = btn.closest("dialog");
+    if (dialog) dialog.close();
   });
 });
 
-$$("dialog.modal").forEach((dlg) => {
-  dlg.addEventListener("click", (e) => {
-    if (e.target === dlg) closeModal(dlg);
-  });
+$$("dialog").forEach((dialog) => {
+  dialog.addEventListener("click", (e) => {
+    const rect = dialog.getBoundingClientRect();
+    const isInDialog =
+      e.clientX >= rect.left &&
+      e.clientX <= rect.right &&
+      e.clientY >= rect.top &&
+      e.clientY <= rect.bottom;
 
-  dlg.addEventListener("cancel", (e) => {
-    e.preventDefault();
-    closeModal(dlg);
+    if (!isInDialog) dialog.close();
   });
 });
-
-function setNotice(el, type, text) {
-  if (!el) return;
-  el.className = `notice ${type || ""}`.trim();
-  el.textContent = text || "";
-  const prev = el.__t;
-  if (prev) clearTimeout(prev);
-  if (text) {
-    el.__t = setTimeout(() => {
-      el.className = "notice";
-      el.textContent = "";
-      el.__t = null;
-    }, 2400);
-  }
-}
-
-async function copyText(text, noticeEl) {
-  const okMsg = currentLang === "fr" ? "Copié ✅" : "Copied ✅";
-  const warnMsg = currentLang === "fr" ? "Copie manuelle : " : "Manual copy: ";
-
-  try {
-    if (navigator.clipboard && window.isSecureContext) {
-      await navigator.clipboard.writeText(text);
-    } else {
-      const ta = document.createElement("textarea");
-      ta.value = text;
-      ta.setAttribute("readonly", "");
-      ta.style.position = "fixed";
-      ta.style.left = "-9999px";
-      ta.style.top = "-9999px";
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      ta.remove();
-    }
-    setNotice(noticeEl, "ok", okMsg);
-  } catch {
-    setNotice(noticeEl, "warn", warnMsg + text);
-  }
-}
-
-const copyLinkBtn = $("#copyLinkBtn");
-const copyNotice = $("#copyNotice");
-if (copyLinkBtn) {
-  copyLinkBtn.addEventListener("click", () => {
-    copyText(window.location.href, copyNotice);
-  });
-}
-
-const copyPageBtn = $("#copyPageBtn");
-const pageNotice = $("#pageNotice");
-if (copyPageBtn) {
-  copyPageBtn.addEventListener("click", () => {
-    copyText(window.location.href, pageNotice);
-  });
-}
-
-const qrBtn = $("#qrBtn");
-const qrImg = $("#qrImg");
-
-if (qrImg) {
-  qrImg.style.display = "none";
-  qrImg.removeAttribute("src");
-  qrImg.decoding = "async";
-  qrImg.loading = "lazy";
-}
-
-if (qrBtn && qrImg) {
-  qrImg.addEventListener("error", () => {
-    qrImg.style.display = "none";
-    setNotice(
-      pageNotice,
-      "warn",
-      currentLang === "fr"
-        ? "Impossible de générer le QR code."
-        : "Could not generate QR code."
-    );
-  });
-
-  qrBtn.addEventListener("click", () => {
-    const url = window.location.href;
-
-    if (!url.startsWith("http")) {
-      setNotice(
-        pageNotice,
-        "warn",
-        currentLang === "fr"
-          ? "Publie d’abord le site (GitHub Pages), puis génère le QR code."
-          : "Publish the website first (GitHub Pages), then generate the QR code."
-      );
-      return;
-    }
-
-    const encoded = encodeURIComponent(url);
-    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encoded}`;
-    qrImg.style.display = "block";
-    setNotice(pageNotice, "ok", currentLang === "fr" ? "QR code généré ✅" : "QR generated ✅");
-  });
-}

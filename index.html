@@ -14,99 +14,75 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" href="./favicon.ico">
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
   <link rel="stylesheet" href="./styles.css" />
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
+  <header class="header">
     <div class="container header-inner">
-      <div class="brand">
-        <div class="avatar" aria-hidden="true">
-          <img src="./favicon.png" alt="Léo Atchekzai">
-        </div>
-        <div class="brand-text">
-          <div class="name">Leo Atchekzai</div>
-          <div class="tagline" data-i18n="header.tagline">
+      <a href="#top" class="brand">
+        <div class="avatar">LA</div>
+        <div>
+          <div class="brand-name">Leo Atchekzai</div>
+          <div class="brand-tagline" data-i18n="header.tagline">
             L3 Informatique — Systèmes, Réseaux & Cybersécurité (Lyon 1 — La Doua)
           </div>
         </div>
-      </div>
+      </a>
 
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav">
         <a href="#projects" data-i18n="nav.projects">Projets</a>
         <a href="#skills" data-i18n="nav.skills">Compétences</a>
         <a href="#about" data-i18n="nav.about">À propos</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
-      <div class="actions">
-        <button id="langToggle" class="btn ghost" type="button" aria-label="Toggle language">
-          <span class="pill" id="langPill">FR</span>
-        </button>
-        <a class="btn primary" href="#contact" data-i18n="header.cta">Me contacter</a>
+      <div class="header-actions">
+        <button id="langToggle" class="btn ghost small" type="button">FR / EN</button>
+        <a class="btn small" href="#contact" data-i18n="header.cta">Me contacter</a>
       </div>
     </div>
   </header>
 
-  <main id="main">
+  <main id="top">
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-text reveal">
-          <div class="kicker" data-i18n="hero.kicker">Portfolio</div>
-
-          <h1 class="title" data-i18n="hero.title">Stage — Systèmes, Réseaux & Cybersécurité</h1>
-
-          <p class="subtitle" data-i18n="hero.subtitle">
-            Étudiant en L3 Informatique à Lyon 1 (La Doua), je m’oriente vers les systèmes, les réseaux et la cybersécurité.
-            Ici, je regroupe quelques projets (cours et perso) pour montrer concrètement ce que je sais faire.
+        <div class="hero-main reveal">
+          <div class="hero-kicker" data-i18n="hero.kicker">Portfolio</div>
+          <h1 class="hero-title" data-i18n="hero.title">
+            Stage / Alternance — Systèmes, Réseaux & Cybersécurité
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Étudiant en Licence 3 Informatique à Lyon 1 (La Doua), je me spécialise en systèmes, réseaux
+            et cybersécurité. Cette page regroupe des projets réalisés en cours et en autonomie.
           </p>
 
-          <div class="hero-cta">
-            <a class="btn primary" href="#projects" data-i18n="hero.btnProjects">Voir mes projets</a>
-
-            <a class="btn ghost" href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer">
-              GitHub <span class="icon" aria-hidden="true">↗</span>
-            </a>
-
-            <a class="btn ghost" href="https://www.linkedin.com/in/l%C3%A9o-atchekzai-644775234/" target="_blank" rel="noreferrer">
-              LinkedIn <span class="icon" aria-hidden="true">↗</span>
-            </a>
+          <div class="hero-actions">
+            <a href="#projects" class="btn" data-i18n="hero.btnProjects">Voir mes projets</a>
+            <a href="#contact" class="btn ghost" data-i18n="hero.btnContact">Discuter d’une opportunité</a>
           </div>
         </div>
 
-        <div class="hero-card reveal">
+        <aside class="hero-side reveal">
           <div class="card">
-            <div class="card-body">
+            <div class="card-head">
               <div class="card-title" data-i18n="hero.card.title">Profil</div>
-
-              <ul class="bullets">
-                <li data-i18n="hero.card.li1">Licence 3 Informatique (UCBL — La Doua)</li>
-                <li data-i18n="hero.card.li2">Bases réseaux solides (CCNA 1 + TP)</li>
-                <li data-i18n="hero.card.li3">Linux au quotidien + scripting</li>
-                <li data-i18n="hero.card.li4">Objectif : Master Systèmes, Réseaux & Sécurité</li>
-              </ul>
-
-              <div class="mini-actions">
-                <a class="btn small" href="#contact" data-i18n="hero.card.contact">Contact</a>
-                <button class="btn small ghost" id="copyLinkBtn" type="button" data-i18n="hero.card.copy">
-                  Copier le lien
-                </button>
-              </div>
-
-              <div class="notice" id="copyNotice" aria-live="polite"></div>
             </div>
+            <ul class="card-list">
+              <li data-i18n="hero.card.li1">Licence 3 Informatique (UCBL — La Doua)</li>
+              <li data-i18n="hero.card.li2">Bases réseaux solides (CCNA 1 + TP)</li>
+              <li data-i18n="hero.card.li3">Linux au quotidien + scripting</li>
+              <li data-i18n="hero.card.li4">Objectif : Master Systèmes, Réseaux & Sécurité</li>
+            </ul>
+            <a href="#contact" class="card-link" data-i18n="hero.card.contact">
+              Disponible pour un stage / une alternance
+            </a>
           </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="divider"></div>
+        </aside>
       </div>
     </section>
 
@@ -126,14 +102,11 @@
             </div>
 
             <p class="project-desc" data-i18n="projects.p1">
-              Site simple et bilingue pour regrouper mes projets, compétences et liens (CV, GitHub, contact).
-              Je l’ai gardé volontairement léger (sans framework) pour que ce soit rapide et lisible.
+              Site simple et bilingue pour regrouper mes projets, compétences et coordonnées. Pensé mobile-first,
+              léger (sans framework) pour qu’il charge vite et reste lisible.
             </p>
 
             <div class="project-actions">
-              <a class="btn small" href="https://github.com/atchekzaileo/portfolio" target="_blank" rel="noreferrer" data-i18n="projects.github">
-                Code / GitHub ↗
-              </a>
               <button class="btn small ghost" type="button" data-modal-open="modal1" data-i18n="projects.details">
                 Détails
               </button>
@@ -142,22 +115,24 @@
 
           <article class="card project">
             <div class="project-top">
-              <div class="project-title" data-i18n="projects.portscanner.title">Port Scanner TCP (Python)</div>
+              <div class="project-title" data-i18n="projects.portscanner.title">
+                Port Scanner TCP (Python)
+              </div>
               <div class="badges">
                 <span class="badge">Python</span>
                 <span class="badge">Sockets</span>
-                <span class="badge">TCP</span>
-                <span class="badge">Flask</span>
+                <span class="badge">Threads</span>
+                <span class="badge">Réseaux</span>
               </div>
             </div>
 
             <p class="project-desc" data-i18n="projects.portscanner.desc">
-              Projet perso pour comprendre un scan TCP : multithread, lecture de bannières (HTTP/SSH),
+              Projet personnel pour comprendre un scan de ports TCP : multithread, lecture de bannières (HTTP/SSH),
               sauvegarde des scans et petite visualisation web.
             </p>
 
             <div class="project-actions">
-              <a class="btn small" href="https://github.com/atchekzaileo/port-scanner" target="_blank" rel="noreferrer" data-i18n="projects.github">
+              <a class="btn small" href="https://github.com/atch...r" target="_blank" rel="noreferrer" data-i18n="projects.github">
                 Code / GitHub ↗
               </a>
               <button class="btn small ghost" type="button" data-modal-open="modal-portscanner" data-i18n="projects.details">
@@ -168,27 +143,25 @@
 
           <article class="card project">
             <div class="project-top">
-              <div class="project-title">NetCheck – Diagnostic réseau (Python)</div>
+              <div class="project-title" data-i18n="projects.p3title">
+                NetCheck – Diagnostic réseau (Python)
+              </div>
               <div class="badges">
                 <span class="badge">Python</span>
-                <span class="badge">Réseaux</span>
-                <span class="badge">DNS</span>
-                <span class="badge">TCP/IP</span>
+                <span class="badge">ICMP</span>
+                <span class="badge">TCP</span>
                 <span class="badge">HTTP</span>
+                <span class="badge">TLS</span>
               </div>
             </div>
 
-            <p class="project-desc">
-              Outil de diagnostic réseau développé après le CCNA 1 pour relier la théorie aux cas concrets.
-              Il permet de vérifier rapidement la résolution DNS, la connectivité ICMP/TCP,
-              l’accès HTTP/HTTPS et l’expiration des certificats TLS.
+            <p class="project-desc" data-i18n="projects.p3">
+              Outil de diagnostic réseau développé après le CCNA 1 pour vérifier rapidement la connectivité (ping),
+              les ports, DNS, HTTP/HTTPS et les certificats TLS.
             </p>
 
             <div class="project-actions">
-              <a class="btn small" href="https://github.com/atchekzaileo/NetCheck-outil-de-diagnostic-et-monitoring-l-ger-Python-" target="_blank" rel="noreferrer">
-                Code / GitHub ↗
-              </a>
-              <button class="btn small ghost" type="button" data-modal-open="modal-netcheck">
+              <button class="btn small ghost" type="button" data-modal-open="modal3" data-i18n="projects.details">
                 Détails
               </button>
             </div>
@@ -196,25 +169,65 @@
 
           <article class="card project">
             <div class="project-top">
-              <div class="project-title" data-i18n="projects.maxflowink.title">Encrage d’image par flot maximum (C++)</div>
+              <div class="project-title" data-i18n="projects.maxflowink.title">
+                Encrage d’image par flot maximum (C++)
+              </div>
               <div class="badges">
                 <span class="badge">C++</span>
                 <span class="badge">Graphes</span>
-                <span class="badge">Edmonds–Karp</span>
-                <span class="badge">PGM</span>
+                <span class="badge">Algorithmes</span>
               </div>
             </div>
 
             <p class="project-desc" data-i18n="projects.maxflowink.desc">
-              TP LIFAPC : binarisation d’une image PGM en modélisant l’image comme un graphe,
+              TP LIFAPC : binarisation d’une image PGM en modélisant les pixels et les contraintes de voisinage en graphe,
               puis en appliquant flot maximum / coupe minimale (Edmonds–Karp + parcours résiduel).
             </p>
 
             <div class="project-actions">
-              <a class="btn small" href="https://github.com/atchekzaileo/Encrage-d-une-image-par-flot-maximum" target="_blank" rel="noreferrer" data-i18n="projects.github">
+              <a class="btn small" href="https://github.com/atch...m" target="_blank" rel="noreferrer" data-i18n="projects.github">
                 Code / GitHub ↗
               </a>
               <button class="btn small ghost" type="button" data-modal-open="modal-maxflowink" data-i18n="projects.details">
+                Détails
+              </button>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project-top">
+              <div class="project-title" data-i18n="projects.brontkd.title">
+                Site du club Bron Taekwondo
+              </div>
+              <div class="badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JS</span>
+              </div>
+            </div>
+
+            <p class="project-desc" data-i18n="projects.brontkd.desc">
+              Site vitrine pour le club Bron Taekwondo : présentation des cours,
+              planning, informations pratiques et mise en avant des événements du club.
+            </p>
+
+            <div class="project-actions">
+              <a
+                class="btn small"
+                href="https://brontaekwondo.com"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="projects.site"
+              >
+                Voir le site ↗
+              </a>
+
+              <button
+                class="btn small ghost"
+                type="button"
+                data-modal-open="modal-brontkd"
+                data-i18n="projects.details"
+              >
                 Détails
               </button>
             </div>
@@ -223,217 +236,282 @@
       </div>
     </section>
 
-    <section id="skills" class="section alt">
+    <section id="skills" class="section">
       <div class="container">
         <div class="section-head reveal">
           <h2 data-i18n="skills.title">Compétences</h2>
+          <p class="muted" data-i18n="skills.subtitle">
+            Je préfère rester factuel : ce qui est listé correspond à ce que j’ai déjà pratiqué (TP + projets).
+          </p>
         </div>
 
         <div class="grid skills-grid">
-          <div class="card">
-            <h3 data-i18n="skills.net.title">Réseaux</h3>
-            <ul class="list">
-              <li>OSI / TCP-IP</li>
+          <article class="card skill-card reveal">
+            <div class="card-head">
+              <div class="card-title" data-i18n="skills.net.title">Réseaux</div>
+            </div>
+            <ul class="card-list">
               <li data-i18n="skills.net.li1">Adressage IP, sous-réseaux</li>
-              <li>ARP, ICMP, TCP/UDP</li>
-              <li data-i18n="skills.net.li2">VLAN, routage statique (notions)</li>
+              <li data-i18n="skills.net.li2">Routage statique, VLAN</li>
+              <li data-i18n="skills.net.li3">Modèle OSI, TCP/IP</li>
+              <li data-i18n="skills.net.li4">DHCP, DNS, NAT (notions)</li>
+              <li data-i18n="skills.net.li5">TP CCNA 1 + labo Cisco</li>
             </ul>
-          </div>
+          </article>
 
-          <div class="card">
-            <h3 data-i18n="skills.sys.title">Systèmes</h3>
-            <ul class="list">
-              <li>Linux (Ubuntu/Debian)</li>
-              <li data-i18n="skills.sys.li1">Commandes réseau : ip, ping, traceroute</li>
-              <li data-i18n="skills.sys.li2">Notions DNS / DHCP / HTTP</li>
-              <li data-i18n="skills.sys.li3">Bases administration</li>
+          <article class="card skill-card reveal">
+            <div class="card-head">
+              <div class="card-title" data-i18n="skills.sys.title">Systèmes</div>
+            </div>
+            <ul class="card-list">
+              <li data-i18n="skills.sys.li1">Linux (Ubuntu/Debian) au quotidien</li>
+              <li data-i18n="skills.sys.li2">Shell, scripts Bash simples</li>
+              <li data-i18n="skills.sys.li3">Services réseau de base</li>
+              <li data-i18n="skills.sys.li4">Notions d’administration Windows</li>
+              <li data-i18n="skills.sys.li5">Utilisation Git/GitHub</li>
             </ul>
-          </div>
+          </article>
 
-          <div class="card">
-            <h3 data-i18n="skills.sec.title">Sécurité</h3>
-            <ul class="list">
-              <li data-i18n="skills.sec.li1">Principes sécurité réseau</li>
-              <li data-i18n="skills.sec.li2">Pare-feu (notions)</li>
-              <li data-i18n="skills.sec.li3">Bonnes pratiques & durcissement (bases)</li>
-              <li data-i18n="skills.sec.li4">Curiosité : SOC, pentest (découverte)</li>
+          <article class="card skill-card reveal">
+            <div class="card-head">
+              <div class="card-title" data-i18n="skills.sec.title">Cybersécurité</div>
+            </div>
+            <ul class="card-list">
+              <li data-i18n="skills.sec.li1">Sensibilisation aux bonnes pratiques</li>
+              <li data-i18n="skills.sec.li2">Premières notions (pare-feu, DMZ)</li>
+              <li data-i18n="skills.sec.li3">Scan de ports, services</li>
+              <li data-i18n="skills.sec.li4">TP sécurité en L3 (en cours)</li>
             </ul>
-          </div>
+          </article>
 
-          <div class="card">
-            <h3 data-i18n="skills.dev.title">Scripting & Dev</h3>
-            <ul class="list">
-              <li>Python, Bash</li>
-              <li>C / C++</li>
-              <li>SQL</li>
-              <li data-i18n="skills.dev.li1">Web : HTML/CSS/JS, WordPress, React</li>
-              <li>Git, GitHub Pages, Docker (bases)</li>
+          <article class="card skill-card reveal">
+            <div class="card-head">
+              <div class="card-title" data-i18n="skills.dev.title">Développement</div>
+            </div>
+            <ul class="card-list">
+              <li data-i18n="skills.dev.li1">Python (scripts, outils réseau)</li>
+              <li data-i18n="skills.dev.li2">C/C++ (TP algo, graphes)</li>
+              <li data-i18n="skills.dev.li3">HTML/CSS/JS (ce site)</li>
+              <li data-i18n="skills.dev.li4">SQL (notions, TP BDD)</li>
             </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="about" class="section">
       <div class="container">
-        <div class="section-head reveal">
-          <h2 data-i18n="about.title">À propos</h2>
-        </div>
+        <div class="grid about-grid">
+          <div class="about-main reveal">
+            <h2 data-i18n="about.title">À propos</h2>
+            <p data-i18n="about.p1">
+              Je m’appelle Leo Atchekzai, étudiant en L3 Informatique à l’Université Lyon 1 (La Doua),
+              parcours Systèmes, Réseaux & Cybersécurité. Je m’intéresse surtout à l’infrastructure
+              (réseaux, serveurs) et à la manière de la sécuriser.
+            </p>
+            <p data-i18n="about.p2">
+              Ce portfolio n’a pas pour but de tout lister, mais de mettre en avant quelques projets que
+              je peux expliquer techniquement (choix, limites, pistes d’amélioration).
+            </p>
+            <p data-i18n="about.p3">
+              Je cherche un stage / une alternance où je peux progresser sur les sujets suivants :
+              administration système, réseaux, sécurité, automatisation (scripts, outils internes).
+            </p>
+          </div>
 
-        <div class="card about-card">
-          <p data-i18n="about.p1">
-            Je suis en Licence 3 Informatique à Lyon 1 (La Doua). J’ai découvert les systèmes et réseaux via les TP,
-            et j’ai voulu aller plus loin en construisant mes propres projets (outils réseau, algo, etc.).
-          </p>
-
-          <p data-i18n="about.p2">
-            Ce que j’aime, c’est le côté concret : diagnostiquer, tester, corriger, et automatiser quand ça fait gagner du temps.
-            Je cherche un stage, puis une alternance, en lien avec un Master Systèmes, Réseaux & Sécurité.
-          </p>
+          <aside class="about-side reveal">
+            <div class="card">
+              <div class="card-head">
+                <div class="card-title" data-i18n="about.card.title">Ce que je recherche</div>
+              </div>
+              <ul class="card-list">
+                <li data-i18n="about.card.li1">Encadrement technique et bienveillance</li>
+                <li data-i18n="about.card.li2">Projets concrets (même modestes)</li>
+                <li data-i18n="about.card.li3">Environnement où je peux poser des questions</li>
+                <li data-i18n="about.card.li4">Possibilité de documenter ce que je fais</li>
+              </ul>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section alt">
+    <section id="contact" class="section">
       <div class="container">
-        <div class="section-head reveal">
-          <h2 data-i18n="contact.title">Contact</h2>
-          <p class="muted" data-i18n="contact.subtitle">Un message suffit. Je réponds rapidement.</p>
-        </div>
-
         <div class="grid contact-grid">
-          <div class="card">
-            <div class="contact-item">
-              <div class="label">Email :</div>
-              <a href="mailto:atchekzaileo@gmail.com">atchekzaileo@gmail.com</a>
-            </div>
-
-            <div class="contact-item">
-              <div class="label">GitHub :</div>
-              <a href="https://github.com/atchekzaileo" target="_blank" rel="noreferrer">github.com/atchekzaileo ↗</a>
-            </div>
-
-            <div class="contact-item">
-              <div class="label">LinkedIn :</div>
-              <a href="https://www.linkedin.com/in/l%C3%A9o-atchekzai-644775234/" target="_blank" rel="noreferrer">
-                linkedin.com/in/léo-atchekzai-644775234 ↗
-              </a>
-            </div>
-
-            <div class="contact-item">
-              <div class="label" data-i18n="contact.cvLabel">CV :</div>
-              <a href="./cv.pdf" download data-i18n="contact.cvLink">Télécharger mon CV (PDF)</a>
-            </div>
-
-            <div class="contact-actions">
-              <button class="btn primary" id="copyPageBtn" type="button" data-i18n="contact.copy">Copier le lien du portfolio</button>
-              <button class="btn ghost" id="qrBtn" type="button" data-i18n="contact.qr">Générer un QR code</button>
-              <div class="notice" id="pageNotice" aria-live="polite"></div>
-            </div>
+          <div class="contact-main reveal">
+            <h2 data-i18n="contact.title">Contact</h2>
+            <p data-i18n="contact.p1">
+              Si mon profil correspond à ce que vous recherchez, je serais ravi d’échanger.
+            </p>
+            <p data-i18n="contact.p2">
+              N’hésitez pas à me contacter pour un stage, une alternance ou simplement discuter de
+              vos besoins en systèmes, réseaux et cybersécurité.
+            </p>
           </div>
 
-          <div class="card qr-card">
-            <div class="qr-wrap">
-              <div class="qr-title" data-i18n="contact.qrTitle">QR Code</div>
-              <div class="qr-box">
-                <img id="qrImg" alt="QR Code" />
+          <aside class="contact-side reveal">
+            <div class="card">
+              <div class="card-head">
+                <div class="card-title" data-i18n="contact.card.title">Coordonnées</div>
               </div>
-              <p class="muted small" data-i18n="contact.qrHint">Clique sur “Générer un QR code” après mise en ligne.</p>
+              <ul class="card-list contact-list">
+                <li>
+                  <span class="label">Email</span>
+                  <a href="mailto:atchekzaileo@gmail.com">atchekzaileo@gmail.com</a>
+                </li>
+                <li>
+                  <span class="label" data-i18n="contact.cv">CV</span>
+                  <a href="./cv-leo-atchekzai.pdf" target="_blank" rel="noreferrer" data-i18n="contact.cvLink">
+                    Télécharger le CV ↗
+                  </a>
+                </li>
+                <li>
+                  <span class="label">GitHub</span>
+                  <a href="https://github.com/atch...i" target="_blank" rel="noreferrer">github.com/atch...i</a>
+                </li>
+                <li>
+                  <span class="label">LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/..." target="_blank" rel="noreferrer">
+                    linkedin.com/in/...
+                  </a>
+                </li>
+              </ul>
             </div>
-          </div>
+          </aside>
         </div>
-
-        <footer class="footer muted">
-          <span>© <span id="year"></span> Leo Atchekzai</span>
-          <span class="dot">•</span>
-          <span data-i18n="footer.built">Fait en HTML/CSS/JS — GitHub Pages</span>
-        </footer>
       </div>
     </section>
   </main>
 
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="muted">
+        © <span id="year"></span> Leo Atchekzai
+      </div>
+      <div class="muted" data-i18n="footer.built">
+        Fait en HTML/CSS/JS — GitHub Pages
+      </div>
+    </div>
+  </footer>
+
   <dialog class="modal" id="modal1">
     <div class="modal-inner">
       <div class="modal-head">
-        <div class="modal-title">Portfolio</div>
+        <div class="modal-title">
+          Portfolio (cette page)
+        </div>
         <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
       </div>
       <p class="muted" data-i18n="modals.m1">
-        Portfolio volontairement simple et lisible : une page, quelques sections, et des liens directs vers GitHub/CV.
+        Portfolio simple et lisible : une page, quelques sections, et des liens directs vers GitHub/CV.
       </p>
-      <div class="modal-actions">
-        <a class="btn small" href="https://github.com/atchekzaileo/portfolio" target="_blank" rel="noreferrer">GitHub ↗</a>
-      </div>
     </div>
   </dialog>
 
   <dialog class="modal" id="modal-portscanner">
     <div class="modal-inner">
       <div class="modal-head">
-        <div class="modal-title" data-i18n="modals.portscanner.title">Port Scanner TCP – Python</div>
+        <div class="modal-title" data-i18n="modals.portscanner.title">
+          Port Scanner TCP – Python
+        </div>
         <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
       </div>
 
       <p class="muted" data-i18n="modals.portscanner.p1">
-        Projet personnel pour comprendre le scan TCP “à la main” : sockets, timeouts, threads, et lecture de bannières (HTTP/SSH).
+        Projet personnel pour comprendre le scan TCP : sockets, timeouts, threads, et lecture de bannières (HTTP/SSH).
       </p>
-
       <p class="muted" data-i18n="modals.portscanner.p2">
-        J’ai ajouté l’historique des scans (SQLite), une détection simple des changements entre deux scans, et un mini-dashboard Flask pour parcourir les résultats.
+        Ajout de l’historique des scans (SQLite), d’une détection basique de services, et d’un mini-dashboard Flask
+        pour parcourir les résultats.
       </p>
-
-      <p class="muted small" data-i18n="modals.portscanner.legal">
+      <p class="muted" data-i18n="modals.portscanner.legal">
         Projet pédagogique — scans réalisés uniquement sur des environnements locaux ou explicitement autorisés.
       </p>
-
-      <div class="modal-actions">
-        <a class="btn small" href="https://github.com/atchekzaileo/port-scanner" target="_blank" rel="noreferrer">GitHub ↗</a>
-      </div>
     </div>
   </dialog>
 
   <dialog class="modal" id="modal3">
     <div class="modal-inner">
       <div class="modal-head">
-        <div class="modal-title" data-i18n="modals.m3title">Automation & Scripting</div>
+        <div class="modal-title" data-i18n="modals.m3title">
+          NetCheck – Diagnostic réseau
+        </div>
         <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
       </div>
       <p class="muted" data-i18n="modals.m3">
-        Scripts Python/Bash : petites automatisations, parsing, utilitaires Linux. Je peux détailler un ou deux scripts selon le besoin.
+        Outil de diagnostic réseau développé après le CCNA 1, orienté supervision rapide : ping, ports, DNS, HTTP/HTTPS,
+        certificats TLS.
       </p>
     </div>
   </dialog>
 
-  <dialog class="modal" id="modal-netcheck">
+  <dialog class="modal" id="modal-maxflowink">
     <div class="modal-inner">
       <div class="modal-head">
-        <div class="modal-title">NetCheck – Diagnostic réseau</div>
+        <div class="modal-title" data-i18n="projects.maxflowink.title">
+          Encrage d’image par flot maximum (C++)
+        </div>
         <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
       </div>
 
-      <p class="muted">
-        NetCheck est un outil de diagnostic réseau développé en Python après le CCNA 1.
-        L’objectif est d’avoir un état des lieux rapide d’un service ou d’une destination réseau,
-        sans utiliser d’outils lourds.
+      <p class="muted" data-i18n="modals.maxflowink.p1">
+        TP LIFAPC : transformer une image en graphe (un sommet par pixel), ajouter des arêtes vers une source (noir)
+        et un puits (blanc) avec des capacités basées sur l’intensité.
+      </p>
+      <p class="muted" data-i18n="modals.maxflowink.p2">
+        Application d’un algorithme de flot maximum (Edmonds–Karp) pour trouver une coupe minimale qui sépare les pixels
+        en deux classes (noir/blanc).
+      </p>
+      <p class="muted" data-i18n="modals.maxflowink.p3">
+        Flot maximum avec Edmonds–Karp (BFS, graphe résiduel). Après convergence, un parcours depuis la source donne
+        la coupure (noir/blanc).
+      </p>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal-brontkd">
+    <div class="modal-inner">
+      <div class="modal-head">
+        <div class="modal-title" data-i18n="modals.brontkd.title">
+          Site Bron Taekwondo
+        </div>
+        <button
+          class="btn small ghost"
+          data-modal-close
+          type="button"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+      </div>
+
+      <p class="muted" data-i18n="modals.brontkd.p1">
+        Site vitrine responsive pour le club Bron Taekwondo : présentation du club,
+        des cours (enfants, ados, adultes), informations pratiques (tarifs, lieu,
+        horaires) et mise en avant des événements (stages, compétitions, passages de grade).
       </p>
 
-      <p class="muted">
-        Il regroupe plusieurs vérifications courantes : DNS, ping, connexions TCP,
-        accès HTTP/HTTPS et contrôle de l’expiration des certificats TLS.
-      </p>
-
-      <p class="muted small">
-        Projet personnel à vocation pédagogique, orienté support et exploitation réseau.
+      <p class="muted" data-i18n="modals.brontkd.p2">
+        Objectif : offrir un point d’entrée clair pour les nouveaux adhérents,
+        tout en restant simple à maintenir pour le club (mise à jour des infos
+        et actualités sans complexité technique).
       </p>
 
       <div class="modal-actions">
-        <a class="btn small" href="https://github.com/atchekzaileo/NetCheck-outil-de-diagnostic-et-monitoring-l-ger-Python-" target="_blank" rel="noreferrer">
-          GitHub ↗
+        <a
+          class="btn small"
+          href="https://brontaekwondo.com"
+          target="_blank"
+          rel="noreferrer"
+          data-i18n="projects.site"
+        >
+          Voir le site ↗
         </a>
       </div>
     </div>
   </dialog>
 
-  <script src="./script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
