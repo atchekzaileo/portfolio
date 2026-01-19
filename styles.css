@@ -78,6 +78,15 @@ button{font-family:inherit}
   font-size:13px
 }
 
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+
 /* Hero */
 .hero{
   padding:56px 0 40px;
