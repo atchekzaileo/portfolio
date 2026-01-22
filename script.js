@@ -98,7 +98,7 @@ const dict = {
     "contact.p1":
       "Si mon profil correspond à ce que vous recherchez, je serais ravi d’échanger.",
     "contact.p2":
-      "N’hésitez pas à me contacter pour un stage, une alternance ou simplement discuter de vos besoins en systèmes, réseaux et cybersécurité.",
+      "N’hésitez pas à me contacter pour un stage, une alternance.",
     "contact.card.title": "Coordonnées",
     "contact.cv": "CV",
     "contact.cvLink": "Télécharger le CV ↗",
@@ -222,7 +222,7 @@ const dict = {
     "contact.p1":
       "If my profile matches your needs, I’d be happy to talk.",
     "contact.p2":
-      "Feel free to contact me for an internship, an apprenticeship or simply to discuss your systems, networks or cybersecurity needs.",
+      "Feel free to contact me for an internship, an apprenticeship.",
     "contact.card.title": "Details",
     "contact.cv": "Resume",
     "contact.cvLink": "Download resume ↗",
