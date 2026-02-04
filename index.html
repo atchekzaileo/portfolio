@@ -11,11 +11,14 @@
   <meta property="og:type" content="website" />
 
   <title>Leo Atchekzai – Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="icon" href="./favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -26,7 +29,7 @@
     <div class="container header-inner">
       <a href="#top" class="brand">
         <div class="avatar">
-          <img src="favicon.png" alt="Logo de Leo Atchekzai" />
+          <img class="avatar-img" src="./favicon.png" alt="Logo Leo Atchekzai" />
         </div>
         <div>
           <div class="brand-name">Leo Atchekzai</div>
@@ -95,14 +98,11 @@
         </div>
 
         <div class="grid projects-grid">
-          <!-- Projet 1 : Portfolio -->
           <article class="card project">
             <div class="project-top">
               <div class="project-title">Portfolio</div>
               <div class="badges">
-                <span class="badge">HTML</span>
-                <span class="badge">CSS</span>
-                <span class="badge">JS</span>
+                <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span>
               </div>
             </div>
 
@@ -110,29 +110,16 @@
               Site simple et bilingue pour regrouper mes projets, compétences et coordonnées. Pensé mobile-first,
               léger (sans framework) pour qu’il charge vite et reste lisible.
             </p>
-
             <div class="project-actions">
-              <a
-                class="btn small"
-                href="https://github.com/atchekzaileo/portfolio"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="projects.github"
-              >
+              <a class="btn small" href="https://github.com/atchekzaileo/portfolio" target="_blank" rel="noreferrer" data-i18n="projects.github">
                 Code / GitHub ↗
               </a>
-              <button
-                class="btn small ghost"
-                type="button"
-                data-modal-open="modal1"
-                data-i18n="projects.details"
-              >
+              <button class="btn small ghost" type="button" data-modal-open="modal1" data-i18n="projects.details">
                 Détails
               </button>
             </div>
           </article>
 
-          <!-- Projet 2 : Port Scanner -->
           <article class="card project">
             <div class="project-top">
               <div class="project-title" data-i18n="projects.portscanner.title">
@@ -152,27 +139,15 @@
             </p>
 
             <div class="project-actions">
-              <a
-                class="btn small"
-                href="https://github.com/atchekzaileo/port-scanner"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="projects.github"
-              >
+              <a class="btn small" href="https://github.com/atchekzaileo/port-scanner" target="_blank" rel="noreferrer" data-i18n="projects.github">
                 Code / GitHub ↗
               </a>
-              <button
-                class="btn small ghost"
-                type="button"
-                data-modal-open="modal-portscanner"
-                data-i18n="projects.details"
-              >
+              <button class="btn small ghost" type="button" data-modal-open="modal-portscanner" data-i18n="projects.details">
                 Détails
               </button>
             </div>
           </article>
 
-          <!-- Projet 3 : NetCheck -->
           <article class="card project">
             <div class="project-top">
               <div class="project-title" data-i18n="projects.p3title">
@@ -193,27 +168,15 @@
             </p>
 
             <div class="project-actions">
-              <a
-                class="btn small"
-                href="https://github.com/atchekzaileo/NetCheck-outil-de-diagnostic-et-monitoring-l-ger-Python-"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="projects.github"
-              >
+              <a class="btn small" href="https://github.com/atchekzaileo/NetCheck-outil-de-diagnostic-et-monitoring-l-ger-Python-" target="_blank" rel="noreferrer" data-i18n="projects.github">
                 Code / GitHub ↗
               </a>
-              <button
-                class="btn small ghost"
-                type="button"
-                data-modal-open="modal3"
-                data-i18n="projects.details"
-              >
+              <button class="btn small ghost" type="button" data-modal-open="modal3" data-i18n="projects.details">
                 Détails
               </button>
             </div>
           </article>
 
-          <!-- Projet 4 : Max Flow Ink -->
           <article class="card project">
             <div class="project-top">
               <div class="project-title" data-i18n="projects.maxflowink.title">
@@ -232,34 +195,21 @@
             </p>
 
             <div class="project-actions">
-              <a
-                class="btn small"
-                href="https://github.com/atchekzaileo/Encrage-d-une-image-par-flot-maximum"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="projects.github"
-              >
+              <a class="btn small" href="https://github.com/atchekzaileo/Encrage-d-une-image-par-flot-maximum" target="_blank" rel="noreferrer" data-i18n="projects.github">
                 Code / GitHub ↗
               </a>
-              <button
-                class="btn small ghost"
-                type="button"
-                data-modal-open="modal-maxflowink"
-                data-i18n="projects.details"
-              >
+              <button class="btn small ghost" type="button" data-modal-open="modal-maxflowink" data-i18n="projects.details">
                 Détails
               </button>
             </div>
           </article>
 
-          <!-- Projet 5 : Bron Taekwondo -->
           <article class="card project">
             <div class="project-top">
               <div class="project-title" data-i18n="projects.brontkd.title">
                 Site du club Bron Taekwondo
               </div>
               <div class="badges">
-                <span class="badge">WordPress</span>
                 <span class="badge">HTML</span>
                 <span class="badge">CSS</span>
                 <span class="badge">JS</span>
@@ -281,6 +231,7 @@
               >
                 Voir le site ↗
               </a>
+
               <button
                 class="btn small ghost"
                 type="button"
@@ -294,7 +245,6 @@
         </div>
       </div>
     </section>
-    <!-- FIN SECTION PROJECTS -->
 
     <section id="skills" class="section">
       <div class="container">
@@ -398,7 +348,8 @@
               Si mon profil correspond à ce que vous recherchez, je serais ravi d’échanger.
             </p>
             <p data-i18n="contact.p2">
-              N’hésitez pas à me contacter pour un stage, une alternance.
+              N’hésitez pas à me contacter pour un stage, une alternance ou simplement discuter de
+              vos besoins en systèmes, réseaux et cybersécurité.
             </p>
           </div>
 
@@ -539,10 +490,9 @@
       </div>
 
       <p class="muted" data-i18n="modals.brontkd.p1">
-        Site responsive pour le club Bron Taekwondo : présentation du club,
+        Site vitrine responsive pour le club Bron Taekwondo : présentation du club,
         des cours (enfants, ados, adultes), informations pratiques (tarifs, lieu,
-        horaires), mise en avant des événements (stages, compétitions, passages de grade) et boutique
-        en ligne (vente de protections, tenues, survêtements).
+        horaires) et mise en avant des événements (stages, compétitions, passages de grade).
       </p>
 
       <p class="muted" data-i18n="modals.brontkd.p2">
@@ -565,6 +515,6 @@
     </div>
   </dialog>
 
-  <script src="./script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
