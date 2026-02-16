@@ -37,6 +37,9 @@ const dict = {
     "projects.p3title": "NetCheck – Diagnostic réseau (Python)",
     "projects.p3":
       "Outil de diagnostic réseau développé après le CCNA 1 pour vérifier rapidement la connectivité (ping), quelques ports, DNS, HTTP/HTTPS et expiration des certificats TLS.",
+    "projects.netprobe.title": "NetProbe – Inspecteur Réseau & Services (CLI)",
+    "projects.netprobe.desc":
+      "Outil CLI pédagogique pour diagnostiquer rapidement un hôte: résolution DNS, latence, ports TCP, vérifications HTTP/HTTPS et inspection de certificats TLS.",
     "projects.maxflowink.title": "Encrage d’image par flot maximum (C++)",
     "projects.maxflowink.desc":
       "TP LIFAPC : binarisation d’une image PGM en modélisant l’image en graphe, puis en appliquant flot maximum / coupe minimale (Edmonds–Karp + parcours résiduel).",
@@ -114,6 +117,11 @@ const dict = {
     "modals.m3title": "NetCheck – Diagnostic réseau",
     "modals.m3":
       "Outil de diagnostic réseau développé après le CCNA 1, orienté supervision rapide : ping, ports, DNS, HTTP/HTTPS, certificats TLS.",
+    "modals.netprobe.title": "NetProbe – Inspecteur Réseau & Services",
+    "modals.netprobe.p1":
+      "Outil en ligne de commande pour explorer rapidement l’accessibilité et l’état de services réseau à partir d’un nom d’hôte ou d’une adresse IP.",
+    "modals.netprobe.p2":
+      "Couvre les bases réseau de bout en bout: DNS, latence (ping avec fallback TCP), ports TCP courants, détection de services, tests HTTP/HTTPS et inspection TLS (issuer, expiration).",
 
     "modals.maxflowink.p1":
       "TP LIFAPC : transformer une image PGM en graphe (un sommet par pixel), ajouter des arêtes vers une source (noir) et un puits (blanc) avec des capacités basées sur l’intensité.",
@@ -160,6 +168,9 @@ const dict = {
     "projects.p3title": "NetCheck – Network diagnostics (Python)",
     "projects.p3":
       "Network diagnostic tool built after CCNA 1, to quickly check connectivity (ping), a few ports, DNS, HTTP/HTTPS and TLS certificate expiry.",
+    "projects.netprobe.title": "NetProbe – Network & Service Inspector (CLI)",
+    "projects.netprobe.desc":
+      "Educational CLI tool to quickly diagnose a host: DNS resolution, latency checks, TCP ports, HTTP/HTTPS checks and TLS certificate inspection.",
     "projects.maxflowink.title": "Image inking via max flow (C++)",
     "projects.maxflowink.desc":
       "LIFAPC lab: binarizing a PGM image by modeling the pixels and neighbourhood constraints as a graph, then applying max-flow/min-cut (Edmonds–Karp + residual graph).",
@@ -236,6 +247,11 @@ const dict = {
     "modals.m3title": "NetCheck – Network diagnostics",
     "modals.m3":
       "Network diagnostic tool built after CCNA 1, focused on quick checks: ping, ports, DNS, HTTP/HTTPS, TLS certificates.",
+    "modals.netprobe.title": "NetProbe – Network & Service Inspector",
+    "modals.netprobe.p1":
+      "Command-line tool to quickly inspect host accessibility and network service status from a hostname or an IP address.",
+    "modals.netprobe.p2":
+      "Covers networking fundamentals end to end: DNS, latency (ping with TCP fallback), common TCP ports, service detection, HTTP/HTTPS checks, and TLS inspection (issuer, expiration).",
 
     "modals.maxflowink.p1":
       "LIFAPC lab: turn a PGM image into a graph (one node per pixel), add edges to a source (black) and a sink (white) with capacities derived from intensity.",

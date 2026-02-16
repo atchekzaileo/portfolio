@@ -179,6 +179,36 @@
 
           <article class="card project">
             <div class="project-top">
+              <div class="project-title" data-i18n="projects.netprobe.title">
+                NetProbe – Network & Service Inspector
+              </div>
+              <div class="badges">
+                <span class="badge">Python</span>
+                <span class="badge">DNS</span>
+                <span class="badge">TCP</span>
+                <span class="badge">HTTP</span>
+                <span class="badge">TLS</span>
+                <span class="badge">CLI</span>
+              </div>
+            </div>
+
+            <p class="project-desc" data-i18n="projects.netprobe.desc">
+              Outil CLI pédagogique pour diagnostiquer rapidement un hôte: résolution DNS, latence, ports TCP,
+              vérifications HTTP/HTTPS et inspection de certificats TLS.
+            </p>
+
+            <div class="project-actions">
+              <a class="btn small" href="https://github.com/atchekzaileo/NetProbe-Network-Service-Inspector-CLI-Tool-" target="_blank" rel="noreferrer" data-i18n="projects.github">
+                Code / GitHub ↗
+              </a>
+              <button class="btn small ghost" type="button" data-modal-open="modal-netprobe" data-i18n="projects.details">
+                Détails
+              </button>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project-top">
               <div class="project-title" data-i18n="projects.maxflowink.title">
                 Encrage d’image par flot maximum (C++)
               </div>
@@ -446,6 +476,38 @@
         Outil de diagnostic réseau développé après le CCNA 1, orienté supervision rapide : ping, ports, DNS, HTTP/HTTPS,
         certificats TLS.
       </p>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal-netprobe">
+    <div class="modal-inner">
+      <div class="modal-head">
+        <div class="modal-title" data-i18n="modals.netprobe.title">
+          NetProbe – Network & Service Inspector
+        </div>
+        <button class="btn small ghost" data-modal-close type="button" aria-label="Close">✕</button>
+      </div>
+
+      <p class="muted" data-i18n="modals.netprobe.p1">
+        Outil en ligne de commande pour explorer rapidement l’accessibilité et l’état de services réseau à partir
+        d’un nom d’hôte ou d’une adresse IP.
+      </p>
+      <p class="muted" data-i18n="modals.netprobe.p2">
+        Couvre les bases réseau de bout en bout: DNS, latence (ping avec fallback TCP), ports TCP courants,
+        détection de services, tests HTTP/HTTPS et inspection TLS (issuer, expiration).
+      </p>
+
+      <div class="modal-actions">
+        <a
+          class="btn small"
+          href="https://github.com/atchekzaileo/NetProbe-Network-Service-Inspector-CLI-Tool-"
+          target="_blank"
+          rel="noreferrer"
+          data-i18n="projects.github"
+        >
+          Code / GitHub ↗
+        </a>
+      </div>
     </div>
   </dialog>
 
